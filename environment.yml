@@ -1,0 +1,10 @@
+name: website
+channels:
+  - default
+  - conda-forge
+dependencies:
+  - python
+  - sphinx
+  - pip
+  - pip:
+      - sphinx_press_theme
