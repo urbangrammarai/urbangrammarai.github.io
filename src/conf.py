@@ -202,3 +202,7 @@ html_theme_options = {
         ("Turing", "https://www.turing.ac.uk")
   ]
 }
+
+html_css_files = [
+    'custom.css',
+]

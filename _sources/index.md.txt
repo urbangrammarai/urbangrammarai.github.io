@@ -12,6 +12,7 @@ Short itnroduction here. Lorem ipsum dolor sit amet, dicat partiendo pro cu, eir
 :maxdepth: 2
 :caption: Contents
 
+Home <self>
 markdown
 Updates <https://urbangrammarai.github.io/blog/archive>
 ```
