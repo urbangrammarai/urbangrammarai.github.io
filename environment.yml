@@ -8,3 +8,5 @@ dependencies:
   - pip
   - pip:
       - sphinx_press_theme
+      - myst-nb
+      - ablog
