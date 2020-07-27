@@ -6,10 +6,14 @@
 Welcome to Urban Grammar AI's documentation!
 ============================================
 
+.. postlist:: 5
+   :excerpts:
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   markdown
 
 
 Indices and tables
