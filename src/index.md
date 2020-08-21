@@ -22,4 +22,5 @@ Updates <https://urbangrammarai.github.io/blog/archive>
 
 static_page
 Data processing <https://urbangrammarai.github.io/data_processing/index>
+Spatial Signatures <https://urbangrammarai.github.io/spatial_signatures/index>
 ```
