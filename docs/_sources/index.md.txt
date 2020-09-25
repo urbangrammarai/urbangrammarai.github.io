@@ -18,7 +18,6 @@ This project develops a conceptual framework to characterise urban structure thr
 
 overview
 Updates <https://urbangrammarai.github.io/blog/archive>
-Turing project page <https://www.turing.ac.uk/research/research-projects/urban-grammar>
 ```
 
 ```{toctree}
