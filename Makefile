@@ -20,5 +20,7 @@ BUILDDIR      = _build
 # 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 website:
+	rm -rf docs
 	sphinx-build -M html "src" "_build"
-	cp -r _build/html/* .
+	cp -r _build/html docs
+	touch docs/.nojekyll
