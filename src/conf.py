@@ -199,7 +199,7 @@ html_static_path = ['_static']
 html_theme_options = {
     "external_links": [
         ("Github", "https://github.com/urbangrammarai"),
-        ("Turing", "https://www.turing.ac.uk")
+        ("Turing", "https://www.turing.ac.uk/research/research-projects/urban-grammar")
   ]
 }
 
