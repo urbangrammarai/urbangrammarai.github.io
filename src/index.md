@@ -1,6 +1,10 @@
 # Urban Grammar AI research project
 
-Short itnroduction here. Lorem ipsum dolor sit amet, dicat partiendo pro cu, eirmod audire ut eum. Usu laudem latine laboramus ea. An vix putant scribentur repudiandae, nec agam iuvaret expetenda ut, aeterno dolorem vivendo ex pri. Delenit scaevola placerat ne cum, sit te alii labore suscipit. Ne antiopam sententiae eam, elit affert consequat vim ex. Ad eum eros quaerendum, mei oblique forensibus in.
+We know little about how the way we organise cities over space influences social, economic and environmental outcomes, in part because it is hard to measure.
+
+Satellite imagery, combined with cutting-edge AI, can provide a source of data to track the evolution of the built environment at unprecedented detail.
+
+This project develops a conceptual framework to characterise urban structure through the notions of spatial signatures and urban grammar, and will deploy it to generate open data products and insight about the evolution of cities.
 
 ## Updates
 
@@ -12,15 +16,15 @@ Short itnroduction here. Lorem ipsum dolor sit amet, dicat partiendo pro cu, eir
 :maxdepth: 2
 :caption: Contents
 
-markdown
+overview
 Updates <https://urbangrammarai.github.io/blog/archive>
+Turing project page <https://www.turing.ac.uk/research/research-projects/urban-grammar>
 ```
 
 ```{toctree}
 :maxdepth: 2
 :caption: Work Packages
 
-static_page
 Data processing <https://urbangrammarai.github.io/data_processing/index>
 Spatial Signatures <https://urbangrammarai.github.io/spatial_signatures/index>
 ```
