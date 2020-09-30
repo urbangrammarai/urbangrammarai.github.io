@@ -6,9 +6,9 @@ Satellite imagery, combined with cutting-edge AI, can provide a source of data t
 
 This project develops a conceptual framework to characterise urban structure through the notions of spatial signatures and urban grammar, and will deploy it to generate open data products and insight about the evolution of cities.
 
-[<img src="_static/gdsl.png" alt="GDSL" width="180" height="90" class="vertimg">](https://www.liverpool.ac.uk/geographic-data-science/)
-[<img src="_static/liv_logo.png" alt="University of Liverpool" width="180" height="90" class="vertimg">](https://www.liverpool.ac.uk)
-[<img src="_static/ati_logo.png" alt="ATI" width="180" height="90" class="vertimg">](https://www.turing.ac.uk/)
+[<img src="_static/gdsl.png" alt="GDSL" width="25%" style="margin-right: 20px">](https://www.liverpool.ac.uk/geographic-data-science/)
+[<img src="_static/liv_logo.png" alt="University of Liverpool"  width="25%" style="margin-right: 20px">](https://www.liverpool.ac.uk)
+[<img src="_static/ati_logo.png" alt="ATI"  width="25%">](https://www.turing.ac.uk/)
 
 ## Updates
 
@@ -28,6 +28,6 @@ Updates <https://urbangrammarai.github.io/blog/archive>
 :maxdepth: 2
 :caption: Work Packages
 
-Data processing <https://urbangrammarai.github.io/data_processing/index>
-Spatial Signatures <https://urbangrammarai.github.io/spatial_signatures/index>
+WP1 - Data processing <https://urbangrammarai.github.io/data_processing/index>
+WP2 - Spatial Signatures <https://urbangrammarai.github.io/spatial_signatures/index>
 ```

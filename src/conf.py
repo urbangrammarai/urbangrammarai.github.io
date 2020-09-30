@@ -103,14 +103,11 @@ blog_authors = {}
 # a link to a archive pages generated for each tag, category, and year.
 # In addition, there are authors.html, languages.html, and locations.html
 # sidebars that link to author and location archive pages.
-# html_sidebars = {
-#     '**': [ 'about.html',
-#             'postcard.html', 'navigation.html',
-#             'recentposts.html',
-#             'archives.html',
-#             'searchbox.html',
-#             ],
-#     }
+html_sidebars = {
+    '**': [ 
+            'archives.html',
+            ],
+    }
 
 # -- Blog Feed Options --------------------------------------------------------
 
@@ -189,7 +186,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'press'
+html_theme = 'pydata_sphinx_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -206,3 +203,5 @@ html_theme_options = {
 html_css_files = [
     'custom.css',
 ]
+
+html_logo = "_static/logo.svg"

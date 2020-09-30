@@ -1,7 +1,61 @@
 a, p a code {
     color: #0ea48f;
-    }
+}
 
-.sidebar .toctree-l1 a.current {    
+.sidebar .toctree-l1 a.current {
     border-left-color: #0ea48f;
-    }
+}
+
+.navbar-brand {
+    height: 300px!important;
+}
+
+.active {
+    color: #0ea48f!important;
+}
+
+.toc-entry>.nav-link.active {
+    border-left: 2px solid #0ea48f;
+}
+
+.navbar-nav>.active>.nav-link {
+    font-weight: 600;
+    color: #0ea48f!important;
+}
+
+.bd-sidebar .nav>.active:hover>a, .bd-sidebar .nav>.active>a {
+    font-weight: 600;
+    color: #0ea48f;
+}
+
+.bd-sidebar .nav>li>a:hover {
+    color: #055e52;
+}
+
+.bd-sidebar .nav>li>ul>.active>a {
+    color: #055e52;
+}
+
+.alert-info a {
+    color: #0ea48f;
+}
+
+.reference a {
+    color: #0ea48f;
+}
+
+h1, h2 {
+    color: #055e52;
+}
+
+body {
+    padding-top: 0!important;
+}
+
+.bd-sidebar {
+    top: 10px!important;
+}
+
+.bd-toc {
+    top: 10px!important;
+}
