@@ -19,15 +19,15 @@
 </content>
   </entry>
   <entry xml:base="https://urbangrammarai.github.io/blog/atom.xml">
-    <title type="text">Blog post number one</title>
+    <title type="text">Firing up the engines</title>
     <id>https://urbangrammarai.github.io/blog/post1.html</id>
-    <updated>2014-04-15T00:00:00Z</updated>
-    <published>2014-04-15T00:00:00Z</published>
+    <updated>2020-04-15T00:00:00Z</updated>
+    <published>2020-04-15T00:00:00Z</published>
     <link href="https://urbangrammarai.github.io/blog/post1.html" />
     <author>
       <name></name>
     </author>
-    <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, dicat partiendo pro cu, eirmod audire ut eum. Usu laudem latine laboramus ea. An vix putant scribentur repudiandae, nec agam iuvaret expetenda ut, aeterno dolorem vivendo ex pri. Delenit scaevola placerat ne cum, sit te alii labore suscipit. Ne antiopam sententiae eam, elit affert consequat vim ex. Ad eum eros quaerendum, mei oblique forensibus in.&lt;/p&gt;
+    <content type="html">&lt;p&gt;This is the first post going out form the &lt;a class=&quot;reference external&quot; href=&quot;https://www.turing.ac.uk/research/research-projects/urban-grammar&quot;&gt;Urban Grammar project&lt;/a&gt;. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either &lt;a class=&quot;reference external&quot; href=&quot;mailto:darribas-bel&amp;#37;&amp;#52;&amp;#48;turing&amp;#46;ac&amp;#46;uk&quot;&gt;Dani&lt;/a&gt; or &lt;a class=&quot;reference external&quot; href=&quot;mailto:M&amp;#46;Fleischmann&amp;#37;&amp;#52;&amp;#48;liverpool&amp;#46;ac&amp;#46;uk&quot;&gt;Martin&lt;/a&gt;!&lt;/p&gt;
 </content>
   </entry>
 </feed>
