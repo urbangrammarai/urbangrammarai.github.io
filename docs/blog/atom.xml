@@ -27,7 +27,7 @@
     <author>
       <name></name>
     </author>
-    <content type="html">&lt;p&gt;&lt;img src=&quot;_static/martin.jpg&quot; alt=&quot;Martin Fleischmann&quot; class=&quot;bg-primary&quot; width=&quot;200px&quot;&gt; The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;../_static/martin.jpg&quot; alt=&quot;Martin Fleischmann&quot; class=&quot;bg-primary&quot; width=&quot;200px&quot;&gt; The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:&lt;/p&gt;
 </content>
   </entry>
   <entry xml:base="https://urbangrammarai.github.io/blog/atom.xml">
