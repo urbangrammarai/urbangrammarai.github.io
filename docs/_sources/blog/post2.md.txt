@@ -3,7 +3,7 @@
 
 # Welcome to Martin Fleischmann
 
-<img src="../_static/martin.jpg" alt="Martin Fleischmann" class="bg-primary" width="200px"> The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:
+<img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/martin.jpg?raw=true" alt="Martin Fleischmann" class="bg-primary" width="200px" style="float:left;margin-right: 10px;"> The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:
 
 > Martin Fleischmann is research associate in the Geographic Data Science Lab at the University of Liverpool and a member of the Urban Design Studies Unit at the University of Strathclyde. His research focuses on urban morphology and geographic data science focusing on quantitative analysis and classification of urban form, remote sensing and AI.
 
