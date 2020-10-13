@@ -71,7 +71,7 @@ blog_authors = {}
 # Number of paragraphs (default is ``1``) that will be displayed as an excerpt
 # from the post. Setting this ``0`` will result in displaying no post excerpt
 # in archive pages.  This option can be set on a per post basis using
-#post_auto_excerpt = 1
+post_auto_excerpt = 10
 
 # Index of the image that will be displayed in the excerpt of the post.
 # Default is ``0``, meaning no image.  Setting this to ``1`` will include
