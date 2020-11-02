@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posted in 2020 &#8212; Urban Grammar AI  documentation</title>
+    <title>Implementing morphological functions to the ecosystem &#8212; Urban Grammar AI  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
@@ -33,7 +33,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
   
-  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="Posted in 2020">
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="Urban Grammar AI Blog">
   
   
   <style type="text/css">
@@ -102,9 +102,24 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#speedups-of-existing-code" class="nav-link">Speedups of existing code</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#new-functionality" class="nav-link">New functionality</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#full-list-of-contributions" class="nav-link">Full list of contributions</a>
+        </li>
     
     </ul>
 </nav>
@@ -119,140 +134,70 @@
               
               <div>
                 
-  <div class="section">
-
-    <h1>
-      
-      Posted in
-      
-      2020
-      
-    </h1>
-    
-    
-
-    <div class="section">
-      <h2><a href="post4.html">Implementing morphological functions to the ecosystem</a></h2>
-
-      <ul class="ablog-archive">
-      <li>
-      
-        02 November 2020
-      
-      </li>
-        
-
-  
-
-  
-
-  
-
-  
-
-  
-  </ul>
-      <p>This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within <a class="reference external" href="https://urbangrammarai.github.io/data_processing/index">WP1</a> and morphometric assessment within <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a> entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.</p>
+  <div class="section" id="implementing-morphological-functions-to-the-ecosystem">
+<h1>Implementing morphological functions to the ecosystem<a class="headerlink" href="#implementing-morphological-functions-to-the-ecosystem" title="Permalink to this headline">¶</a></h1>
+<p>This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within <a class="reference external" href="https://urbangrammarai.github.io/data_processing/index">WP1</a> and morphometric assessment within <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a> entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.</p>
+<div class="section" id="speedups-of-existing-code">
+<h2>Speedups of existing code<a class="headerlink" href="#speedups-of-existing-code" title="Permalink to this headline">¶</a></h2>
 <p>As part of the data processing stage of the project, we have refactored some of them to gain the performance enhancements we needed. Since we strongly believe in replicability of research, all software developed within Urban Grammar AI project should be available for other researchers, optimally packaged in a friendly shape of a Python library. At the same time, we want to support open-source software which we use for the research.</p>
 <p>We think the natural approach is to include enhancements made within the area of urban morphometrics to <a class="reference external" href="http://docs.momepy.org"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> an existing toolkit for urban morphology. <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a> heavily builds on <code class="docutils literal notranslate"><span class="pre">momepy</span></code>’s code and every relevant piece of code we made is now merged back into <code class="docutils literal notranslate"><span class="pre">momepy</span></code>. That covers both performance-focused changes to implementation (<a class="reference external" href="https://github.com/martinfleis/momepy/pull/219">#219</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/209">#209</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/207">#207</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/205">#205</a>), mostly based on <code class="docutils literal notranslate"><span class="pre">pygeos</span></code> and vectorization, and new additions.</p>
+</div>
+<div class="section" id="new-functionality">
+<h2>New functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">¶</a></h2>
 <p>Two key features of Spatial Signatures, the concepts of <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/spatial_unit/Parallelized_enclosures.html">enclosures</a> and <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/spatial_unit/enclosed_tessellation.html">enclosed tessellation</a> are now available in <code class="docutils literal notranslate"><span class="pre">momepy.elements</span></code> module and you can create both using only a few lines of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enclosures</span> <span class="o">=</span> <span class="n">momepy</span><span class="o">.</span><span class="n">enclosures</span><span class="p">(</span>
+    <span class="n">streets</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">([</span><span class="n">convex_hull</span><span class="p">]),</span> <span class="n">additional_barriers</span><span class="o">=</span><span class="p">[</span><span class="n">railway</span><span class="p">,</span> <span class="n">rivers</span><span class="p">])</span>
+
+<span class="n">enclosed_tessellation</span> <span class="o">=</span> <span class="n">momepy</span><span class="o">.</span><span class="n">Tessellation</span><span class="p">(</span>
+    <span class="n">buildings</span><span class="p">,</span> <span class="n">unique_id</span><span class="o">=</span><span class="s1">&#39;uID&#39;</span><span class="p">,</span> <span class="n">enclosures</span><span class="o">=</span><span class="n">enclosures</span><span class="p">)</span><span class="o">.</span><span class="n">tessellation</span>
+</pre></div>
+</div>
 <p>See the detailed guidance in <a class="reference external" href="http://docs.momepy.org/en/latest/user_guide/elements/enclosed.html">momepy’s documentation</a>.</p>
+<p>Tools <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/spatial_unit/Generate_enclosures.html#preprocess-railways">we used</a> to preprocess street network and railway tracks before creating enclosures for a core of a new module <a class="reference external" href="http://docs.momepy.org/en/latest/api.html#preprocessing"><code class="docutils literal notranslate"><span class="pre">momepy.preprocessing</span></code></a>, where you can find them as <a class="reference external" href="http://docs.momepy.org/en/latest/generated/momepy.remove_false_nodes.html#momepy.remove_false_nodes"><code class="docutils literal notranslate"><span class="pre">momepy.remove_false_nodes</span></code></a>, <a class="reference external" href="http://docs.momepy.org/en/latest/generated/momepy.close_gaps.html#momepy.close_gaps"><code class="docutils literal notranslate"><span class="pre">momepy.close_gaps</span></code></a> and <a class="reference external" href="http://docs.momepy.org/en/latest/generated/momepy.extend_lines.html#momepy.extend_lines"><code class="docutils literal notranslate"><span class="pre">momepy.extend_lines</span></code></a>. To measure percentiles used as a convolution layer for delineation of Spatial Signatures, you can use <a class="reference external" href="http://docs.momepy.org/en/latest/generated/momepy.Percentiles.html#momepy.Percentiles"><code class="docutils literal notranslate"><span class="pre">momepy.Percentiles</span></code></a> and to link enclosed tessellation to street network, there is a new function <a class="reference external" href="http://docs.momepy.org/en/latest/generated/momepy.get_network_ratio.html#momepy.get_network_ratio"><code class="docutils literal notranslate"><span class="pre">momepy.get_network_ratio</span></code></a>.</p>
+</div>
+<div class="section" id="full-list-of-contributions">
+<h2>Full list of contributions<a class="headerlink" href="#full-list-of-contributions" title="Permalink to this headline">¶</a></h2>
+<p>The complete list of pull requests implementing code resulting from Urban Grammar AI is below:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/219">#219 REF: vectorize StreetProfile</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/218">#218 ENH: ratio-based network links</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/217">#217 ENH: extend_lines</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/215">#215 ENH: Close gaps</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/214">#214 REF: preprocessing module</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/213">#213 API: unified Tessellation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/212">#212 ENH: Enclosed tessellation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/211">#211 ENH: add enclosures function</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/209">#209 ENH: speedups, Percentiles</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/207">#207 REF: pygeos-based Tessellation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/205">#205 ENH: faster circular compactness</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martinfleis/momepy/pull/204">#204 ENH: vectorised remove_false_nodes</a></p></li>
+</ul>
+</div>
+</div>
 
-      <p><a href="post4.html">Read more ...</a></p>
-      <hr>
-    </div>
+  <div class="section">
+  
     
 
-    <div class="section">
-      <h2><a href="post3.html">First Advisory Board</a></h2>
 
-      <ul class="ablog-archive">
-      <li>
-      
-        01 October 2020
-      
-      </li>
-        
-
+<div class="section">
+  <span style="float: left;">
   
-
-  
-
-  
-
-  
-
-  
-  </ul>
-      <p>On October 1st. 2020, Dani and Martin held the first meeting of the Advisory Board for the project. We are thrilled to have a board that includes <a class="reference external" href="https://www.linkedin.com/in/edwardes/">Alistair Edwardes</a>, <a class="reference external" href="https://www.ncl.ac.uk/curds/people/staffprofile/rachelfranklin.html#background">Rachel Franklin</a>, <a class="reference external" href="https://www.linkedin.com/in/izzysargent">Isabel Sargent</a> and <a class="reference external" href="http://www.dpi.inpe.br/DPI/institucional/pessoal/servidores/antonio-miguel-vieira-monteiro">Antonio Miguel Vieira Monteiro</a>.</p>
-<p>The meeting took place, as it’s become customary in 2020, on Zoom. Dani provided an overview of the main components of the project, and Martin updated on progress so far; throughout the three hours of the meeting, there was plenty of discussion and great questions about what the project is trying to do and how it’ll tackle its main challenges. This is by no means a full replacement of the physical meeting we would have had in Liverpool for a full day, but it was an excellent way to connect and kickstart the role of the Advisory Board.</p>
-<p>One of the conclusions from the discussion was that we might adapt to the current situation by trying to have these meetings a bit more frequent (initially only four were scheduled for the entire project) and of shorter duration than a full day (maybe up to three hours). This will allow us to focus on specific aspects of the project for every meeting. Next one will hopefully take place early in the next year and, by then, we might even have something in the form of deliverables to show!</p>
-
-      <p><a href="post3.html">Read more ...</a></p>
-      <hr>
-    </div>
+  Previous: 
+  <a href="post3.html">
     
-
-    <div class="section">
-      <h2><a href="post2.html">Welcome to Martin Fleischmann</a></h2>
-
-      <ul class="ablog-archive">
-      <li>
-      
-        01 July 2020
-      
-      </li>
-        
+    First Advisory Board
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+  </span>
+</div>
 
   
-
   
-
-  
-
-  
-
-  
-  </ul>
-      <p><img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/martin.jpg?raw=true" alt="Martin Fleischmann" class="bg-primary" width="200px" style="float:left;margin-right: 10px;"> The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:</p>
-<p>Martin Fleischmann is research associate in the Geographic Data Science Lab at the University of Liverpool and a member of the Urban Design Studies Unit at the University of Strathclyde. His research focuses on urban morphology and geographic data science focusing on quantitative analysis and classification of urban form, remote sensing and AI.</p>
-<p>He is the author of <code class="docutils literal notranslate"><span class="pre">momepy</span></code>, the open source urban morphology measuring toolkit for Python and member of development teams of GeoPandas, the open source Python package for geographic data and PySAL, the Python library for spatial analysis.</p>
-<p>Martin brings with him a theoretical background in urban morphology combined with a <em>lot</em> of experience in Python open source development around geospatial. There could not be a better combination for the project. As the postdoctoral researcher, Martin will be heavily involved in the implementation of much of the code required to develop the idea of Spatial Signatures, teach a computer to recognise them from satellite imagery, and use them to develop an Urban Grammar. At the same time, he is also joining the <a class="reference external" href="https://www.liverpool.ac.uk/geographic-data-science/">Geographic Data Science Lab</a> and getting involved in its day to day life, participating in internal seminars, coordinating the Brown Bags series and, more generally, chipping in where possible to make the lab a great place to be part of.</p>
-<p>Welcome Martin, this will be a fun ride!</p>
-
-      <p><a href="post2.html">Read more ...</a></p>
-      <hr>
-    </div>
-    
-
-    <div class="section">
-      <h2><a href="post1.html">Firing up the engines</a></h2>
-
-      <ul class="ablog-archive">
-      <li>
-      
-        15 April 2020
-      
-      </li>
-        
-
-  
-
-  
-
-  
-
-  
-
-  
-  </ul>
-      <p>This is the first post going out form the <a class="reference external" href="https://www.turing.ac.uk/research/research-projects/urban-grammar">Urban Grammar project</a>. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either <a class="reference external" href="mailto:darribas-bel&#37;&#52;&#48;turing&#46;ac&#46;uk">Dani</a> or <a class="reference external" href="mailto:M&#46;Fleischmann&#37;&#52;&#48;liverpool&#46;ac&#46;uk">Martin</a>!</p>
-
-      <p><a href="post1.html">Read more ...</a></p>
-      <hr>
-    </div>
-    
-    
   </div>
 
               </div>
