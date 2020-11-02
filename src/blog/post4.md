@@ -3,18 +3,18 @@
 
 # Implementing morphological functions to the ecosystem
 
-Processing of data within WP1 and morphometric assessment within WP2 entail development of new bespoke algorithms and implementation of some which are currently available in Python ecosystem. However, even those already existing were often not performant enough for the scale of this project. Therefore, we have refactored some of them to gain the performance enhancements we needed. Since we strongly believe in replicability of research, it is crucial that all software developed within Urban Grammar AI project is available for other researchers, optimally packaged in a friendly shape of a Python library. At the same time, we want to support open-source software which we use for the research. 
+Processing of data within [WP1](https://urbangrammarai.github.io/data_processing/index) and morphometric assessment within [WP2](https://urbangrammarai.github.io/spatial_signatures/index) entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project. Therefore, we have refactored some of them to gain the performance enhancements we needed. Since we strongly believe in replicability of research, all software developed within Urban Grammar AI project should be available for other researchers, optimally packaged in a friendly shape of a Python library. At the same time, we want to support open-source software which we use for the research. 
 
-What felt natural, was to include enhancements made within the area of urban morphometrics to `momepy` an existing toolkit for urban morphology. WP2 heavily builds on `momepy`'s code and every relevant piece of code we made is now merged back into `momepy`. That covers both performance focused changes to implementation (#219, #209, #207, #205), mostly based on `pygeos` and vectorization, and new additions.
+What felt natural, was to include enhancements made within the area of urban morphometrics to `momepy` an existing toolkit for urban morphology. [WP2](https://urbangrammarai.github.io/spatial_signatures/index) heavily builds on `momepy`'s code and every relevant piece of code we made is now merged back into `momepy`. That covers both performance-focused changes to implementation ([#219](https://github.com/martinfleis/momepy/pull/219), [#209](https://github.com/martinfleis/momepy/pull/209), [#207](https://github.com/martinfleis/momepy/pull/207), [#205](https://github.com/martinfleis/momepy/pull/205)), mostly based on `pygeos` and vectorization, and new additions.
 
 Two key features of Spatial Signatures, the concepts of [enclosures](https://urbangrammarai.github.io/spatial_signatures/spatial_unit/Parallelized_enclosures.html) and [enclosed tessellation](https://urbangrammarai.github.io/spatial_signatures/spatial_unit/enclosed_tessellation.html) are now available in `momepy.elements` module and you can create both using only a few lines of code:
 
 ```python
 enclosures = momepy.enclosures(
-    streets, limit=gpd.GeoSeries([convex_hull]), additional_barriers=[railway, rivers]
-)
+    streets, limit=gpd.GeoSeries([convex_hull]), additional_barriers=[railway, rivers])
 
-enclosed_tessellation = momepy.Tessellation(buildings, unique_id='uID', enclosures=enclosures).tessellation
+enclosed_tessellation = momepy.Tessellation(
+    buildings, unique_id='uID', enclosures=enclosures).tessellation
 ```
 
 See the detailed guidance in [momepy's documentation](http://docs.momepy.org/en/latest/user_guide/elements/enclosed.html).
