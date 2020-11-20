@@ -3,7 +3,7 @@
 
 # 30DayMapChallenge 2020
 
-On Novemeber 1<sup>st</sup> Topi Tjukanov [started](https://twitter.com/tjukanov/status/1311568912950140930) a [#30DayMapChallenge 2020](https://twitter.com/hashtag/30DayMapChallenge) - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23<sup>rd</sup> day, it was our turn.
+On November 1<sup>st</sup> Topi Tjukanov [started](https://twitter.com/tjukanov/status/1311568912950140930) a [#30DayMapChallenge 2020](https://twitter.com/hashtag/30DayMapChallenge) - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23<sup>rd</sup> day, it was our turn.
 
 Since the topic was _boundaries_, we decided to share with you the process of creation of boundaries of morpohlogical tessellation - the (smallest) spatial unit used in urban morphometrics.
 <center>

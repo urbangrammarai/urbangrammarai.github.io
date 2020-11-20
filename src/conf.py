@@ -179,6 +179,7 @@ templates_path.append(ablog.get_html_templates_path())
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
+jupyter_execute_notebooks = "off"
 
 
 # -- Options for HTML output -------------------------------------------------
