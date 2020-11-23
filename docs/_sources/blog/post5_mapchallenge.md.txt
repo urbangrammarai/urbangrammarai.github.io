@@ -7,7 +7,7 @@ On November 1<sup>st</sup> Topi Tjukanov [started](https://twitter.com/tjukanov/
 
 Since the topic was _boundaries_, we decided to share with you the process of creation of boundaries of morpohlogical tessellation - the (smallest) spatial unit used in urban morphometrics.
 <center>
-<img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/mapchallenge.gif?raw=true" alt="Tessellation animation" width=400></center>
+<img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/mapchallenge.gif?raw=true" alt="Tessellation animation"></center>
 
 Five cities, five different urban patterns. Morphological tessellation is in principle Voronoi tessellation based on building footprint polygons. In practice, we first shrink our polygons (you need a gap between adjacent buildings) by a small margin, then generate a dense array of points along the polygon boundary which is passed to Voronoi algorithm. Finally, resulting polygons are dissolved based on the building it belongs to, and morphological tessellation is done. See by yourself how each step looks and compares across different patterns on a matrix below. If you click on the image, you can see the [full resolution (16.2 MB)](https://github.com/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/matrix_lowres.png?raw=true).
 

@@ -2,10 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Urban Grammar AI Blog</title>
   <id>https://urbangrammarai.github.io/blog/atom.xml</id>
-  <updated>2020-11-02T00:00:00Z</updated>
+  <updated>2020-11-23T00:00:00Z</updated>
   <link href="https://urbangrammarai.github.io/" />
   <link href="https://urbangrammarai.github.io/blog/atom.xml" rel="self" />
   <generator uri="https://ablog.readthedocs.org" version="0.10.6">ABlog</generator>
+  <entry xml:base="https://urbangrammarai.github.io/blog/atom.xml">
+    <title type="text">30DayMapChallenge 2020</title>
+    <id>https://urbangrammarai.github.io/blog/post5_mapchallenge.html</id>
+    <updated>2020-11-23T00:00:00Z</updated>
+    <published>2020-11-23T00:00:00Z</published>
+    <link href="https://urbangrammarai.github.io/blog/post5_mapchallenge.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;p&gt;On November 1&lt;sup&gt;st&lt;/sup&gt; Topi Tjukanov &lt;a class=&quot;reference external&quot; href=&quot;https://twitter.com/tjukanov/status/1311568912950140930&quot;&gt;started&lt;/a&gt; a &lt;a class=&quot;reference external&quot; href=&quot;https://twitter.com/hashtag/30DayMapChallenge&quot;&gt;#30DayMapChallenge 2020&lt;/a&gt; - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23&lt;sup&gt;rd&lt;/sup&gt; day, it was our turn.&lt;/p&gt;
+&lt;p&gt;Since the topic was &lt;em&gt;boundaries&lt;/em&gt;, we decided to share with you the process of creation of boundaries of morpohlogical tessellation - the (smallest) spatial unit used in urban morphometrics.&lt;/p&gt;
+&lt;p&gt;Five cities, five different urban patterns. Morphological tessellation is in principle Voronoi tessellation based on building footprint polygons. In practice, we first shrink our polygons (you need a gap between adjacent buildings) by a small margin, then generate a dense array of points along the polygon boundary which is passed to Voronoi algorithm. Finally, resulting polygons are dissolved based on the building it belongs to, and morphological tessellation is done. See by yourself how each step looks and compares across different patterns on a matrix below. If you click on the image, you can see the &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/matrix_lowres.png?raw=true&quot;&gt;full resolution (16.2 MB)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Do you want to play with the algorithm and create your own sequences? We have a &lt;a class=&quot;reference external&quot; href=&quot;https://nbviewer.jupyter.org/github/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/tessellation.ipynb&quot;&gt;notebook&lt;/a&gt; just for you! And if you’re going to generate tessellation on your data, &lt;a class=&quot;reference external&quot; href=&quot;http://docs.momepy.org/en/stable/user_guide/elements/tessellation.html&quot;&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;momepy&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; has you covered. For further details head to Martin’s blog post about &lt;a class=&quot;reference external&quot; href=&quot;https://martinfleischmann.net/morphological-tessellation/&quot;&gt;a paper on tessellation&lt;/a&gt; he has published earlier this year.&lt;/p&gt;
+&lt;p&gt;Stay tuned for new advances in this space!&lt;/p&gt;
+</content>
+  </entry>
   <entry xml:base="https://urbangrammarai.github.io/blog/atom.xml">
     <title type="text">Implementing morphological functions to the ecosystem</title>
     <id>https://urbangrammarai.github.io/blog/post4.html</id>

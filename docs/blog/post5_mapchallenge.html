@@ -124,7 +124,7 @@
 <p>On November 1<sup>st</sup> Topi Tjukanov <a class="reference external" href="https://twitter.com/tjukanov/status/1311568912950140930">started</a> a <a class="reference external" href="https://twitter.com/hashtag/30DayMapChallenge">#30DayMapChallenge 2020</a> - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23<sup>rd</sup> day, it was our turn.</p>
 <p>Since the topic was <em>boundaries</em>, we decided to share with you the process of creation of boundaries of morpohlogical tessellation - the (smallest) spatial unit used in urban morphometrics.</p>
 <center>
-<img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/mapchallenge.gif?raw=true" alt="Tessellation animation" width=400></center>
+<img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/mapchallenge.gif?raw=true" alt="Tessellation animation"></center>
 <p>Five cities, five different urban patterns. Morphological tessellation is in principle Voronoi tessellation based on building footprint polygons. In practice, we first shrink our polygons (you need a gap between adjacent buildings) by a small margin, then generate a dense array of points along the polygon boundary which is passed to Voronoi algorithm. Finally, resulting polygons are dissolved based on the building it belongs to, and morphological tessellation is done. See by yourself how each step looks and compares across different patterns on a matrix below. If you click on the image, you can see the <a class="reference external" href="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/matrix_lowres.png?raw=true">full resolution (16.2 MB)</a>.</p>
 <a href="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/matrix_fullres.png?raw=true">
 <img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/matrix_lowres.png?raw=true" alt="Matrix of cases"></a>
@@ -136,6 +136,22 @@
   
     
 
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="post4.html">
+    
+    Implementing morphological functions to the ecosystem
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+  </span>
+</div>
 
   
   
