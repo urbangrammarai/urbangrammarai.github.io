@@ -68,6 +68,7 @@
    "source": [
     "import geopandas as gpd\n",
     "import momepy as mm\n",
+    "import osmnx as ox\n",
     "import pygeos\n",
     "import numpy as np\n",
     "from scipy.spatial import Voronoi\n",
@@ -75,7 +76,8 @@
     "from mapclassify import greedy\n",
     "import contextily as ctx\n",
     "import matplotlib.pyplot as plt\n",
-    "from palettable.wesanderson import FantasticFox2_5"
+    "from palettable.wesanderson import FantasticFox2_5\n",
+    "from shapely.geometry import Point"
    ]
   },
   {
