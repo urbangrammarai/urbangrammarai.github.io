@@ -132,6 +132,38 @@
     
 
     <div class="section">
+      <h2><a href="blog/post5_mapchallenge.html">30DayMapChallenge 2020</a></h2>
+
+      <ul class="ablog-archive">
+      <li>
+      
+        23 November 2020
+      
+      </li>
+        
+
+  
+
+  
+
+  
+
+  
+
+  
+  </ul>
+      <p>On November 1<sup>st</sup> Topi Tjukanov <a class="reference external" href="https://twitter.com/tjukanov/status/1311568912950140930">started</a> a <a class="reference external" href="https://twitter.com/hashtag/30DayMapChallenge">#30DayMapChallenge 2020</a> - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23<sup>rd</sup> day, it was our turn.</p>
+<p>Since the topic was <em>boundaries</em>, we decided to share with you the process of creation of boundaries of morpohlogical tessellation - the (smallest) spatial unit used in urban morphometrics.</p>
+<p>Five cities, five different urban patterns. Morphological tessellation is in principle Voronoi tessellation based on building footprint polygons. In practice, we first shrink our polygons (you need a gap between adjacent buildings) by a small margin, then generate a dense array of points along the polygon boundary which is passed to Voronoi algorithm. Finally, resulting polygons are dissolved based on the building it belongs to, and morphological tessellation is done. See by yourself how each step looks and compares across different patterns on a matrix below. If you click on the image, you can see the <a class="reference external" href="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/matrix_lowres.png?raw=true">full resolution (16.2 MB)</a>.</p>
+<p>Do you want to play with the algorithm and create your own sequences? We have a <a class="reference external" href="https://nbviewer.jupyter.org/github/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/tessellation.ipynb">notebook</a> just for you! And if you’re going to generate tessellation on your data, <a class="reference external" href="http://docs.momepy.org/en/stable/user_guide/elements/tessellation.html"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> has you covered. For further details head to Martin’s blog post about <a class="reference external" href="https://martinfleischmann.net/morphological-tessellation/">a paper on tessellation</a> he has published earlier this year.</p>
+<p>Stay tuned for new advances in this space!</p>
+
+      <p><a href="blog/post5_mapchallenge.html">Read more ...</a></p>
+      <hr>
+    </div>
+    
+
+    <div class="section">
       <h2><a href="blog/post4.html">Implementing morphological functions to the ecosystem</a></h2>
 
       <ul class="ablog-archive">
