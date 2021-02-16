@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>30DayMapChallenge 2020 &#8212; Urban Grammar AI  documentation</title>
+    <title>Contribution to tobler: Speeding up areal interpolation &#8212; Urban Grammar AI  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
@@ -101,9 +101,20 @@
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#speeding-up-existing-functions" class="nav-link">Speeding up existing functions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#new-addition" class="nav-link">New addition</a>
+        </li>
     
     </ul>
 </nav>
@@ -118,17 +129,29 @@
               
               <div>
                 
-  <div class="section" id="daymapchallenge-2020">
-<h1>30DayMapChallenge 2020<a class="headerlink" href="#daymapchallenge-2020" title="Permalink to this headline">¶</a></h1>
-<p>On November 1<sup>st</sup> Topi Tjukanov <a class="reference external" href="https://twitter.com/tjukanov/status/1311568912950140930">started</a> a <a class="reference external" href="https://twitter.com/hashtag/30DayMapChallenge">#30DayMapChallenge 2020</a> - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23<sup>rd</sup> day, it was our turn.</p>
-<p>Since the topic was <em>boundaries</em>, we decided to share with you the process of creation of boundaries of morpohlogical tessellation - the (smallest) spatial unit used in urban morphometrics.</p>
-<center>
-<img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/mapchallenge.gif?raw=true" alt="Tessellation animation"></center>
-<p>Five cities, five different urban patterns. Morphological tessellation is in principle Voronoi tessellation based on building footprint polygons. In practice, we first shrink our polygons (you need a gap between adjacent buildings) by a small margin, then generate a dense array of points along the polygon boundary which is passed to Voronoi algorithm. Finally, resulting polygons are dissolved based on the building it belongs to, and morphological tessellation is done. See by yourself how each step looks and compares across different patterns on a matrix below. If you click on the image, you can see the <a class="reference external" href="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/matrix_lowres.png?raw=true">full resolution (16.2 MB)</a>.</p>
-<a href="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/matrix_fullres.png?raw=true">
-<img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/notebooks/mapchallenge/matrix_lowres.png?raw=true" alt="Matrix of cases"></a>
-<p>Do you want to play with the algorithm and create your own sequences? We have a <a class="reference external" href="https://nbviewer.jupyter.org/github/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/tessellation.ipynb">notebook</a> just for you! And if you’re going to generate tessellation on your data, <a class="reference external" href="http://docs.momepy.org/en/stable/user_guide/elements/tessellation.html"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> has you covered. For further details head to Martin’s blog post about <a class="reference external" href="https://martinfleischmann.net/morphological-tessellation/">a paper on tessellation</a> he has published earlier this year.</p>
-<p>Stay tuned for new advances in this space!</p>
+  <div class="section" id="contribution-to-tobler-speeding-up-areal-interpolation">
+<h1>Contribution to <code class="docutils literal notranslate"><span class="pre">tobler</span></code>: Speeding up areal interpolation<a class="headerlink" href="#contribution-to-tobler-speeding-up-areal-interpolation" title="Permalink to this headline">¶</a></h1>
+<p>Have you ever needed to link two sources of data, each attached to a different geometry? In our work in the <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>, we do. We have to transfer data from various sources, linked to output areas, urban blocks or other spatial units to our own bespoke set of geographies. Therefore, we often need to do areal interpolation to correctly map data from one layer to another. Luckily, the open-source Python ecosystem can help.</p>
+<p><a class="reference external" href="https://pysal.org/tobler/">Tobler</a>, a part of <a class="reference external" href="https://pysal.org">PySAL family</a>, is a library for areal interpolation and dasymetric mapping which already offered what we needed. However, our data tends to be large, up to 15 million rows on which we need to interpolate several hundreds of thousands of rows of input data. That can take a while, so each performance improvement can help a lot.</p>
+<div class="section" id="speeding-up-existing-functions">
+<h2>Speeding up existing functions<a class="headerlink" href="#speeding-up-existing-functions" title="Permalink to this headline">¶</a></h2>
+<p>We have looked into the existing code of <code class="docutils literal notranslate"><span class="pre">tobler</span></code> and contributed to the refactoring if its <code class="docutils literal notranslate"><span class="pre">area_interpolate</span></code> function. The original implementation was using custom code for spatial indexing, which was replaced by a performant vectorised implementation based on the more recent <a class="reference external" href="https://pygeos.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">pygeos</span></code></a> project.</p>
+<p>With sample data, we’ve been able to speed up the interpolation from 2.4 seconds to less than 400 milliseconds, having the same result 6x faster.</p>
+<p>Such an improvement is great, but it still uses only a single core (as most of the geospatial code to be honest), leaving the rest in a modern computer (four or more cores is not uncommon these days…) lazily laying around. We have tried to change this and contributed a (still experimental) parallel implementation of the same algorithm (based on <a class="reference external" href="https://joblib.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">joblib</span></code></a>).</p>
+<p>The resulting improvements depend a lot on the input data structure, and we are still working of further tweaking, but certain combinations can provide significant speedups, which can later save us some time.</p>
+</div>
+<div class="section" id="new-addition">
+<h2>New addition<a class="headerlink" href="#new-addition" title="Permalink to this headline">¶</a></h2>
+<p>Interpolation is not always the best way of transferring data from one layer to the other, especially for categorical variables. We have found ourselves in need of a spatial join based on the largest intersection between geometries - the category from the largest intersection gets joined to the target geometry. Such a function was not available (at least we have not found one) so we have developed it. Once it was done and battle-tested on our application, we have contributed it as a new addition to <code class="docutils literal notranslate"><span class="pre">tobler</span></code>. Everyone can now use it as <code class="docutils literal notranslate"><span class="pre">area_join</span></code>.</p>
+<p>## Full list of contributions</p>
+<p>The complete list of pull requests implementing code resulting from the Urban Grammar AI project is below:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pysal/tobler/pull/110">use STRtree.query_bulk in _area_tables_binning #110</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pysal/tobler/pull/112">STRTree parallel implementation #112</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pysal/tobler/pull/119">add area_join for join based on the largest intersection #119</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pysal/tobler/pull/123">fix parallel binning #123</a></p></li>
+</ul>
+</div>
 </div>
 
   <div class="section">
@@ -140,20 +163,14 @@
   <span style="float: left;">
   
   Previous: 
-  <a href="post4.html">
+  <a href="post5_mapchallenge.html">
     
-    Implementing morphological functions to the ecosystem
+    30DayMapChallenge 2020
   </a>
   
   </span>
   <span>&nbsp;</span>
   <span style="float: right;">
-  
-  Next: 
-  <a href="post6_tobler.html">
-    Contribution to tobler: Speeding up areal interpolation
-    
-  </a>
   
   </span>
 </div>

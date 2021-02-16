@@ -2,10 +2,9 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Posts &#8212; Urban Grammar AI  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
@@ -26,7 +25,7 @@
     <script src="_static/thebelab-helper.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   
@@ -129,6 +128,38 @@
       
     </h1>
     
+    
+
+    <div class="section">
+      <h2><a href="blog/post6_tobler.html">Contribution to tobler: Speeding up areal interpolation</a></h2>
+
+      <ul class="ablog-archive">
+      <li>
+      
+        16 February 2021
+      
+      </li>
+        
+
+  
+
+  
+
+  
+
+  
+
+  
+  </ul>
+      <p>Have you ever needed to link two sources of data, each attached to a different geometry? In our work in the <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>, we do. We have to transfer data from various sources, linked to output areas, urban blocks or other spatial units to our own bespoke set of geographies. Therefore, we often need to do areal interpolation to correctly map data from one layer to another. Luckily, the open-source Python ecosystem can help.</p>
+<p><a class="reference external" href="https://pysal.org/tobler/">Tobler</a>, a part of <a class="reference external" href="https://pysal.org">PySAL family</a>, is a library for areal interpolation and dasymetric mapping which already offered what we needed. However, our data tends to be large, up to 15 million rows on which we need to interpolate several hundreds of thousands of rows of input data. That can take a while, so each performance improvement can help a lot.</p>
+<p>We have looked into the existing code of <code class="docutils literal notranslate"><span class="pre">tobler</span></code> and contributed to the refactoring if its <code class="docutils literal notranslate"><span class="pre">area_interpolate</span></code> function. The original implementation was using custom code for spatial indexing, which was replaced by a performant vectorised implementation based on the more recent <a class="reference external" href="https://pygeos.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">pygeos</span></code></a> project.</p>
+<p>With sample data, we’ve been able to speed up the interpolation from 2.4 seconds to less than 400 milliseconds, having the same result 6x faster.</p>
+<p>Such an improvement is great, but it still uses only a single core (as most of the geospatial code to be honest), leaving the rest in a modern computer (four or more cores is not uncommon these days…) lazily laying around. We have tried to change this and contributed a (still experimental) parallel implementation of the same algorithm (based on <a class="reference external" href="https://joblib.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">joblib</span></code></a>).</p>
+
+      <p><a href="blog/post6_tobler.html">Read more ...</a></p>
+      <hr>
+    </div>
     
 
     <div class="section">
@@ -306,7 +337,7 @@
   <div class="container">
     <p>
           &copy; Copyright 2020, Dani Arribas-Bel, Martin Fleischmann.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
     </p>
   </div>
 </footer>
