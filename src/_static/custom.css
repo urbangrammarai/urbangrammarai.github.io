@@ -1,9 +1,49 @@
+/* Import ET Book styles
+   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
+
+   @font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book-roman-old-style";
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 a, p a code {
-    color: #0ea48f;
+    color: #BD5B4F;
 }
 
 .sidebar .toctree-l1 a.current {
-    border-left-color: #0ea48f;
+    border-left-color: #BD5B4F;
 }
 
 .navbar-brand {
@@ -11,41 +51,42 @@ a, p a code {
 }
 
 .active {
-    color: #0ea48f!important;
+    color: #BD5B4F!important;
 }
 
 .toc-entry>.nav-link.active {
-    border-left: 2px solid #0ea48f;
+    border-left: 2px solid #3B6E8D;
 }
 
 .navbar-nav>.active>.nav-link {
     font-weight: 600;
-    color: #0ea48f!important;
+    color: #3B6E8D!important;
 }
 
 .bd-sidebar .nav>.active:hover>a, .bd-sidebar .nav>.active>a {
     font-weight: 600;
-    color: #0ea48f;
+    color: #3B6E8D;
 }
 
 .bd-sidebar .nav>li>a:hover {
-    color: #055e52;
+    color: #3B6E8D;
 }
 
 .bd-sidebar .nav>li>ul>.active>a {
-    color: #055e52;
+    color: #3B6E8D;
 }
 
 .alert-info a {
-    color: #0ea48f;
+    color: #BD5B4F;
 }
 
 .reference a {
-    color: #0ea48f;
+    color: #BD5B4F;
 }
 
-h1, h2 {
-    color: #055e52;
+h1, h2, h3, h4, h5, h6 {
+    color: #3B6E8D;
+    font-family: 'et-book', serif;
 }
 
 body {
@@ -54,6 +95,7 @@ body {
 
 .bd-sidebar {
     top: 10px!important;
+    font-family: 'et-book', serif;
 }
 
 .bd-toc {
@@ -66,8 +108,13 @@ ul.postlist {
 
 ul.postlist>li>p:first-child {
     font-size: 1.5em;
+    font-family: 'et-book', serif;
 }
 
 ul.postlist li+li {
     margin-top: 2em;
+}
+
+span.pre {
+    color: #3B6E8D;
 }
