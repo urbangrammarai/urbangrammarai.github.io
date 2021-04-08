@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Clustergam: visualisation of cluster analysis &#8212; Urban Grammar AI  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
@@ -129,7 +130,7 @@
               
               <div>
                 
-  <div class="section" id="clustergam-visualisation-of-cluster-analysis">
+  <section id="clustergam-visualisation-of-cluster-analysis">
 <h1>Clustergam: visualisation of cluster analysis<a class="headerlink" href="#clustergam-visualisation-of-cluster-analysis" title="Permalink to this headline">¶</a></h1>
 <p>When we want to do some cluster analysis to identify groups in our data, we often use algorithms like K-Means, which require the specification of a number of clusters. But the issue is that we usually don’t know how many clusters there are.</p>
 <p>There are many methods on how to determine the correct number, like silhouettes or elbow plot, to name a few. But they usually don’t give much insight into what is happening between different options, so the numbers are a bit abstract.</p>
@@ -154,7 +155,7 @@
 </div>
 </div>
 <p>Let us look at some examples to understand how clustergram looks and what to do with it.</p>
-<div class="section" id="iris-flower-data-set">
+<section id="iris-flower-data-set">
 <h2>Iris flower data set<a class="headerlink" href="#iris-flower-data-set" title="Permalink to this headline">¶</a></h2>
 <p>The first example which we try to analyse using clustergram is the famous Iris flower data set. It contains data on three species of Iris flowers measuring sepal width and length and petal width and length. We can start with some exploration:</p>
 <div class="cell docutils container">
@@ -236,8 +237,8 @@ K=9 fitted in 3.2460429668426514 seconds.
 </div>
 </div>
 <p>These plots would suggest 3-4 clusters, similarly to clustergram, but they are not very conclusive.</p>
-</div>
-<div class="section" id="palmer-penguins-data-set">
+</section>
+<section id="palmer-penguins-data-set">
 <h2>Palmer penguins data set<a class="headerlink" href="#palmer-penguins-data-set" title="Permalink to this headline">¶</a></h2>
 <p>Now let’s try different data, one where clusters are a bit more complicated to assess. Palmer penguins contain similar data as Iris example, but it measures several attributes of three species of penguins.</p>
 <div class="cell docutils container">
@@ -351,8 +352,8 @@ K=9 fitted in 3.464596748352051 seconds.
 <p>If you want to play with the examples used in this article, the Jupyter notebook is on <span class="xref myst">GitHub</span>. You can also run it in <span class="xref myst">an interactive binder environment</span> in your browser. ADD LINKS</p>
 <p>For more information, check <a class="reference external" href="https://www.r-statistics.com/2010/06/clustergram-visualization-and-diagnostics-for-cluster-analysis-r-code/">Tal Galili’s blog post</a> and <a class="reference external" href="http://www.schonlau.net/clustergram.html">original papers by Matthias Schonlau</a>.</p>
 <p>Give it a go!</p>
-</div>
-</div>
+</section>
+</section>
 
   <div class="section">
   
