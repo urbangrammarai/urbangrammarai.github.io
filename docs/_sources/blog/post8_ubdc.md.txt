@@ -11,7 +11,7 @@ questions that extended the session well over one hour, we are super happy
 with how the foundational ideas of the project were received.
 
 The link to the webinar, for posterity, is [here](http://ubdc.ac.uk/education-and-events/events-and-courses/past-events-2021/spatial-signatures-research-webinar/) and
-you can have a look at and edited version of the vide at:
+you can have a look at an edited version of the video at:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5fq1bJX9NcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
