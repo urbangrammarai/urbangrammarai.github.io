@@ -166,7 +166,7 @@ html_sidebars = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "myst_nb",
+    "myst_parser",
     'ablog',
     'sphinx.ext.intersphinx',
     'nbsphinx'
@@ -180,7 +180,7 @@ templates_path.append(ablog.get_html_templates_path())
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-# jupyter_execute_notebooks = "off"
+jupyter_execute_notebooks = "off"
 
 
 # -- Options for HTML output -------------------------------------------------
