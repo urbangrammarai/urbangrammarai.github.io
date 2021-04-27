@@ -104,7 +104,7 @@ post_auto_excerpt = 5
 # In addition, there are authors.html, languages.html, and locations.html
 # sidebars that link to author and location archive pages.
 html_sidebars = {
-    '**': [ 
+    '**': [
             'archives.html',
             ],
     }
@@ -169,6 +169,7 @@ extensions = [
     "myst_nb",
     'ablog',
     'sphinx.ext.intersphinx',
+    'nbsphinx'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -179,7 +180,7 @@ templates_path.append(ablog.get_html_templates_path())
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-jupyter_execute_notebooks = "off"
+# jupyter_execute_notebooks = "off"
 
 
 # -- Options for HTML output -------------------------------------------------

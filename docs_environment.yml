@@ -8,5 +8,6 @@ dependencies:
   - pip:
       - pydata-sphinx-theme==0.3.1
       - myst-parser==0.9.1
-      - myst-nb==0.8.4
+      # - myst-nb==0.8.4
       - ablog==0.10.6
+      - nbsphinx
