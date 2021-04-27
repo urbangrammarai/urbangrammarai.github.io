@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Clustergam: visualisation of cluster analysis &#8212; Urban Grammar AI  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="Urban Grammar AI Blog">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><center>
+  <a class="navbar-brand" href="../index.html">
+    <img src="../_static/logo.svg" alt="logo">
+  </a>
+  <p style="font-size:1.3em">Urban Grammar AI</p>
+  <p style="font-size:1em">research project</p>
+</center>
+
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..."
+    aria-label="Search the docs ..." autocomplete="off">
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+    
+
+
+
+    <ul class="nav bd-sidenav">
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="../overview.html">Project overview</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.github.io/blog/archive">Updates</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.github.io/data_processing/index">WP1 - Data processing</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2 - Spatial Signatures</a>
+      </li>
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#Install" class="nav-link">Install</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#Iris-flower-data-set" class="nav-link">Iris flower data set</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#Palmer-penguins-data-set" class="nav-link">Palmer penguins data set</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<section id="Clustergam:-visualisation-of-cluster-analysis">
+<h1>Clustergam: visualisation of cluster analysis<a class="headerlink" href="#Clustergam:-visualisation-of-cluster-analysis" title="Permalink to this headline">¶</a></h1>
+<p>In this post, we introduce a new Python package to generate clustergrams from clustering solutions. The library has been developed as part of the Urban Grammar project, and it is compatible with <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> and GPU-enabled libraries such as <code class="docutils literal notranslate"><span class="pre">cuML</span></code> or <code class="docutils literal notranslate"><span class="pre">cuDF</span></code> within <code class="docutils literal notranslate"><span class="pre">RAPIDS.AI</span></code>.</p>
+<p>When we want to do some cluster analysis to identify groups in our data, we often use algorithms like K-Means, which require the specification of a number of clusters. But the issue is that we usually don’t know how many clusters there are.</p>
+<p>There are many methods on how to determine the correct number, like silhouettes or elbow plot, to name a few. But they usually don’t give much insight into what is happening between different options, so the numbers are a bit abstract.</p>
+<p><a class="reference external" href="http://www.schonlau.net/clustergram.html">Matthias Schonlau</a> proposed another approach - a clustergram. Clustergram is a two-dimensional plot capturing the flows of observations between classes as you add more clusters. It tells you how your data reshuffles and how good your splits are. <a class="reference external" href="https://www.r-statistics.com/2010/06/clustergram-visualization-and-diagnostics-for-cluster-analysis-r-code/">Tal Galili</a> later implemented clustergram for K-Means in R. And I have used Tal’s
+implementation, ported it to Python and created <code class="docutils literal notranslate"><span class="pre">clustergram</span></code> - a Python package to make clustergrams.</p>
+<p><code class="docutils literal notranslate"><span class="pre">clustergram</span></code> currently supports K-Means and using <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> (inlcuding Mini-Batch implementation) and RAPIDS.AI <code class="docutils literal notranslate"><span class="pre">cuML</span></code> (if you have a CUDA-enabled GPU), Gaussian Mixture Model (<code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> only) and hierarchical clustering based on <code class="docutils literal notranslate"><span class="pre">scipy.hierarchy</span></code>. Alternatively, we can create clustergram based on labels and data derived from alternative custom clustering algorithms. It provides a sklearn-like API and plots clustergram using matplotlib, which gives it a wide range of styling
+options to match your publication style.</p>
+<section id="Install">
+<h2>Install<a class="headerlink" href="#Install" title="Permalink to this headline">¶</a></h2>
+<p>You can install clustergram from conda or pip:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install clustergram -c conda-forge
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install clustergram
+</pre></div>
+</div>
+<p>In any case, you still need to install your selected backend (scikit-learn and scipy or cuML).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>from clustergram import Clustergram
+import urbangrammar_graphics as ugg
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import scale
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>sns.set(style=&#39;whitegrid&#39;)
+</pre></div>
+</div>
+</div>
+<p>Let us look at some examples to understand how clustergram looks and what to do with it.</p>
+</section>
+<section id="Iris-flower-data-set">
+<h2>Iris flower data set<a class="headerlink" href="#Iris-flower-data-set" title="Permalink to this headline">¶</a></h2>
+<p>The first example which we try to analyse using clustergram is the famous Iris flower data set. It contains data on three species of Iris flowers measuring sepal width and length and petal width and length. We can start with some exploration:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>iris = sns.load_dataset(&quot;iris&quot;)
+g = sns.pairplot(iris, hue=&quot;species&quot;, palette=ugg.COLORS[1:4])
+g.fig.suptitle(&quot;Iris flowers&quot;, y=1.01)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0.5, 1.01, &#39;Iris flowers&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/blog_post10_clustergram_6_1.png" src="../_images/blog_post10_clustergram_6_1.png" />
+</div>
+</div>
+<p>It seems that <em>setosa</em> is a relatively well-defined group, while the difference between <em>versicolor</em> and <em>virginica</em> is smaller as they partially overlap (or entirely in the case of sepal width).</p>
+<p>Okay, so we know how the data looks. Now we can check how does clustergram look. Remember that we know that there are three clusters, and we should ideally be able to recognise this from clustergram. I am saying ideally because even though there are known labels, it does not mean that our data or clustering method are able to distinguish between those classes.</p>
+<p>Let’s start with K-Means clustering. To get a stable result, we can run a clustergram with 1000 initialisations.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>data = scale(iris.drop(columns=[&#39;species&#39;]))
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cgram = Clustergram(range(1, 10), n_init=1000)
+cgram.fit(data)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+K=1 fitted in 2.222404718399048 seconds.
+K=2 fitted in 1.041506290435791 seconds.
+K=3 fitted in 1.8730895519256592 seconds.
+K=4 fitted in 2.5718801021575928 seconds.
+K=5 fitted in 2.6239545345306396 seconds.
+K=6 fitted in 2.872279644012451 seconds.
+K=7 fitted in 2.7275290489196777 seconds.
+K=8 fitted in 3.0242857933044434 seconds.
+K=9 fitted in 3.2460429668426514 seconds.
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
+ax.yaxis.grid(False)
+sns.despine(offset=10)
+ax.set_title(&#39;K-Means (scikit-learn)&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0.5, 1.0, &#39;K-Means (scikit-learn)&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/blog_post10_clustergram_10_1.png" src="../_images/blog_post10_clustergram_10_1.png" />
+</div>
+</div>
+<p>On the <em>x</em> axis, we can see the number of clusters. Points represent a centre of each cluster (by default) weighted by the first principal component (that helps with the diagram’s readability). The lines connecting points and their thickness represent observations moving between clusters. Therefore, we can read when new clusters are formed as a split of a single existing class and when they are formed based on observations from two clusters.</p>
+<p>We’re looking for the separation, i.e., did an additional cluster bring any meaningful split? The step from one cluster to two is a big one - nice and clear separation. From two to three, we also have quite a nice split in the top branch. But from 3 to 4, there is no visible difference because the new fourth cluster is almost the same as the existing bottom branch. Although it is now separated into two, this split does not give us much information. Therefore, we could conclude that the ideal
+number of clusters for Iris data is three.</p>
+<p>We can also check some additional information, like a silhouette score or Calinski-Harabazs score.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>fig, axs = plt.subplots(2, figsize=(10, 10), sharex=True)
+cgram.silhouette_score().plot(xlabel=&quot;Number of clusters (k)&quot;, ylabel=&quot;Silhouette score&quot;, color=ugg.COLORS[1], ax=axs[0])
+cgram.calinski_harabasz_score().plot(xlabel=&quot;Number of clusters (k)&quot;, ylabel=&quot;Calinski-Harabasz score&quot;, color=ugg.COLORS[1], ax=axs[1])
+sns.despine(offset=10)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/blog_post10_clustergram_12_0.png" src="../_images/blog_post10_clustergram_12_0.png" />
+</div>
+</div>
+<p>These plots would suggest 3-4 clusters, similarly to clustergram, but they are not very conclusive.</p>
+</section>
+<section id="Palmer-penguins-data-set">
+<h2>Palmer penguins data set<a class="headerlink" href="#Palmer-penguins-data-set" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s try different data, one where clusters are a bit more complicated to assess. Palmer penguins contain similar data as Iris example, but it measures several attributes of three species of penguins.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>penguins = sns.load_dataset(&quot;penguins&quot;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>g = sns.pairplot(penguins, hue=&quot;species&quot;, palette=ugg.COLORS[3:])
+g.fig.suptitle(&quot;Palmer penguins&quot;, y=1.01)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0.5, 1.01, &#39;Palmer penguins&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/blog_post10_clustergram_15_1.png" src="../_images/blog_post10_clustergram_15_1.png" />
+</div>
+</div>
+<p>Looking at the situation, we see that the overlap between species is much higher than before. It will likely be much more complicated to identify them. Again, we know that there are three <em>clusters</em>, but that does not mean that data has the power to distinguish between them. In this case, it may be especially tricky to differentiate between <em>Adelie</em> and <em>Chinstrap</em> penguins.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>data = scale(penguins.drop(columns=[&#39;species&#39;, &#39;island&#39;, &#39;sex&#39;]).dropna())
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cgram = Clustergram(range(1, 10), n_init=1000)
+cgram.fit(data)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+K=1 fitted in 2.4900381565093994 seconds.
+K=2 fitted in 2.6844642162323 seconds.
+K=3 fitted in 3.3492660522460938 seconds.
+K=4 fitted in 4.542513370513916 seconds.
+K=5 fitted in 6.29776930809021 seconds.
+K=6 fitted in 6.103058338165283 seconds.
+K=7 fitted in 6.665079116821289 seconds.
+K=8 fitted in 6.739859342575073 seconds.
+K=9 fitted in 7.696599721908569 seconds.
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
+ax.yaxis.grid(False)
+sns.despine(offset=10)
+ax.set_title(&#39;K-Means (scikit-learn)&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0.5, 1.0, &#39;K-Means (scikit-learn)&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/blog_post10_clustergram_19_1.png" src="../_images/blog_post10_clustergram_19_1.png" />
+</div>
+</div>
+<p>We’re looking for separations, and this clustergram shows plenty. It is actually quite complicated to determine the optimal number of clusters. However, since we know what happens between different options, we can play with that. If we have a reason to be conservative, we can go with 4 clusters (I know, it is already more than the initial species). But further splits are also reasonable, which indicates that even higher granularity may provide useful insight, that there might be meaningful
+groups.</p>
+<p>Can we say it is three? Since we know it should be three… Well, not really. The difference between the split from 2 - 3 and that from 3 - 4 is slight. However, the culprit here is K-Means, not clustergram. It just simply cannot correctly cluster these data due to the overlaps and the overall structure.</p>
+<p>Let’s have a look at how the Gaussian Mixture Model does.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cgram = Clustergram(range(1, 10), n_init=100, method=&quot;gmm&quot;)
+cgram.fit(data)
+ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
+ax.yaxis.grid(False)
+sns.despine(offset=10)
+ax.set_title(&#39;Gaussian Mixture Model (scikit-learn)&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+K=1 fitted in 0.6643445491790771 seconds.
+K=2 fitted in 0.5813486576080322 seconds.
+K=3 fitted in 1.4166145324707031 seconds.
+K=4 fitted in 1.6115505695343018 seconds.
+K=5 fitted in 1.3064675331115723 seconds.
+K=6 fitted in 1.383194923400879 seconds.
+K=7 fitted in 2.40691876411438 seconds.
+K=8 fitted in 2.482234477996826 seconds.
+K=9 fitted in 3.464596748352051 seconds.
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0.5, 1.0, &#39;Gaussian Mixture Model (scikit-learn)&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/blog_post10_clustergram_21_2.png" src="../_images/blog_post10_clustergram_21_2.png" />
+</div>
+</div>
+<p>The result is very similar, though the difference between the third and fourth split is more pronounced. Even here, I would probably go with a four cluster solution.</p>
+<p>A situation like this happens very often. The ideal case does not exist. We ultimately need to make <strong>a decision</strong> on the optimal number of clusters. Clustergam gives us additional insights into what happens between different options, how it splits. We can tell that the four-cluster option in Iris data is not helpful. We can tell that Palmer penguins may be tricky to cluster using K-Means, that there is no decisive <em>right</em> solution. Clustergram does not give an easy answer, but it gives us
+additional insight, and it is upon us how we interpret it.</p>
+<p>You can install clustergram using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">clustergram</span> <span class="pre">-c</span> <span class="pre">conda-forge</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">clustergram</span></code>. In any case, you will still need to install a clustering backend, either <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> or <code class="docutils literal notranslate"><span class="pre">cuML</span></code>. The documentation is available at <a class="reference external" href="https://clustergram.readthedocs.io">clustergram.readthedocs.io</a>, and the source code is on <a class="reference external" href="https://github.com/martinfleis/clustergram">github.com/martinfleis/clustergram</a>, released under MIT license.</p>
+<p>If you want to play with the examples used in this article, the Jupyter notebook is on <a class="reference external" href="https://github.com/martinfleis/clustergram/blob/main/examples/introduction.ipynb">GitHub</a>. You can also run it in <a class="reference external" href="https://mybinder.org/v2/gh/martinfleis/clustergram/HEAD?filepath=examples%2Fintroduction.ipynb">an interactive binder environment</a> in your browser.</p>
+<p>For more information, check <a class="reference external" href="https://www.r-statistics.com/2010/06/clustergram-visualization-and-diagnostics-for-cluster-analysis-r-code/">Tal Galili’s blog post</a> and <a class="reference external" href="http://www.schonlau.net/clustergram.html">original papers by Matthias Schonlau</a>.</p>
+<p>Give it a go!</p>
+</section>
+</section>
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="post9_sad.html">
+    
+    Spatial Signatures at the Spatial Analytics + Data Seminar Series
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+  </span>
+</div>
+
+  
+  
+  </div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, Dani Arribas-Bel, Martin Fleischmann.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

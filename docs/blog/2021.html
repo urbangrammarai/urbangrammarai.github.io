@@ -10,22 +10,13 @@
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
-    <script src="../_static/thebelab-helper.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   
@@ -128,6 +119,40 @@
       
     </h1>
     
+    
+
+    <div class="section">
+      <h2><a href="post10_clustergram.html">Clustergam: visualisation of cluster analysis</a></h2>
+
+      <ul class="ablog-archive">
+      <li>
+      
+        27 April 2021
+      
+      </li>
+        
+
+  
+
+  
+
+  
+
+  
+
+  
+  </ul>
+      <p>In this post, we introduce a new Python package to generate clustergrams from clustering solutions. The library has been developed as part of the Urban Grammar project, and it is compatible with <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> and GPU-enabled libraries such as <code class="docutils literal notranslate"><span class="pre">cuML</span></code> or <code class="docutils literal notranslate"><span class="pre">cuDF</span></code> within <code class="docutils literal notranslate"><span class="pre">RAPIDS.AI</span></code>.</p>
+<p>When we want to do some cluster analysis to identify groups in our data, we often use algorithms like K-Means, which require the specification of a number of clusters. But the issue is that we usually don’t know how many clusters there are.</p>
+<p>There are many methods on how to determine the correct number, like silhouettes or elbow plot, to name a few. But they usually don’t give much insight into what is happening between different options, so the numbers are a bit abstract.</p>
+<p><a class="reference external" href="http://www.schonlau.net/clustergram.html">Matthias Schonlau</a> proposed another approach - a clustergram. Clustergram is a two-dimensional plot capturing the flows of observations between classes as you add more clusters. It tells you how your data reshuffles and how good your splits are. <a class="reference external" href="https://www.r-statistics.com/2010/06/clustergram-visualization-and-diagnostics-for-cluster-analysis-r-code/">Tal Galili</a> later implemented clustergram for K-Means in R. And I have used Tal’s
+implementation, ported it to Python and created <code class="docutils literal notranslate"><span class="pre">clustergram</span></code> - a Python package to make clustergrams.</p>
+<p><code class="docutils literal notranslate"><span class="pre">clustergram</span></code> currently supports K-Means and using <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> (inlcuding Mini-Batch implementation) and RAPIDS.AI <code class="docutils literal notranslate"><span class="pre">cuML</span></code> (if you have a CUDA-enabled GPU), Gaussian Mixture Model (<code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> only) and hierarchical clustering based on <code class="docutils literal notranslate"><span class="pre">scipy.hierarchy</span></code>. Alternatively, we can create clustergram based on labels and data derived from alternative custom clustering algorithms. It provides a sklearn-like API and plots clustergram using matplotlib, which gives it a wide range of styling
+options to match your publication style.</p>
+
+      <p><a href="post10_clustergram.html">Read more ...</a></p>
+      <hr>
+    </div>
     
 
     <div class="section">
