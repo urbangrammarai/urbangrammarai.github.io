@@ -18,6 +18,8 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Project overview" href="overview.html" />
@@ -129,6 +131,31 @@
 <section id="updates">
 <h2>Updates<a class="headerlink" href="#updates" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li><p>04 June - <a class="reference internal" href="blog/post12_gsoc.html">Google Summer of Code</a></p>
+<p>Members of the Urban Grammar project are getting involved in developing the next
+generation set of tools for distributing processing of geospatial vector data. In its
+<a class="reference external" href="https://urbangrammarai.github.io/data_processing/index">first</a>
+<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">part</a>, the Urban Grammar
+project heavily depends on the processing of vector geospatial data using
+<a class="reference external" href="https://geopandas.org">GeoPandas</a> Python library. However, to scale GeoPandas
+algorithms to the extent of Great Britain, we need to do more than the library can do by
+default. GeoPandas operations are currently all single-threaded, severely limiting the
+scalability of its usage and leaving most of the CPU cores just laying around, doing
+nothing. <a class="reference external" href="https://dask.org/">Dask</a> is a library that brings parallel and distributed
+computing to the ecosystem. For example, it provides a Dask DataFrame that consists of
+partitioned pandas DataFrames. Each partition can be processed by a different process
+enabling the computation to be done in parallel or even out-of-core.</p>
+<p>We are using Dask within our workflows in bespoke scripts. However, Dask could provide
+ways to scale geospatial operations in GeoPandas in a similar way it does with pandas.
+There has been some effort to build a bridge between Dask and GeoPandas, currently
+taking the shape of the <a class="reference external" href="https://github.com/geopandas/dask-geopandas">dask-geopandas</a>
+library. While that already supports basic parallelisation, which we used in our code,
+some critical components are not ready yet. That should change during this summer within
+the Google Summer of Code project Martin is (co-)mentoring. We hope that this effort
+will allow us to significantly simplify and even speed up the custom machinery we built
+to create spatial signatures in
+<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>.</p>
+</li>
 <li><p>29 April - <a class="reference internal" href="blog/post11_second_advisory_board.html">Second Advisory Board</a></p>
 <p>On April 15th. 2021, we held the second meeting of the Advisory Board for the project. We are delighted that all <a class="reference external" href="https://urbangrammarai.github.io/blog/post3.html">board members</a> joined us on Zoom for a few hours of exciting discussions on the progress and the future of the project.</p>
 <p>Dani started with an overview of our progress since the last meeting, which you can check in his <a class="reference external" href="https://urbangrammarai.github.io/blog/post8_ubdc.html">UBDC talk</a>. We followed by the focused discussion on the concepts of Spatial Signature and Enclosed Tessellation and our initial paper illustrating both on the sample of cities worldwide. We discussed the clarity of our ideas and the needs for new spatial units and classification methods, and their potential drawbacks and enhancements. In the last part, we tried to zoom out to see a bigger picture and fit the research within existing projects within academia and the public sector.</p>

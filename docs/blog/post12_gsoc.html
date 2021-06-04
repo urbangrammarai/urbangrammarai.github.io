@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Firing up the engines &#8212; Urban Grammar AI  documentation</title>
+    <title>Google Summer of Code &#8212; Urban Grammar AI  documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
@@ -112,9 +112,31 @@
               
               <div>
                 
-  <section id="firing-up-the-engines">
-<h1>Firing up the engines<a class="headerlink" href="#firing-up-the-engines" title="Permalink to this headline">¶</a></h1>
-<p>This is the first post going out form the <a class="reference external" href="https://www.turing.ac.uk/research/research-projects/urban-grammar">Urban Grammar project</a>. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either <a class="reference external" href="mailto:darribas-bel&#37;&#52;&#48;turing&#46;ac&#46;uk">Dani</a> or <a class="reference external" href="mailto:M&#46;Fleischmann&#37;&#52;&#48;liverpool&#46;ac&#46;uk">Martin</a>!</p>
+  <section id="google-summer-of-code">
+<h1>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Permalink to this headline">¶</a></h1>
+<p>Members of the Urban Grammar project are getting involved in developing the next
+generation set of tools for distributing processing of geospatial vector data. In its
+<a class="reference external" href="https://urbangrammarai.github.io/data_processing/index">first</a>
+<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">part</a>, the Urban Grammar
+project heavily depends on the processing of vector geospatial data using
+<a class="reference external" href="https://geopandas.org">GeoPandas</a> Python library. However, to scale GeoPandas
+algorithms to the extent of Great Britain, we need to do more than the library can do by
+default. GeoPandas operations are currently all single-threaded, severely limiting the
+scalability of its usage and leaving most of the CPU cores just laying around, doing
+nothing. <a class="reference external" href="https://dask.org/">Dask</a> is a library that brings parallel and distributed
+computing to the ecosystem. For example, it provides a Dask DataFrame that consists of
+partitioned pandas DataFrames. Each partition can be processed by a different process
+enabling the computation to be done in parallel or even out-of-core.</p>
+<p>We are using Dask within our workflows in bespoke scripts. However, Dask could provide
+ways to scale geospatial operations in GeoPandas in a similar way it does with pandas.
+There has been some effort to build a bridge between Dask and GeoPandas, currently
+taking the shape of the <a class="reference external" href="https://github.com/geopandas/dask-geopandas">dask-geopandas</a>
+library. While that already supports basic parallelisation, which we used in our code,
+some critical components are not ready yet. That should change during this summer within
+the Google Summer of Code project Martin is (co-)mentoring. We hope that this effort
+will allow us to significantly simplify and even speed up the custom machinery we built
+to create spatial signatures in
+<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>.</p>
 </section>
 
   <div class="section">
@@ -125,15 +147,15 @@
 <div class="section">
   <span style="float: left;">
   
+  Previous: 
+  <a href="post11_second_advisory_board.html">
+    
+    Second Advisory Board
+  </a>
+  
   </span>
   <span>&nbsp;</span>
   <span style="float: right;">
-  
-  Next: 
-  <a href="post2.html">
-    Welcome to Martin Fleischmann
-    
-  </a>
   
   </span>
 </div>

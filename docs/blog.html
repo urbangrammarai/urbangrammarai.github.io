@@ -17,6 +17,8 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   
@@ -119,6 +121,56 @@
       
     </h1>
     
+    
+
+    <div class="section">
+      <h2><a href="blog/post12_gsoc.html">Google Summer of Code</a></h2>
+
+      <ul class="ablog-archive">
+      <li>
+      
+        04 June 2021
+      
+      </li>
+        
+
+  
+
+  
+
+  
+
+  
+
+  
+  </ul>
+      <p>Members of the Urban Grammar project are getting involved in developing the next
+generation set of tools for distributing processing of geospatial vector data. In its
+<a class="reference external" href="https://urbangrammarai.github.io/data_processing/index">first</a>
+<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">part</a>, the Urban Grammar
+project heavily depends on the processing of vector geospatial data using
+<a class="reference external" href="https://geopandas.org">GeoPandas</a> Python library. However, to scale GeoPandas
+algorithms to the extent of Great Britain, we need to do more than the library can do by
+default. GeoPandas operations are currently all single-threaded, severely limiting the
+scalability of its usage and leaving most of the CPU cores just laying around, doing
+nothing. <a class="reference external" href="https://dask.org/">Dask</a> is a library that brings parallel and distributed
+computing to the ecosystem. For example, it provides a Dask DataFrame that consists of
+partitioned pandas DataFrames. Each partition can be processed by a different process
+enabling the computation to be done in parallel or even out-of-core.</p>
+<p>We are using Dask within our workflows in bespoke scripts. However, Dask could provide
+ways to scale geospatial operations in GeoPandas in a similar way it does with pandas.
+There has been some effort to build a bridge between Dask and GeoPandas, currently
+taking the shape of the <a class="reference external" href="https://github.com/geopandas/dask-geopandas">dask-geopandas</a>
+library. While that already supports basic parallelisation, which we used in our code,
+some critical components are not ready yet. That should change during this summer within
+the Google Summer of Code project Martin is (co-)mentoring. We hope that this effort
+will allow us to significantly simplify and even speed up the custom machinery we built
+to create spatial signatures in
+<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>.</p>
+
+      <p><a href="blog/post12_gsoc.html">Read more ...</a></p>
+      <hr>
+    </div>
     
 
     <div class="section">
