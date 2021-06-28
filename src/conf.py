@@ -19,7 +19,7 @@ import ablog
 # -- Project information -----------------------------------------------------
 
 project = 'Urban Grammar AI'
-copyright = '2020, Dani Arribas-Bel, Martin Fleischmann'
+copyright = '2020-, Dani Arribas-Bel, Martin Fleischmann'
 author = 'Dani Arribas-Bel, Martin Fleischmann'
 
 # -- General ABlog Options ----------------------------------------------------
@@ -105,10 +105,10 @@ post_auto_excerpt = 5
 # sidebars that link to author and location archive pages.
 html_sidebars = {
     '**': [
-            'archives.html',
+            'docs-sidebar.html',
+            # 'archives.html',
             ],
     }
-
 # -- Blog Feed Options --------------------------------------------------------
 
 # Turn feeds by setting :confval:`blog_baseurl` configuration variable.

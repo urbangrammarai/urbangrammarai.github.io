@@ -22,6 +22,7 @@ This project develops a conceptual framework to characterise urban structure thr
 
 overview
 Updates <https://urbangrammarai.github.io/blog/archive>
+Public talks <https://urbangrammarai.github.io/talks/>
 ```
 
 ```{toctree}
