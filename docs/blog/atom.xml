@@ -2,24 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.github.io/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2021-06-28T10:44:30.119060+00:00</updated>
+  <updated>2021-06-28T10:46:51.159386+00:00</updated>
   <link href="https://urbangrammarai.github.io/"/>
   <link href="https://urbangrammarai.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post1.html</id>
     <title>Firing up the engines</title>
-    <updated>2020-04-15T00:00:00+01:00</updated>
+    <updated>2020-04-15T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;This is the first post going out form the &lt;a class="reference external" href="https://www.turing.ac.uk/research/research-projects/urban-grammar"&gt;Urban Grammar project&lt;/a&gt;. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either &lt;a class="reference external" href="mailto:darribas-bel&amp;#37;&amp;#52;&amp;#48;turing&amp;#46;ac&amp;#46;uk"&gt;Dani&lt;/a&gt; or &lt;a class="reference external" href="mailto:M&amp;#46;Fleischmann&amp;#37;&amp;#52;&amp;#48;liverpool&amp;#46;ac&amp;#46;uk"&gt;Martin&lt;/a&gt;!&lt;/p&gt;
 </content>
     <link href="https://urbangrammarai.github.io/blog/post1.html" rel="alternate"/>
     <summary>This is the first post going out form the Urban Grammar project. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either Dani or Martin!</summary>
-    <published>2020-04-15T00:00:00+01:00</published>
+    <published>2020-04-15T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post2.html</id>
     <title>Welcome to Martin Fleischmann</title>
-    <updated>2020-07-01T00:00:00+01:00</updated>
+    <updated>2020-07-01T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;&lt;img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/martin.jpg?raw=true" alt="Martin Fleischmann" class="bg-primary" width="200px" style="float:left;margin-right: 10px;"&gt; The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:&lt;/p&gt;
 &lt;p&gt;Martin Fleischmann is research associate in the Geographic Data Science Lab at the University of Liverpool and a member of the Urban Design Studies Unit at the University of Strathclyde. His research focuses on urban morphology and geographic data science focusing on quantitative analysis and classification of urban form, remote sensing and AI.&lt;/p&gt;
 &lt;p&gt;He is the author of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;, the open source urban morphology measuring toolkit for Python and member of development teams of GeoPandas, the open source Python package for geographic data and PySAL, the Python library for spatial analysis.&lt;/p&gt;
@@ -28,19 +28,19 @@
 </content>
     <link href="https://urbangrammarai.github.io/blog/post2.html" rel="alternate"/>
     <summary>&lt;img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/martin.jpg?raw=true" alt="Martin Fleischmann" class="bg-primary" width="200px" style="float:left;margin-right: 10px;"&gt; The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:Martin Fleischmann is research associate in the Geographic Data Science Lab at the University of Liverpool and a member of the Urban Design Studies Unit at the University of Strathclyde. His research focuses on urban morphology and geographic data science focusing on quantitative analysis and classification of urban form, remote sensing and AI.He is the author of momepy, the open source urban morphology measuring toolkit for Python and member of development teams of GeoPandas, the open source Python package for geographic data and PySAL, the Python library for spatial analysis.Martin brings with him a theoretical background in urban morphology combined with a lot of experience in Python open source development around geospatial. There could not be a better combination for the project. As the postdoctoral researcher, Martin will be heavily involved in the implementation of much of the code required to develop the idea of Spatial Signatures, teach a computer to recognise them from satellite imagery, and use them to develop an Urban Grammar. At the same time, he is also joining the Geographic Data Science Lab and getting involved in its day to day life, participating in internal seminars, coordinating the Brown Bags series and, more generally, chipping in where possible to make the lab a great place to be part of.Welcome Martin, this will be a fun ride!</summary>
-    <published>2020-07-01T00:00:00+01:00</published>
+    <published>2020-07-01T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post3.html</id>
     <title>First Advisory Board</title>
-    <updated>2020-10-01T00:00:00+01:00</updated>
+    <updated>2020-10-01T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On October 1st. 2020, Dani and Martin held the first meeting of the Advisory Board for the project. We are thrilled to have a board that includes &lt;a class="reference external" href="https://www.linkedin.com/in/edwardes/"&gt;Alistair Edwardes&lt;/a&gt;, &lt;a class="reference external" href="https://www.ncl.ac.uk/curds/people/staffprofile/rachelfranklin.html#background"&gt;Rachel Franklin&lt;/a&gt;, &lt;a class="reference external" href="https://www.linkedin.com/in/izzysargent"&gt;Isabel Sargent&lt;/a&gt; and &lt;a class="reference external" href="http://www.dpi.inpe.br/DPI/institucional/pessoal/servidores/antonio-miguel-vieira-monteiro"&gt;Antonio Miguel Vieira Monteiro&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The meeting took place, as it’s become customary in 2020, on Zoom. Dani provided an overview of the main components of the project, and Martin updated on progress so far; throughout the three hours of the meeting, there was plenty of discussion and great questions about what the project is trying to do and how it’ll tackle its main challenges. This is by no means a full replacement of the physical meeting we would have had in Liverpool for a full day, but it was an excellent way to connect and kickstart the role of the Advisory Board.&lt;/p&gt;
 &lt;p&gt;One of the conclusions from the discussion was that we might adapt to the current situation by trying to have these meetings a bit more frequent (initially only four were scheduled for the entire project) and of shorter duration than a full day (maybe up to three hours). This will allow us to focus on specific aspects of the project for every meeting. Next one will hopefully take place early in the next year and, by then, we might even have something in the form of deliverables to show!&lt;/p&gt;
 </content>
     <link href="https://urbangrammarai.github.io/blog/post3.html" rel="alternate"/>
     <summary>On October 1st. 2020, Dani and Martin held the first meeting of the Advisory Board for the project. We are thrilled to have a board that includes Alistair Edwardes, Rachel Franklin, Isabel Sargent and Antonio Miguel Vieira Monteiro.The meeting took place, as it’s become customary in 2020, on Zoom. Dani provided an overview of the main components of the project, and Martin updated on progress so far; throughout the three hours of the meeting, there was plenty of discussion and great questions about what the project is trying to do and how it’ll tackle its main challenges. This is by no means a full replacement of the physical meeting we would have had in Liverpool for a full day, but it was an excellent way to connect and kickstart the role of the Advisory Board.One of the conclusions from the discussion was that we might adapt to the current situation by trying to have these meetings a bit more frequent (initially only four were scheduled for the entire project) and of shorter duration than a full day (maybe up to three hours). This will allow us to focus on specific aspects of the project for every meeting. Next one will hopefully take place early in the next year and, by then, we might even have something in the form of deliverables to show!</summary>
-    <published>2020-10-01T00:00:00+01:00</published>
+    <published>2020-10-01T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post4.html</id>
@@ -101,7 +101,7 @@
   <entry>
     <id>https://urbangrammarai.github.io/blog/post8_ubdc.html</id>
     <title>Spatial Signatures at UBDC</title>
-    <updated>2021-04-08T00:00:00+01:00</updated>
+    <updated>2021-04-08T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On March 16th, Dani presented ongoing work on the development of Spatial
 Signatures at the University of Glasgow’s Urban Big Data Centre webinar
 series. This was the first time we took the project on tour and it was very
@@ -120,12 +120,12 @@ well received. With an audience that peaked at about 75 folks and many great
 questions that extended the session well over one hour, we are super happy
 with how the foundational ideas of the project were received.The link to the webinar, for posterity, is here and
 you can have a look at an edited version of the video at:The slides used are here or, if you prefer it, here is the PDF file (15Mb).</summary>
-    <published>2021-04-08T00:00:00+01:00</published>
+    <published>2021-04-08T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post9_sad.html</id>
     <title>Spatial Signatures at the Spatial Analytics + Data Seminar Series</title>
-    <updated>2021-04-26T00:00:00+01:00</updated>
+    <updated>2021-04-26T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On March 30th, Martin presented the current progress in the development
 of Spatial Signatures at the Spatial Analytics + Data Seminar Series
 organised by the University of Newcastle, the University of Bristol and
@@ -146,12 +146,12 @@ showing examples of relevant research based on the momepy Python package to
 provide a background for the second part of the talk focusing on Spatial
 Signatures. The research was well received and initiated a great discussion,
 which we hope will continue on some other platforms soon.The recording is available on Youtube:The slides used are here or, if you prefer it, here is the PDF file (27Mb).</summary>
-    <published>2021-04-26T00:00:00+01:00</published>
+    <published>2021-04-26T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post10_clustergram.html</id>
     <title>Clustergam: visualisation of cluster analysis</title>
-    <updated>2021-04-27T00:00:00+01:00</updated>
+    <updated>2021-04-27T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;In this post, we introduce a new Python package to generate clustergrams from clustering solutions. The library has been developed as part of the Urban Grammar project, and it is compatible with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/code&gt; and GPU-enabled libraries such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cuML&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cuDF&lt;/span&gt;&lt;/code&gt; within &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;RAPIDS.AI&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;When we want to do some cluster analysis to identify groups in our data, we often use algorithms like K-Means, which require the specification of a number of clusters. But the issue is that we usually don’t know how many clusters there are.&lt;/p&gt;
 &lt;p&gt;There are many methods on how to determine the correct number, like silhouettes or elbow plot, to name a few. But they usually don’t give much insight into what is happening between different options, so the numbers are a bit abstract.&lt;/p&gt;
@@ -164,24 +164,24 @@ options to match your publication style.&lt;/p&gt;
     <summary>In this post, we introduce a new Python package to generate clustergrams from clustering solutions. The library has been developed as part of the Urban Grammar project, and it is compatible with scikit-learn and GPU-enabled libraries such as cuML or cuDF within RAPIDS.AI.When we want to do some cluster analysis to identify groups in our data, we often use algorithms like K-Means, which require the specification of a number of clusters. But the issue is that we usually don’t know how many clusters there are.There are many methods on how to determine the correct number, like silhouettes or elbow plot, to name a few. But they usually don’t give much insight into what is happening between different options, so the numbers are a bit abstract.Matthias Schonlau proposed another approach - a clustergram. Clustergram is a two-dimensional plot capturing the flows of observations between classes as you add more clusters. It tells you how your data reshuffles and how good your splits are. Tal Galili later implemented clustergram for K-Means in R. And I have used Tal’s
 implementation, ported it to Python and created clustergram - a Python package to make clustergrams.clustergram currently supports K-Means and using scikit-learn (inlcuding Mini-Batch implementation) and RAPIDS.AI cuML (if you have a CUDA-enabled GPU), Gaussian Mixture Model (scikit-learn only) and hierarchical clustering based on scipy.hierarchy. Alternatively, we can create clustergram based on labels and data derived from alternative custom clustering algorithms. It provides a sklearn-like API and plots clustergram using matplotlib, which gives it a wide range of styling
 options to match your publication style.</summary>
-    <published>2021-04-27T00:00:00+01:00</published>
+    <published>2021-04-27T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post11_second_advisory_board.html</id>
     <title>Second Advisory Board</title>
-    <updated>2021-04-29T00:00:00+01:00</updated>
+    <updated>2021-04-29T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On April 15th. 2021, we held the second meeting of the Advisory Board for the project. We are delighted that all &lt;a class="reference external" href="https://urbangrammarai.github.io/blog/post3.html"&gt;board members&lt;/a&gt; joined us on Zoom for a few hours of exciting discussions on the progress and the future of the project.&lt;/p&gt;
 &lt;p&gt;Dani started with an overview of our progress since the last meeting, which you can check in his &lt;a class="reference external" href="https://urbangrammarai.github.io/blog/post8_ubdc.html"&gt;UBDC talk&lt;/a&gt;. We followed by the focused discussion on the concepts of Spatial Signature and Enclosed Tessellation and our initial paper illustrating both on the sample of cities worldwide. We discussed the clarity of our ideas and the needs for new spatial units and classification methods, and their potential drawbacks and enhancements. In the last part, we tried to zoom out to see a bigger picture and fit the research within existing projects within academia and the public sector.&lt;/p&gt;
 &lt;p&gt;After three hours of a very fruitful discussion, we finished with a lot of food for thought and ideas to be explored in the future. Let’s just hope that the Advisory Board meetings will soon happen physically in Liverpool to have an even more productive and friendly environment!&lt;/p&gt;
 </content>
     <link href="https://urbangrammarai.github.io/blog/post11_second_advisory_board.html" rel="alternate"/>
     <summary>On April 15th. 2021, we held the second meeting of the Advisory Board for the project. We are delighted that all board members joined us on Zoom for a few hours of exciting discussions on the progress and the future of the project.Dani started with an overview of our progress since the last meeting, which you can check in his UBDC talk. We followed by the focused discussion on the concepts of Spatial Signature and Enclosed Tessellation and our initial paper illustrating both on the sample of cities worldwide. We discussed the clarity of our ideas and the needs for new spatial units and classification methods, and their potential drawbacks and enhancements. In the last part, we tried to zoom out to see a bigger picture and fit the research within existing projects within academia and the public sector.After three hours of a very fruitful discussion, we finished with a lot of food for thought and ideas to be explored in the future. Let’s just hope that the Advisory Board meetings will soon happen physically in Liverpool to have an even more productive and friendly environment!</summary>
-    <published>2021-04-29T00:00:00+01:00</published>
+    <published>2021-04-29T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.github.io/blog/post12_gsoc.html</id>
     <title>Google Summer of Code</title>
-    <updated>2021-06-04T00:00:00+01:00</updated>
+    <updated>2021-06-04T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;Members of the Urban Grammar project are getting involved in developing the next
 generation set of tools for distributing processing of geospatial vector data. In its
 &lt;a class="reference external" href="https://urbangrammarai.github.io/data_processing/index"&gt;first&lt;/a&gt;
@@ -229,6 +229,6 @@ the Google Summer of Code project Martin is (co-)mentoring. We hope that this ef
 will allow us to significantly simplify and even speed up the custom machinery we built
 to create spatial signatures in
 WP2.</summary>
-    <published>2021-06-04T00:00:00+01:00</published>
+    <published>2021-06-04T00:00:00+00:00</published>
   </entry>
 </feed>

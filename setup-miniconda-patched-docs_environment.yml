@@ -2,12 +2,10 @@ name: website
 channels:
   - conda-forge
 dependencies:
-  - python=3.7.8
-  - sphinx=3.1.2
+  - python
+  - sphinx
   - nbsphinx
-  - pip
-  - pip:
-      - pydata-sphinx-theme==0.3.1
-      - myst-parser==0.9.1
-      - ablog==0.10.6
+  - ablog
+  - pydata-sphinx-theme
+  - myst-parser
   - python=3.7
