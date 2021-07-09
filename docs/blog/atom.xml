@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.github.io/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2021-07-09T11:46:33.197339+00:00</updated>
+  <updated>2021-07-09T11:54:18.220992+00:00</updated>
   <link href="https://urbangrammarai.github.io/"/>
   <link href="https://urbangrammarai.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -250,5 +250,27 @@ was held virtually in Glasgow, Scotland. This was the first time we have present
 whole GB, albeit using a single component only (function has been temporarily excluded). The work was received positively and spurred
 a bit of discussion. Within a few months, the results should be published in the conference proceedings.You can have a look at Martin’s presentation at:The slides used are here or, if you prefer it, here is the PDF file (24Mb).</summary>
     <published>2021-07-05T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.github.io/blog/post14_ati.html</id>
+    <title>Signatures for (all of) GB at Turing Urban Analytics</title>
+    <updated>2021-07-09T00:00:00+00:00</updated>
+    <content type="html">&lt;p&gt;On June 30th, Dani provided an overview of ongoing work to build Spatial Signatures for all
+of Great Britain at the Turing’s &lt;a class="reference external" href="https://www.turing.ac.uk/events/urban-analytics-monthly-meet"&gt;Urban Analytics monthly meetup&lt;/a&gt;.
+This was the first public presentation covering our work at a national scale and we are excited at how positively it was
+received.&lt;/p&gt;
+&lt;p&gt;The talk is published now on YouTube:&lt;/p&gt;
+&lt;p&gt;You can have a look at Martin’s presentation at:&lt;/p&gt;
+&lt;p&gt;And if you want to check out the slides, you can see the &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202106_ati/index.html"&gt;HTML deck&lt;/a&gt; or the &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202106_ati/index.pdf"&gt;PDF version&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are nearing the point where we can release some of the data products we have been building and feature in this talk so, if you are interested, stay
+tuned as we will have more news to share shortly!&lt;/p&gt;
+</content>
+    <link href="https://urbangrammarai.github.io/blog/post14_ati.html" rel="alternate"/>
+    <summary>On June 30th, Dani provided an overview of ongoing work to build Spatial Signatures for all
+of Great Britain at the Turing’s Urban Analytics monthly meetup.
+This was the first public presentation covering our work at a national scale and we are excited at how positively it was
+received.The talk is published now on YouTube:You can have a look at Martin’s presentation at:And if you want to check out the slides, you can see the HTML deck or the PDF version.We are nearing the point where we can release some of the data products we have been building and feature in this talk so, if you are interested, stay
+tuned as we will have more news to share shortly!</summary>
+    <published>2021-07-09T00:00:00+00:00</published>
   </entry>
 </feed>
