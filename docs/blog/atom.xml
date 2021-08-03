@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.github.io/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2021-07-09T11:54:18.220992+00:00</updated>
+  <updated>2021-08-03T10:32:52.473426+00:00</updated>
   <link href="https://urbangrammarai.github.io/"/>
   <link href="https://urbangrammarai.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -272,5 +272,41 @@ This was the first public presentation covering our work at a national scale and
 received.The talk is published now on YouTube:You can have a look at Martin’s presentation at:And if you want to check out the slides, you can see the HTML deck or the PDF version.We are nearing the point where we can release some of the data products we have been building and feature in this talk so, if you are interested, stay
 tuned as we will have more news to share shortly!</summary>
     <published>2021-07-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.github.io/blog/post15_xyzservices.html</id>
+    <title>xyzservices: a unified source of XYZ tile providers in Python</title>
+    <updated>2021-08-03T00:00:00+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;Within the project, we often need to map the results within different contexts ranging from static to interactive maps. We felt that it could be a smoother experience and built &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xyzservices&lt;/span&gt;&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A Python ecosystem offers numerous tools for the visualisation of data
+on a map. A lot of them depend on XYZ tiles, providing a base map layer,
+either from OpenStreetMap, satellite or other sources. The issue is that
+each package that offers XYZ support manages its own list of supported
+providers.&lt;/p&gt;
+&lt;p&gt;We have built &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xyzservices&lt;/span&gt;&lt;/code&gt; package to support any Python library making
+use of XYZ tiles. I’ll try to explain the rationale why we did that,
+without going into the details of the package. If you want those
+details, check its &lt;a class="reference external" href="https://xyzservices.readthedocs.io/en/latest/"&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let me quickly look at a few popular packages and their approach to tile
+management - &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;contextily&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;folium&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ipyleaflet&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;holoviews&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;contextily&lt;/span&gt;&lt;/code&gt; brings contextual base maps to static &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;geopandas&lt;/span&gt;&lt;/code&gt; plots. It
+comes with a dedicated &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;contextily.providers&lt;/span&gt;&lt;/code&gt; module, which contains &lt;a class="reference external" href="https://github.com/geopandas/contextily/blob/v1.1.0/contextily/_providers.py"&gt;a
+hard-coded list of providers&lt;/a&gt; scraped from &lt;a class="reference external" href="http://leaflet-extras.github.io/leaflet-providers/preview/"&gt;the list used by leaflet&lt;/a&gt;
+(as of version 1.1.0).&lt;/p&gt;
+</content>
+    <link href="https://urbangrammarai.github.io/blog/post15_xyzservices.html" rel="alternate"/>
+    <summary>Within the project, we often need to map the results within different contexts ranging from static to interactive maps. We felt that it could be a smoother experience and built xyzservices.A Python ecosystem offers numerous tools for the visualisation of data
+on a map. A lot of them depend on XYZ tiles, providing a base map layer,
+either from OpenStreetMap, satellite or other sources. The issue is that
+each package that offers XYZ support manages its own list of supported
+providers.We have built xyzservices package to support any Python library making
+use of XYZ tiles. I’ll try to explain the rationale why we did that,
+without going into the details of the package. If you want those
+details, check its documentation.Let me quickly look at a few popular packages and their approach to tile
+management - contextily, folium, ipyleaflet and holoviews.contextily brings contextual base maps to static geopandas plots. It
+comes with a dedicated contextily.providers module, which contains a
+hard-coded list of providers scraped from the list used by leaflet
+(as of version 1.1.0).</summary>
+    <published>2021-08-03T00:00:00+00:00</published>
   </entry>
 </feed>

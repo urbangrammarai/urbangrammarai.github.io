@@ -156,6 +156,41 @@
 
   <div class="section">
     <h2>
+      <a href="post15_xyzservices.html"
+        >xyzservices: a unified source of XYZ tile providers in Python</a
+      >
+    </h2>
+
+    <ul class="ablog-archive">
+      <li>
+          03 August 2021 
+      </li>
+            
+    </ul>
+    <p><em>Within the project, we often need to map the results within different contexts ranging from static to interactive maps. We felt that it could be a smoother experience and built <code class="docutils literal notranslate"><span class="pre">xyzservices</span></code>.</em></p>
+<p>A Python ecosystem offers numerous tools for the visualisation of data
+on a map. A lot of them depend on XYZ tiles, providing a base map layer,
+either from OpenStreetMap, satellite or other sources. The issue is that
+each package that offers XYZ support manages its own list of supported
+providers.</p>
+<p>We have built <code class="docutils literal notranslate"><span class="pre">xyzservices</span></code> package to support any Python library making
+use of XYZ tiles. I’ll try to explain the rationale why we did that,
+without going into the details of the package. If you want those
+details, check its <a class="reference external" href="https://xyzservices.readthedocs.io/en/latest/">documentation</a>.</p>
+<p>Let me quickly look at a few popular packages and their approach to tile
+management - <code class="docutils literal notranslate"><span class="pre">contextily</span></code>, <code class="docutils literal notranslate"><span class="pre">folium</span></code>, <code class="docutils literal notranslate"><span class="pre">ipyleaflet</span></code> and <code class="docutils literal notranslate"><span class="pre">holoviews</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">contextily</span></code> brings contextual base maps to static <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> plots. It
+comes with a dedicated <code class="docutils literal notranslate"><span class="pre">contextily.providers</span></code> module, which contains <a class="reference external" href="https://github.com/geopandas/contextily/blob/v1.1.0/contextily/_providers.py">a
+hard-coded list of providers</a> scraped from <a class="reference external" href="http://leaflet-extras.github.io/leaflet-providers/preview/">the list used by leaflet</a>
+(as of version 1.1.0).</p>
+
+    <p><a href="post15_xyzservices.html">Read more ...</a></p>
+    <hr />
+  </div>
+  
+
+  <div class="section">
+    <h2>
       <a href="post14_ati.html"
         >Signatures for (all of) GB at Turing Urban Analytics</a
       >
@@ -431,7 +466,7 @@ you can have a look at an edited version of the video at:</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
 </p>
     </div>
     
