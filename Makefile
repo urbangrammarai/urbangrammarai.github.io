@@ -24,3 +24,5 @@ website:
 	sphinx-build -M html "src" "_build"
 	cp -r _build/html docs
 	touch docs/.nojekyll
+	echo urbangrammarai.xyz > docs/CNAME
+
