@@ -32,7 +32,7 @@ blog_title = u'Urban Grammar AI Blog'
 
 # Base URL for the website, required for generating feeds.
 # e.g. blog_baseurl = "http://example.com/"
-blog_baseurl = u'https://urbangrammarai.github.io/'
+blog_baseurl = u'https://urbangrammarai.xyz/'
 
 # Choose to archive only post titles. Archiving only titles can speed
 # up project building.

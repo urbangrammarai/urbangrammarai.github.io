@@ -21,14 +21,14 @@ This project develops a conceptual framework to characterise urban structure thr
 :caption: Contents
 
 overview
-Updates <https://urbangrammarai.github.io/blog/archive>
-Public talks <https://urbangrammarai.github.io/talks/>
+Updates <https://urbangrammarai.xyz/blog/archive>
+Public talks <https://urbangrammarai.xyz/talks/>
 ```
 
 ```{toctree}
 :maxdepth: 2
 :caption: Work Packages
 
-WP1 - Data processing <https://urbangrammarai.github.io/data_processing/index>
-WP2 - Spatial Signatures <https://urbangrammarai.github.io/spatial_signatures/index>
+WP1 - Data processing <https://urbangrammarai.xyz/data_processing/index>
+WP2 - Spatial Signatures <https://urbangrammarai.xyz/spatial_signatures/index>
 ```
