@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://urbangrammarai.github.io/</id>
+  <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2021-09-16T12:19:32.220991+00:00</updated>
-  <link href="https://urbangrammarai.github.io/"/>
-  <link href="https://urbangrammarai.github.io/blog/atom.xml" rel="self"/>
+  <updated>2021-09-16T12:25:03.241344+00:00</updated>
+  <link href="https://urbangrammarai.xyz/"/>
+  <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post1.html</id>
+    <id>https://urbangrammarai.xyz/blog/post1.html</id>
     <title>Firing up the engines</title>
     <updated>2020-04-15T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;This is the first post going out form the &lt;a class="reference external" href="https://www.turing.ac.uk/research/research-projects/urban-grammar"&gt;Urban Grammar project&lt;/a&gt;. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either &lt;a class="reference external" href="mailto:darribas-bel&amp;#37;&amp;#52;&amp;#48;turing&amp;#46;ac&amp;#46;uk"&gt;Dani&lt;/a&gt; or &lt;a class="reference external" href="mailto:M&amp;#46;Fleischmann&amp;#37;&amp;#52;&amp;#48;liverpool&amp;#46;ac&amp;#46;uk"&gt;Martin&lt;/a&gt;!&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post1.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post1.html" rel="alternate"/>
     <summary>This is the first post going out form the Urban Grammar project. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either Dani or Martin!</summary>
     <published>2020-04-15T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post2.html</id>
+    <id>https://urbangrammarai.xyz/blog/post2.html</id>
     <title>Welcome to Martin Fleischmann</title>
     <updated>2020-07-01T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;&lt;img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/martin.jpg?raw=true" alt="Martin Fleischmann" class="bg-primary" width="200px" style="float:left;margin-right: 10px;"&gt; The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:&lt;/p&gt;
@@ -26,38 +26,38 @@
 &lt;p&gt;Martin brings with him a theoretical background in urban morphology combined with a &lt;em&gt;lot&lt;/em&gt; of experience in Python open source development around geospatial. There could not be a better combination for the project. As the postdoctoral researcher, Martin will be heavily involved in the implementation of much of the code required to develop the idea of Spatial Signatures, teach a computer to recognise them from satellite imagery, and use them to develop an Urban Grammar. At the same time, he is also joining the &lt;a class="reference external" href="https://www.liverpool.ac.uk/geographic-data-science/"&gt;Geographic Data Science Lab&lt;/a&gt; and getting involved in its day to day life, participating in internal seminars, coordinating the Brown Bags series and, more generally, chipping in where possible to make the lab a great place to be part of.&lt;/p&gt;
 &lt;p&gt;Welcome Martin, this will be a fun ride!&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post2.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post2.html" rel="alternate"/>
     <summary>&lt;img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/martin.jpg?raw=true" alt="Martin Fleischmann" class="bg-primary" width="200px" style="float:left;margin-right: 10px;"&gt; The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:Martin Fleischmann is research associate in the Geographic Data Science Lab at the University of Liverpool and a member of the Urban Design Studies Unit at the University of Strathclyde. His research focuses on urban morphology and geographic data science focusing on quantitative analysis and classification of urban form, remote sensing and AI.He is the author of momepy, the open source urban morphology measuring toolkit for Python and member of development teams of GeoPandas, the open source Python package for geographic data and PySAL, the Python library for spatial analysis.Martin brings with him a theoretical background in urban morphology combined with a lot of experience in Python open source development around geospatial. There could not be a better combination for the project. As the postdoctoral researcher, Martin will be heavily involved in the implementation of much of the code required to develop the idea of Spatial Signatures, teach a computer to recognise them from satellite imagery, and use them to develop an Urban Grammar. At the same time, he is also joining the Geographic Data Science Lab and getting involved in its day to day life, participating in internal seminars, coordinating the Brown Bags series and, more generally, chipping in where possible to make the lab a great place to be part of.Welcome Martin, this will be a fun ride!</summary>
     <published>2020-07-01T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post3.html</id>
+    <id>https://urbangrammarai.xyz/blog/post3.html</id>
     <title>First Advisory Board</title>
     <updated>2020-10-01T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On October 1st. 2020, Dani and Martin held the first meeting of the Advisory Board for the project. We are thrilled to have a board that includes &lt;a class="reference external" href="https://www.linkedin.com/in/edwardes/"&gt;Alistair Edwardes&lt;/a&gt;, &lt;a class="reference external" href="https://www.ncl.ac.uk/curds/people/staffprofile/rachelfranklin.html#background"&gt;Rachel Franklin&lt;/a&gt;, &lt;a class="reference external" href="https://www.linkedin.com/in/izzysargent"&gt;Isabel Sargent&lt;/a&gt; and &lt;a class="reference external" href="http://www.dpi.inpe.br/DPI/institucional/pessoal/servidores/antonio-miguel-vieira-monteiro"&gt;Antonio Miguel Vieira Monteiro&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The meeting took place, as it’s become customary in 2020, on Zoom. Dani provided an overview of the main components of the project, and Martin updated on progress so far; throughout the three hours of the meeting, there was plenty of discussion and great questions about what the project is trying to do and how it’ll tackle its main challenges. This is by no means a full replacement of the physical meeting we would have had in Liverpool for a full day, but it was an excellent way to connect and kickstart the role of the Advisory Board.&lt;/p&gt;
 &lt;p&gt;One of the conclusions from the discussion was that we might adapt to the current situation by trying to have these meetings a bit more frequent (initially only four were scheduled for the entire project) and of shorter duration than a full day (maybe up to three hours). This will allow us to focus on specific aspects of the project for every meeting. Next one will hopefully take place early in the next year and, by then, we might even have something in the form of deliverables to show!&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post3.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post3.html" rel="alternate"/>
     <summary>On October 1st. 2020, Dani and Martin held the first meeting of the Advisory Board for the project. We are thrilled to have a board that includes Alistair Edwardes, Rachel Franklin, Isabel Sargent and Antonio Miguel Vieira Monteiro.The meeting took place, as it’s become customary in 2020, on Zoom. Dani provided an overview of the main components of the project, and Martin updated on progress so far; throughout the three hours of the meeting, there was plenty of discussion and great questions about what the project is trying to do and how it’ll tackle its main challenges. This is by no means a full replacement of the physical meeting we would have had in Liverpool for a full day, but it was an excellent way to connect and kickstart the role of the Advisory Board.One of the conclusions from the discussion was that we might adapt to the current situation by trying to have these meetings a bit more frequent (initially only four were scheduled for the entire project) and of shorter duration than a full day (maybe up to three hours). This will allow us to focus on specific aspects of the project for every meeting. Next one will hopefully take place early in the next year and, by then, we might even have something in the form of deliverables to show!</summary>
     <published>2020-10-01T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post4.html</id>
+    <id>https://urbangrammarai.xyz/blog/post4.html</id>
     <title>Implementing morphological functions to the ecosystem</title>
     <updated>2020-11-02T00:00:00+00:00</updated>
-    <content type="html">&lt;p&gt;This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within &lt;a class="reference external" href="https://urbangrammarai.github.io/data_processing/index"&gt;WP1&lt;/a&gt; and morphometric assessment within &lt;a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index"&gt;WP2&lt;/a&gt; entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.&lt;/p&gt;
+    <content type="html">&lt;p&gt;This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within &lt;a class="reference external" href="https://urbangrammarai.xyz/data_processing/index"&gt;WP1&lt;/a&gt; and morphometric assessment within &lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index"&gt;WP2&lt;/a&gt; entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.&lt;/p&gt;
 &lt;p&gt;As part of the data processing stage of the project, we have refactored some of them to gain the performance enhancements we needed. Since we strongly believe in replicability of research, all software developed within Urban Grammar AI project should be available for other researchers, optimally packaged in a friendly shape of a Python library. At the same time, we want to support open-source software which we use for the research.&lt;/p&gt;
-&lt;p&gt;We think the natural approach is to include enhancements made within the area of urban morphometrics to &lt;a class="reference external" href="http://docs.momepy.org"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; an existing toolkit for urban morphology. &lt;a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index"&gt;WP2&lt;/a&gt; heavily builds on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;’s code and every relevant piece of code we made is now merged back into &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;. That covers both performance-focused changes to implementation (&lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/219"&gt;#219&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/209"&gt;#209&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/207"&gt;#207&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/205"&gt;#205&lt;/a&gt;), mostly based on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pygeos&lt;/span&gt;&lt;/code&gt; and vectorization, and new additions.&lt;/p&gt;
-&lt;p&gt;Two key features of Spatial Signatures, the concepts of &lt;a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/spatial_unit/Parallelized_enclosures.html"&gt;enclosures&lt;/a&gt; and &lt;a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/spatial_unit/enclosed_tessellation.html"&gt;enclosed tessellation&lt;/a&gt; are now available in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy.elements&lt;/span&gt;&lt;/code&gt; module and you can create both using only a few lines of code:&lt;/p&gt;
+&lt;p&gt;We think the natural approach is to include enhancements made within the area of urban morphometrics to &lt;a class="reference external" href="http://docs.momepy.org"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; an existing toolkit for urban morphology. &lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index"&gt;WP2&lt;/a&gt; heavily builds on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;’s code and every relevant piece of code we made is now merged back into &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;. That covers both performance-focused changes to implementation (&lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/219"&gt;#219&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/209"&gt;#209&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/207"&gt;#207&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/martinfleis/momepy/pull/205"&gt;#205&lt;/a&gt;), mostly based on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pygeos&lt;/span&gt;&lt;/code&gt; and vectorization, and new additions.&lt;/p&gt;
+&lt;p&gt;Two key features of Spatial Signatures, the concepts of &lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/Parallelized_enclosures.html"&gt;enclosures&lt;/a&gt; and &lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/enclosed_tessellation.html"&gt;enclosed tessellation&lt;/a&gt; are now available in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy.elements&lt;/span&gt;&lt;/code&gt; module and you can create both using only a few lines of code:&lt;/p&gt;
 &lt;p&gt;See the detailed guidance in &lt;a class="reference external" href="http://docs.momepy.org/en/latest/user_guide/elements/enclosed.html"&gt;momepy’s documentation&lt;/a&gt;.&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post4.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post4.html" rel="alternate"/>
     <summary>This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within WP1 and morphometric assessment within WP2 entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.As part of the data processing stage of the project, we have refactored some of them to gain the performance enhancements we needed. Since we strongly believe in replicability of research, all software developed within Urban Grammar AI project should be available for other researchers, optimally packaged in a friendly shape of a Python library. At the same time, we want to support open-source software which we use for the research.We think the natural approach is to include enhancements made within the area of urban morphometrics to momepy an existing toolkit for urban morphology. WP2 heavily builds on momepy’s code and every relevant piece of code we made is now merged back into momepy. That covers both performance-focused changes to implementation (#219, #209, #207, #205), mostly based on pygeos and vectorization, and new additions.Two key features of Spatial Signatures, the concepts of enclosures and enclosed tessellation are now available in momepy.elements module and you can create both using only a few lines of code:See the detailed guidance in momepy’s documentation.</summary>
     <published>2020-11-02T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post5_mapchallenge.html</id>
+    <id>https://urbangrammarai.xyz/blog/post5_mapchallenge.html</id>
     <title>30DayMapChallenge 2020</title>
     <updated>2020-11-23T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On November 1&lt;sup&gt;st&lt;/sup&gt; Topi Tjukanov &lt;a class="reference external" href="https://twitter.com/tjukanov/status/1311568912950140930"&gt;started&lt;/a&gt; a &lt;a class="reference external" href="https://twitter.com/hashtag/30DayMapChallenge"&gt;#30DayMapChallenge 2020&lt;/a&gt; - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23&lt;sup&gt;rd&lt;/sup&gt; day, it was our turn.&lt;/p&gt;
@@ -66,12 +66,12 @@
 &lt;p&gt;Do you want to play with the algorithm and create your own sequences? We have a &lt;a class="reference external" href="https://nbviewer.jupyter.org/github/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/tessellation.ipynb"&gt;notebook&lt;/a&gt; just for you! And if you’re going to generate tessellation on your data, &lt;a class="reference external" href="http://docs.momepy.org/en/stable/user_guide/elements/tessellation.html"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;momepy&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; has you covered. For further details head to Martin’s blog post about &lt;a class="reference external" href="https://martinfleischmann.net/morphological-tessellation/"&gt;a paper on tessellation&lt;/a&gt; he has published earlier this year.&lt;/p&gt;
 &lt;p&gt;Stay tuned for new advances in this space!&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post5_mapchallenge.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post5_mapchallenge.html" rel="alternate"/>
     <summary>On November 1&lt;sup&gt;st&lt;/sup&gt; Topi Tjukanov started a #30DayMapChallenge 2020 - one day, one map, one theme. Because it is a lot of fun, the Geographic Data Science Lab wanted to be a part of it and on 23&lt;sup&gt;rd&lt;/sup&gt; day, it was our turn.Since the topic was boundaries, we decided to share with you the process of creation of boundaries of morpohlogical tessellation - the (smallest) spatial unit used in urban morphometrics.Five cities, five different urban patterns. Morphological tessellation is in principle Voronoi tessellation based on building footprint polygons. In practice, we first shrink our polygons (you need a gap between adjacent buildings) by a small margin, then generate a dense array of points along the polygon boundary which is passed to Voronoi algorithm. Finally, resulting polygons are dissolved based on the building it belongs to, and morphological tessellation is done. See by yourself how each step looks and compares across different patterns on a matrix below. If you click on the image, you can see the full resolution (16.2 MB).Do you want to play with the algorithm and create your own sequences? We have a notebook just for you! And if you’re going to generate tessellation on your data, momepy has you covered. For further details head to Martin’s blog post about a paper on tessellation he has published earlier this year.Stay tuned for new advances in this space!</summary>
     <published>2020-11-23T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post6_tobler.html</id>
+    <id>https://urbangrammarai.xyz/blog/post6_tobler.html</id>
     <title>Contribution to tobler: Speeding up areal interpolation</title>
     <updated>2021-02-16T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;Have you ever needed to link two sources of data, each attached to a different geometry? In our work in the &lt;a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index"&gt;WP2&lt;/a&gt;, we do. We have to transfer data from various sources, linked to output areas, urban blocks or other spatial units to our own bespoke set of geographies. Therefore, we often need to do areal interpolation to correctly map data from one layer to another. Luckily, the open-source Python ecosystem can help.&lt;/p&gt;
@@ -80,12 +80,12 @@
 &lt;p&gt;With sample data, we’ve been able to speed up the interpolation from 2.4 seconds to less than 400 milliseconds, having the same result 6x faster.&lt;/p&gt;
 &lt;p&gt;Such an improvement is great, but it still uses only a single core (as most of the geospatial code to be honest), leaving the rest in a modern computer (four or more cores is not uncommon these days…) lazily laying around. We have tried to change this and contributed a (still experimental) parallel implementation of the same algorithm (based on &lt;a class="reference external" href="https://joblib.readthedocs.io/en/latest/"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;joblib&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post6_tobler.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post6_tobler.html" rel="alternate"/>
     <summary>Have you ever needed to link two sources of data, each attached to a different geometry? In our work in the WP2, we do. We have to transfer data from various sources, linked to output areas, urban blocks or other spatial units to our own bespoke set of geographies. Therefore, we often need to do areal interpolation to correctly map data from one layer to another. Luckily, the open-source Python ecosystem can help.Tobler, a part of PySAL family, is a library for areal interpolation and dasymetric mapping which already offered what we needed. However, our data tends to be large, up to 15 million rows on which we need to interpolate several hundreds of thousands of rows of input data. That can take a while, so each performance improvement can help a lot.We have looked into the existing code of tobler and contributed to the refactoring if its area_interpolate function. The original implementation was using custom code for spatial indexing, which was replaced by a performant vectorised implementation based on the more recent pygeos project.With sample data, we’ve been able to speed up the interpolation from 2.4 seconds to less than 400 milliseconds, having the same result 6x faster.Such an improvement is great, but it still uses only a single core (as most of the geospatial code to be honest), leaving the rest in a modern computer (four or more cores is not uncommon these days…) lazily laying around. We have tried to change this and contributed a (still experimental) parallel implementation of the same algorithm (based on joblib).</summary>
     <published>2021-02-16T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post7_graphics.html</id>
+    <id>https://urbangrammarai.xyz/blog/post7_graphics.html</id>
     <title>Visual style and a graphics package</title>
     <updated>2021-02-17T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;Any work of the size of our Urban Grammar AI project has many outputs. All of them should ideally share the same design language, so once we combine them, they tell a coherent story. Therefore, we have defined a visual style applied to any graphical output we will produce.&lt;/p&gt;
@@ -94,12 +94,12 @@
 &lt;p&gt;We based our primary colours on the six colours you can see on this map. This colour map offers a variety while retaining readability, colours nicely play with each other and, importantly, are colour blind safe.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Primary colours derived from Adams and Kelly.&lt;/em&gt;&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post7_graphics.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post7_graphics.html" rel="alternate"/>
     <summary>Any work of the size of our Urban Grammar AI project has many outputs. All of them should ideally share the same design language, so once we combine them, they tell a coherent story. Therefore, we have defined a visual style applied to any graphical output we will produce.We have started with a basic colourmap. A significant part of our work will result in categorical maps, so we need diverse colours. We have looked back at the excellent cartography our predecessors produced and found a gem. A study of wage and nationality in Chicago by Jane Addams and Florence Kelley from 1895 resulted in a series of beautiful maps like this one:Hull House Maps and Papers (1895) by Jane Addams and Florence Kelley.We based our primary colours on the six colours you can see on this map. This colour map offers a variety while retaining readability, colours nicely play with each other and, importantly, are colour blind safe.Primary colours derived from Adams and Kelly.</summary>
     <published>2021-02-17T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post8_ubdc.html</id>
+    <id>https://urbangrammarai.xyz/blog/post8_ubdc.html</id>
     <title>Spatial Signatures at UBDC</title>
     <updated>2021-04-08T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On March 16th, Dani presented ongoing work on the development of Spatial
@@ -112,7 +112,7 @@ with how the foundational ideas of the project were received.&lt;/p&gt;
 you can have a look at an edited version of the video at:&lt;/p&gt;
 &lt;p&gt;The slides used are &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202103_ubdc"&gt;here&lt;/a&gt; or, if you prefer it, &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202103_ubdc/index.pdf"&gt;here is the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt; file&lt;/a&gt; (15Mb).&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post8_ubdc.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post8_ubdc.html" rel="alternate"/>
     <summary>On March 16th, Dani presented ongoing work on the development of Spatial
 Signatures at the University of Glasgow’s Urban Big Data Centre webinar
 series. This was the first time we took the project on tour and it was very
@@ -123,7 +123,7 @@ you can have a look at an edited version of the video at:The slides used are her
     <published>2021-04-08T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post9_sad.html</id>
+    <id>https://urbangrammarai.xyz/blog/post9_sad.html</id>
     <title>Spatial Signatures at the Spatial Analytics + Data Seminar Series</title>
     <updated>2021-04-26T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On March 30th, Martin presented the current progress in the development
@@ -137,7 +137,7 @@ which we hope will continue on some other platforms soon.&lt;/p&gt;
 &lt;p&gt;The recording is available on Youtube:&lt;/p&gt;
 &lt;p&gt;The slides used are &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202103_sad/"&gt;here&lt;/a&gt; or, if you prefer it, &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202103_sad/index.pdf"&gt;here is the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt; file&lt;/a&gt; (27Mb).&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post9_sad.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post9_sad.html" rel="alternate"/>
     <summary>On March 30th, Martin presented the current progress in the development
 of Spatial Signatures at the Spatial Analytics + Data Seminar Series
 organised by the University of Newcastle, the University of Bristol and
@@ -149,7 +149,7 @@ which we hope will continue on some other platforms soon.The recording is availa
     <published>2021-04-26T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post10_clustergram.html</id>
+    <id>https://urbangrammarai.xyz/blog/post10_clustergram.html</id>
     <title>Clustergam: visualisation of cluster analysis</title>
     <updated>2021-04-27T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;In this post, we introduce a new Python package to generate clustergrams from clustering solutions. The library has been developed as part of the Urban Grammar project, and it is compatible with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/code&gt; and GPU-enabled libraries such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cuML&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cuDF&lt;/span&gt;&lt;/code&gt; within &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;RAPIDS.AI&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
@@ -160,32 +160,32 @@ implementation, ported it to Python and created &lt;code class="docutils literal
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;clustergram&lt;/span&gt;&lt;/code&gt; currently supports K-Means and using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/code&gt; (inlcuding Mini-Batch implementation) and RAPIDS.AI &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cuML&lt;/span&gt;&lt;/code&gt; (if you have a CUDA-enabled GPU), Gaussian Mixture Model (&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/code&gt; only) and hierarchical clustering based on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;scipy.hierarchy&lt;/span&gt;&lt;/code&gt;. Alternatively, we can create clustergram based on labels and data derived from alternative custom clustering algorithms. It provides a sklearn-like API and plots clustergram using matplotlib, which gives it a wide range of styling
 options to match your publication style.&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post10_clustergram.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post10_clustergram.html" rel="alternate"/>
     <summary>In this post, we introduce a new Python package to generate clustergrams from clustering solutions. The library has been developed as part of the Urban Grammar project, and it is compatible with scikit-learn and GPU-enabled libraries such as cuML or cuDF within RAPIDS.AI.When we want to do some cluster analysis to identify groups in our data, we often use algorithms like K-Means, which require the specification of a number of clusters. But the issue is that we usually don’t know how many clusters there are.There are many methods on how to determine the correct number, like silhouettes or elbow plot, to name a few. But they usually don’t give much insight into what is happening between different options, so the numbers are a bit abstract.Matthias Schonlau proposed another approach - a clustergram. Clustergram is a two-dimensional plot capturing the flows of observations between classes as you add more clusters. It tells you how your data reshuffles and how good your splits are. Tal Galili later implemented clustergram for K-Means in R. And I have used Tal’s
 implementation, ported it to Python and created clustergram - a Python package to make clustergrams.clustergram currently supports K-Means and using scikit-learn (inlcuding Mini-Batch implementation) and RAPIDS.AI cuML (if you have a CUDA-enabled GPU), Gaussian Mixture Model (scikit-learn only) and hierarchical clustering based on scipy.hierarchy. Alternatively, we can create clustergram based on labels and data derived from alternative custom clustering algorithms. It provides a sklearn-like API and plots clustergram using matplotlib, which gives it a wide range of styling
 options to match your publication style.</summary>
     <published>2021-04-27T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post11_second_advisory_board.html</id>
+    <id>https://urbangrammarai.xyz/blog/post11_second_advisory_board.html</id>
     <title>Second Advisory Board</title>
     <updated>2021-04-29T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On April 15th. 2021, we held the second meeting of the Advisory Board for the project. We are delighted that all &lt;a class="reference external" href="https://urbangrammarai.github.io/blog/post3.html"&gt;board members&lt;/a&gt; joined us on Zoom for a few hours of exciting discussions on the progress and the future of the project.&lt;/p&gt;
 &lt;p&gt;Dani started with an overview of our progress since the last meeting, which you can check in his &lt;a class="reference external" href="https://urbangrammarai.github.io/blog/post8_ubdc.html"&gt;UBDC talk&lt;/a&gt;. We followed by the focused discussion on the concepts of Spatial Signature and Enclosed Tessellation and our initial paper illustrating both on the sample of cities worldwide. We discussed the clarity of our ideas and the needs for new spatial units and classification methods, and their potential drawbacks and enhancements. In the last part, we tried to zoom out to see a bigger picture and fit the research within existing projects within academia and the public sector.&lt;/p&gt;
 &lt;p&gt;After three hours of a very fruitful discussion, we finished with a lot of food for thought and ideas to be explored in the future. Let’s just hope that the Advisory Board meetings will soon happen physically in Liverpool to have an even more productive and friendly environment!&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post11_second_advisory_board.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post11_second_advisory_board.html" rel="alternate"/>
     <summary>On April 15th. 2021, we held the second meeting of the Advisory Board for the project. We are delighted that all board members joined us on Zoom for a few hours of exciting discussions on the progress and the future of the project.Dani started with an overview of our progress since the last meeting, which you can check in his UBDC talk. We followed by the focused discussion on the concepts of Spatial Signature and Enclosed Tessellation and our initial paper illustrating both on the sample of cities worldwide. We discussed the clarity of our ideas and the needs for new spatial units and classification methods, and their potential drawbacks and enhancements. In the last part, we tried to zoom out to see a bigger picture and fit the research within existing projects within academia and the public sector.After three hours of a very fruitful discussion, we finished with a lot of food for thought and ideas to be explored in the future. Let’s just hope that the Advisory Board meetings will soon happen physically in Liverpool to have an even more productive and friendly environment!</summary>
     <published>2021-04-29T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post12_gsoc.html</id>
+    <id>https://urbangrammarai.xyz/blog/post12_gsoc.html</id>
     <title>Google Summer of Code</title>
     <updated>2021-06-04T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;Members of the Urban Grammar project are getting involved in developing the next
 generation set of tools for distributing processing of geospatial vector data. In its
-&lt;a class="reference external" href="https://urbangrammarai.github.io/data_processing/index"&gt;first&lt;/a&gt;
-&lt;a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index"&gt;part&lt;/a&gt;, the Urban Grammar
+&lt;a class="reference external" href="https://urbangrammarai.xyz/data_processing/index"&gt;first&lt;/a&gt;
+&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index"&gt;part&lt;/a&gt;, the Urban Grammar
 project heavily depends on the processing of vector geospatial data using
 &lt;a class="reference external" href="https://geopandas.org"&gt;GeoPandas&lt;/a&gt; Python library. However, to scale GeoPandas
 algorithms to the extent of Great Britain, we need to do more than the library can do by
@@ -204,9 +204,9 @@ some critical components are not ready yet. That should change during this summe
 the Google Summer of Code project Martin is (co-)mentoring. We hope that this effort
 will allow us to significantly simplify and even speed up the custom machinery we built
 to create spatial signatures in
-&lt;a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index"&gt;WP2&lt;/a&gt;.&lt;/p&gt;
+&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index"&gt;WP2&lt;/a&gt;.&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post12_gsoc.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post12_gsoc.html" rel="alternate"/>
     <summary>Members of the Urban Grammar project are getting involved in developing the next
 generation set of tools for distributing processing of geospatial vector data. In its
 first
@@ -232,7 +232,7 @@ WP2.</summary>
     <published>2021-06-04T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post13_isuf.html</id>
+    <id>https://urbangrammarai.xyz/blog/post13_isuf.html</id>
     <title>Form-based Signatures at ISUF 2021</title>
     <updated>2021-07-05T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On June 30th, Martin presented a classification of Great Britain based on the form
@@ -241,9 +241,9 @@ was held virtually in Glasgow, Scotland. This was the first time we have present
 whole GB, albeit using a single component only (function has been temporarily excluded). The work was received positively and spurred
 a bit of discussion. Within a few months, the results should be published in the conference proceedings.&lt;/p&gt;
 &lt;p&gt;You can have a look at Martin’s presentation at:&lt;/p&gt;
-&lt;p&gt;The slides used are &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202106_isuf"&gt;here&lt;/a&gt; or, if you prefer it, &lt;a class="reference external" href="https://urbangrammarai.github.io/talks/202106_isuf/index.pdf"&gt;here is the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt; file&lt;/a&gt; (24Mb).&lt;/p&gt;
+&lt;p&gt;The slides used are &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf"&gt;here&lt;/a&gt; or, if you prefer it, &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf/index.pdf"&gt;here is the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt; file&lt;/a&gt; (24Mb).&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post13_isuf.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post13_isuf.html" rel="alternate"/>
     <summary>On June 30th, Martin presented a classification of Great Britain based on the form
 component of Spatial Signatures at the International Seminar on Urban Form 2021, which
 was held virtually in Glasgow, Scotland. This was the first time we have presented results covering the
@@ -252,7 +252,7 @@ a bit of discussion. Within a few months, the results should be published in the
     <published>2021-07-05T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post14_ati.html</id>
+    <id>https://urbangrammarai.xyz/blog/post14_ati.html</id>
     <title>Signatures for (all of) GB at Turing Urban Analytics</title>
     <updated>2021-07-09T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;On June 30th, Dani provided an overview of ongoing work to build Spatial Signatures for all
@@ -265,7 +265,7 @@ received.&lt;/p&gt;
 &lt;p&gt;We are nearing the point where we can release some of the data products we have been building and feature in this talk so, if you are interested, stay
 tuned as we will have more news to share shortly!&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post14_ati.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post14_ati.html" rel="alternate"/>
     <summary>On June 30th, Dani provided an overview of ongoing work to build Spatial Signatures for all
 of Great Britain at the Turing’s Urban Analytics monthly meetup.
 This was the first public presentation covering our work at a national scale and we are excited at how positively it was
@@ -274,7 +274,7 @@ tuned as we will have more news to share shortly!</summary>
     <published>2021-07-09T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://urbangrammarai.github.io/blog/post15_xyzservices.html</id>
+    <id>https://urbangrammarai.xyz/blog/post15_xyzservices.html</id>
     <title>xyzservices: a unified source of XYZ tile providers in Python</title>
     <updated>2021-08-03T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;&lt;em&gt;Within the project, we often need to map the results within different contexts ranging from static to interactive maps. We felt that it could be a smoother experience and built &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xyzservices&lt;/span&gt;&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -294,7 +294,7 @@ comes with a dedicated &lt;code class="docutils literal notranslate"&gt;&lt;span
 hard-coded list of providers&lt;/a&gt; scraped from &lt;a class="reference external" href="http://leaflet-extras.github.io/leaflet-providers/preview/"&gt;the list used by leaflet&lt;/a&gt;
 (as of version 1.1.0).&lt;/p&gt;
 </content>
-    <link href="https://urbangrammarai.github.io/blog/post15_xyzservices.html" rel="alternate"/>
+    <link href="https://urbangrammarai.xyz/blog/post15_xyzservices.html" rel="alternate"/>
     <summary>Within the project, we often need to map the results within different contexts ranging from static to interactive maps. We felt that it could be a smoother experience and built xyzservices.A Python ecosystem offers numerous tools for the visualisation of data
 on a map. A lot of them depend on XYZ tiles, providing a base map layer,
 either from OpenStreetMap, satellite or other sources. The issue is that

@@ -112,19 +112,19 @@
       </li>
       
       <li class="nav-item ">
-        <a class="nav-link" href="https://urbangrammarai.github.io/blog/archive">Updates</a>
+        <a class="nav-link" href="https://urbangrammarai.xyz/blog/archive">Updates</a>
       </li>
       
       <li class="nav-item ">
-        <a class="nav-link" href="https://urbangrammarai.github.io/talks/">Public talks</a>
+        <a class="nav-link" href="https://urbangrammarai.xyz/talks/">Public talks</a>
       </li>
       
       <li class="nav-item ">
-        <a class="nav-link" href="https://urbangrammarai.github.io/data_processing/index">WP1 - Data processing</a>
+        <a class="nav-link" href="https://urbangrammarai.xyz/data_processing/index">WP1 - Data processing</a>
       </li>
       
       <li class="nav-item ">
-        <a class="nav-link" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2 - Spatial Signatures</a>
+        <a class="nav-link" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2 - Spatial Signatures</a>
       </li>
       
     </ul>
@@ -236,7 +236,7 @@ was held virtually in Glasgow, Scotland. This was the first time we have present
 whole GB, albeit using a single component only (function has been temporarily excluded). The work was received positively and spurred
 a bit of discussion. Within a few months, the results should be published in the conference proceedings.</p>
 <p>You can have a look at Martin’s presentation at:</p>
-<p>The slides used are <a class="reference external" href="https://urbangrammarai.github.io/talks/202106_isuf">here</a> or, if you prefer it, <a class="reference external" href="https://urbangrammarai.github.io/talks/202106_isuf/index.pdf">here is the <code class="docutils literal notranslate"><span class="pre">PDF</span></code> file</a> (24Mb).</p>
+<p>The slides used are <a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf">here</a> or, if you prefer it, <a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf/index.pdf">here is the <code class="docutils literal notranslate"><span class="pre">PDF</span></code> file</a> (24Mb).</p>
 
     <p><a href="blog/post13_isuf.html">Read more ...</a></p>
     <hr />
@@ -258,8 +258,8 @@ a bit of discussion. Within a few months, the results should be published in the
     </ul>
     <p>Members of the Urban Grammar project are getting involved in developing the next
 generation set of tools for distributing processing of geospatial vector data. In its
-<a class="reference external" href="https://urbangrammarai.github.io/data_processing/index">first</a>
-<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">part</a>, the Urban Grammar
+<a class="reference external" href="https://urbangrammarai.xyz/data_processing/index">first</a>
+<a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">part</a>, the Urban Grammar
 project heavily depends on the processing of vector geospatial data using
 <a class="reference external" href="https://geopandas.org">GeoPandas</a> Python library. However, to scale GeoPandas
 algorithms to the extent of Great Britain, we need to do more than the library can do by
@@ -278,7 +278,7 @@ some critical components are not ready yet. That should change during this summe
 the Google Summer of Code project Martin is (co-)mentoring. We hope that this effort
 will allow us to significantly simplify and even speed up the custom machinery we built
 to create spatial signatures in
-<a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>.</p>
+<a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2</a>.</p>
 
     <p><a href="blog/post12_gsoc.html">Read more ...</a></p>
     <hr />
@@ -475,10 +475,10 @@ you can have a look at an edited version of the video at:</p>
       </li>
             
     </ul>
-    <p>This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within <a class="reference external" href="https://urbangrammarai.github.io/data_processing/index">WP1</a> and morphometric assessment within <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a> entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.</p>
+    <p>This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within <a class="reference external" href="https://urbangrammarai.xyz/data_processing/index">WP1</a> and morphometric assessment within <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2</a> entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.</p>
 <p>As part of the data processing stage of the project, we have refactored some of them to gain the performance enhancements we needed. Since we strongly believe in replicability of research, all software developed within Urban Grammar AI project should be available for other researchers, optimally packaged in a friendly shape of a Python library. At the same time, we want to support open-source software which we use for the research.</p>
-<p>We think the natural approach is to include enhancements made within the area of urban morphometrics to <a class="reference external" href="http://docs.momepy.org"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> an existing toolkit for urban morphology. <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a> heavily builds on <code class="docutils literal notranslate"><span class="pre">momepy</span></code>’s code and every relevant piece of code we made is now merged back into <code class="docutils literal notranslate"><span class="pre">momepy</span></code>. That covers both performance-focused changes to implementation (<a class="reference external" href="https://github.com/martinfleis/momepy/pull/219">#219</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/209">#209</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/207">#207</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/205">#205</a>), mostly based on <code class="docutils literal notranslate"><span class="pre">pygeos</span></code> and vectorization, and new additions.</p>
-<p>Two key features of Spatial Signatures, the concepts of <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/spatial_unit/Parallelized_enclosures.html">enclosures</a> and <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/spatial_unit/enclosed_tessellation.html">enclosed tessellation</a> are now available in <code class="docutils literal notranslate"><span class="pre">momepy.elements</span></code> module and you can create both using only a few lines of code:</p>
+<p>We think the natural approach is to include enhancements made within the area of urban morphometrics to <a class="reference external" href="http://docs.momepy.org"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> an existing toolkit for urban morphology. <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2</a> heavily builds on <code class="docutils literal notranslate"><span class="pre">momepy</span></code>’s code and every relevant piece of code we made is now merged back into <code class="docutils literal notranslate"><span class="pre">momepy</span></code>. That covers both performance-focused changes to implementation (<a class="reference external" href="https://github.com/martinfleis/momepy/pull/219">#219</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/209">#209</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/207">#207</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/205">#205</a>), mostly based on <code class="docutils literal notranslate"><span class="pre">pygeos</span></code> and vectorization, and new additions.</p>
+<p>Two key features of Spatial Signatures, the concepts of <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/Parallelized_enclosures.html">enclosures</a> and <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/enclosed_tessellation.html">enclosed tessellation</a> are now available in <code class="docutils literal notranslate"><span class="pre">momepy.elements</span></code> module and you can create both using only a few lines of code:</p>
 <p>See the detailed guidance in <a class="reference external" href="http://docs.momepy.org/en/latest/user_guide/elements/enclosed.html">momepy’s documentation</a>.</p>
 
     <p><a href="blog/post4.html">Read more ...</a></p>

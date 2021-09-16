@@ -5,8 +5,8 @@
 
 Members of the Urban Grammar project are getting involved in developing the next
 generation set of tools for distributing processing of geospatial vector data. In its
-[first](https://urbangrammarai.github.io/data_processing/index)
-[part](https://urbangrammarai.github.io/spatial_signatures/index), the Urban Grammar
+[first](https://urbangrammarai.xyz/data_processing/index)
+[part](https://urbangrammarai.xyz/spatial_signatures/index), the Urban Grammar
 project heavily depends on the processing of vector geospatial data using
 [GeoPandas](https://geopandas.org) Python library. However, to scale GeoPandas
 algorithms to the extent of Great Britain, we need to do more than the library can do by
@@ -26,4 +26,4 @@ some critical components are not ready yet. That should change during this summe
 the Google Summer of Code project Martin is (co-)mentoring. We hope that this effort
 will allow us to significantly simplify and even speed up the custom machinery we built
 to create spatial signatures in
-[WP2](https://urbangrammarai.github.io/spatial_signatures/index).
+[WP2](https://urbangrammarai.xyz/spatial_signatures/index).

@@ -13,4 +13,4 @@ You can have a look at Martin's presentation at:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8d4e1uVMg3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The slides used are [here](https://urbangrammarai.github.io/talks/202106_isuf) or, if you prefer it, [here is the `PDF` file](https://urbangrammarai.github.io/talks/202106_isuf/index.pdf) (24Mb).
+The slides used are [here](https://urbangrammarai.xyz/talks/202106_isuf) or, if you prefer it, [here is the `PDF` file](https://urbangrammarai.xyz/talks/202106_isuf/index.pdf) (24Mb).
