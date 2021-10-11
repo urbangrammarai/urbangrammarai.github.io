@@ -1,8 +1,10 @@
 # How to create a vector-based web map and host it on GitHub
 
-<embed a map>
+<iframe height="650" name="Spatial Signatures in Great Britain" src="https://urbangrammarai.xyz/great-britain/" width="100%"></iframe>
 
-This is the map we have created for the Urban Grammar AI project. This post will walk you through the whole process step by step so you can create your own map. It is a bit longer than usual, so a quick outline for better orientation:
+This is the map we have created for the Urban Grammar AI project. It is created using open source software stack and hosted on GitHub, for free.
+
+This post will walk you through the whole process of generation of the map, step by step, so you can create your own. It is a bit longer than usual, so a quick outline for better orientation:
 
 - Vector tiles
 	- Zoom levels
@@ -23,7 +25,7 @@ Bonus:
 	- Conditional formatting based on the zoom level
 	- Legend and details
 
-By the end of this tutorial, you will be able to take your vector data and turn them into a fully-fledged vector map hosted on GitHub with no cost involved. 
+By the end of this tutorial, you will be able to take your vector data and turn them into a fully-fledged vector map hosted on GitHub with no cost involved, for everyone to enjoy.
 
 ## Vector tiles
 
@@ -37,13 +39,13 @@ gdf[["signature_type", "geometry"]].to_crs(4326).to_file("signatures_4326.geojso
 
 Now you have a `signatures_4326.geojson` with geometry and a column encoding the signature type. It means that it is time to use `tippecanoe` (check the [installation instructions](https://github.com/mapbox/tippecanoe#installation)).
 
-`tippecanoe` is a command-line tool, so fire up your favourite terminal, or use it within a Jupyter notebook (as we did). There are some options to set but let's talk about the most important ones (you can check the rest in the [documentation](https://github.com/mapbox/tippecanoe#usage)).
+`tippecanoe` is a command-line tool, so fire up your favourite terminal, or use it within a Jupyter notebook (as [we did](https://urbangrammarai.xyz/spatial_signatures/data_product/vector_tile.html)). There are some options to set but let's talk about the most important ones (you can check the rest in the [documentation](https://github.com/mapbox/tippecanoe#usage)).
 
 ### Zoom levels
 
-Every map has a range of zoom levels at which the shown data is meaningful. If you're comparing states, you don't need to zoom to a level of a street, and if you're showing building-level data, you don't need a zoom to see the whole continent. 
+Every map has a range of zoom levels at which the shown data is meaningful. If you're comparing states, you don't need to zoom to a level of a street, and if you're showing building-level data, you don't need a zoom to see the whole continent.
 
-Zoom level 0 means you are zoomed out to see the whole world. It is a single tile. Zoom level 1 is a bit closer and is split into 4 tiles. Zoom level 2 has 16, level 3 has 64 and so on. Zoom level 16, which shows a street-level detail, consists of 4 294 967 296 tiles if you want to create them for the whole world. That is a lot of data, so you need to be mindful of which detail you actually need because the difference between zooming up to level 15 and up to level 16 is huge. OpenStreetMap has a [nice guide on zoom levels](https://wiki.openstreetmap.org/wiki/Zoom_levels) if you are interested in more details.
+Zoom level 0 means you are zoomed out to see the whole world. It is a single tile. Zoom level 1 is a bit closer and is split into 4 tiles. Zoom level 2 has 16 tiles, level 3 has 64 and so on. Zoom level 16, which shows a street-level detail, consists of 4 294 967 296 tiles if you want to create them for the whole world. That is a lot of data, so you need to be mindful of which detail you actually need because the difference between zooming up to level 15 and up to level 16 is huge. OpenStreetMap has a [nice guide on zoom levels](https://wiki.openstreetmap.org/wiki/Zoom_levels) if you are interested in more details.
 
 For the signature geometry that represents neighbourhood-level classification, level 15 feels like the reasonable maximum, so you have the first option - `-z15`
 
@@ -64,15 +66,15 @@ tippecanoe -z15 \
            signatures_4326.geojson
 ```
 
-The command above sets the maximum zoom to 15 so you don't create overly detailed tiles (`z15`, disables tile compression (`--no-tile-compression`) and saves the result to the `tiles/` directory (`--output-to-directory=tiles/`), based on your GeoJSON file (`signatures_4326.geojson`).
+The command above sets the maximum zoom to 15 so you don't create overly detailed tiles (`z15`), disables tile compression (`--no-tile-compression`) and saves the result to the `tiles/` directory (`--output-to-directory=tiles/`), based on your GeoJSON file (`signatures_4326.geojson`).
 
-This step may take a bit, but once it is done, you will see thousands of files in the `tiles/` folder. It is time to show them on a map.
+This step may take a bit of time, but once it is done, you will see thousands of files in the `tiles/` folder. It is time to show them on a map.
 
 ## Leaflet.js map
 
-One of the best tools for interactive maps is a `leaflet.js`, an open-source JavaScript library. With the right plugins, it is an ideal tool for almost any web map.
+One of the best tools for interactive maps is `leaflet.js`, an open-source JavaScript library. With the right plugins, it is an ideal tool for almost any web map.
 
-The whole map and a JavaScript code will be served from a single HTML file. Let's start with some basic structure, with comments as a placeholder you will fill later:
+The whole map and a JavaScript code will be served from a single HTML file saved in the same folder where the `tiles` folder is. Let's start with some basic structure, with comments as a placeholder you will fill later:
 
 ```HTML
 <!DOCTYPE html>
@@ -95,7 +97,7 @@ The whole map and a JavaScript code will be served from a single HTML file. Let'
 
 ### Load leaflet.js
 
-To load the `leaflet.js`, you need to get its source script and CSS styles. Both are usually fetched over the web. It is a good idea to include SHA checksum to ensure you get what you want. You can then replace `<!-- load leaflet.js -->` with the following snippet:
+To load the `leaflet.js`, you need to get its source script and CSS styles. Both are usually fetched over the web. You can then replace `<!-- load leaflet.js -->` with the following snippet:
 
 ```HTML
 <!-- load leaflet.js -->
@@ -110,7 +112,7 @@ However, the basic `leaflet.js` is not able to work with vector tiles, so you ne
 
 ```html
 <!-- load VectorGrid extension -->
-<script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script> 
+<script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
 ```
 
 At this moment, you have everything you need to create the map in your file.
@@ -150,7 +152,7 @@ The map object is ready! There's nothing there now, but that will change soon.
 
 ### Add a base map
 
-It is nice to have some base map in there before adding other layers, just to make sure everything works. You can add a default OpenStreetMap or something more subtle as CartoDB Positron map.
+It is nice to have some base map in there before adding other layers, just to make sure everything works. You can add a default OpenStreetMap or something more subtle as a CartoDB Positron map.
 
 ```jsx
 // add background basemap
@@ -219,11 +221,11 @@ mapPbfLayer.addTo(map);
 
 At this point, you should be able to see your vector tiles on your map with no styles. It should look like this:
 
-![Screenshot 2021-10-07 at 19.22.44.png](Webmap%20a9c2d235301b4fdbba2c4f0889d09e78/Screenshot_2021-10-07_at_19.22.44.png)
+![Screenshot 2021-10-07 at 19.22.44.png](https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/Screenshot_2021-10-07_at_19.22.44.png)
 
 ### Style the tiles
 
-The GeoJSON used to create these tiles had a single attribute column called `signature_type`. What you want to do now is to use this column to style the map to your liking. 
+The GeoJSON used to create these tiles has a single attribute column called `signature_type`. What you want to do now is to use this column to style the map to your liking.
 
 Let's assume that you know which RGB colours should apply to which signature type code. Let's save those in a dictionary, so you can use them later.
 
@@ -263,7 +265,7 @@ var vectorTileStyling = {
     signatures_4326: function(properties) {
         return ({
             fill: true,
-						fillColor: cmap[properties.signature_type],
+			fillColor: cmap[properties.signature_type],
             fillOpacity: 0.9,
             weight: 1,
             color: "#ffffff",
@@ -286,7 +288,7 @@ Then you just need to edit the vector tile options (the `mapVectorTileOptions` d
 
 At this point, the basic map is done, and you can try to get it online or style it a bit more (scroll below for that).
 
-![Screenshot 2021-10-07 at 19.42.40.png](Webmap%20a9c2d235301b4fdbba2c4f0889d09e78/Screenshot_2021-10-07_at_19.42.40.png)
+![Screenshot 2021-10-07 at 19.42.40.png](https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/Screenshot_2021-10-07_at_19.42.40.png)
 
 This is the whole code of the page for reference.
 
@@ -395,17 +397,17 @@ This is the whole code of the page for reference.
 </html>
 ```
 
-## Github Pages
+## GitHub Pages
 
-You can use Github Pages to host the whole map online. Github has a size limit for individual files of 100MB. Considering that the original GeoJSON has 2.2GB, that may sound like a problem. But remember that the data are now cut to small tiles, where the size of each is a few KB. You want to create a repository on Github, upload your `tiles/` folder and the HTML file you have just created, called `index.html` and set up Github Pages hosting. 
+You can use GitHub Pages to host the whole map online. GitHub has a size limit for individual files of 100MB. Considering that the original GeoJSON has 2.2GB, that may sound like a problem. But remember that the data are now cut to small tiles, where the size of each is a few KB. You want to create a repository on GitHub, upload your `tiles/` folder and the HTML file you have just created, called `index.html` and set up GitHub Pages hosting.
 
-Once your data are uploaded, create an empty file called `.nojekyll` that tells Github Pages to use the repository as an HTML code as it is (what it really says is "do not use Jekyll to compile the page") and go to Settings > Pages and enable GitHub Pages. 
+Once your data are uploaded, create an empty file called `.nojekyll` that tells GitHub Pages to use the repository as an HTML code as it is (what it really says is "do not use Jekyll to compile the page") and go to Settings > Pages and enable GitHub Pages.
 
 🎉  Your web map is live and accessible by anyone online. GitHub Pages settings show you the exact link. It is as easy as that.
 
 *Tip: Once you have everything set on GitHub, use [github.dev](http://github.dev) to make the further changes to the HTML file avoid download and indexing of the whole repository (just hit `.` when you are on GitHub in your repository).*
 
-Our map lives in the [urbangrammarai/great-britain](https://github.com/urbangrammarai/great-britain) repository if you want to check the source and is available on [https://urbangrammarai.xyz/great-britain/](https://urbangrammarai.xyz/great-britain/) (we use the custom domain on GitHub Pages). 
+Our map lives in the [urbangrammarai/great-britain](https://github.com/urbangrammarai/great-britain) repository if you want to check the source code and is available on [https://urbangrammarai.xyz/great-britain/](https://urbangrammarai.xyz/great-britain/) (we use the custom domain on GitHub Pages).
 
 ## Further styling and interactivity
 
