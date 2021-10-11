@@ -1,3 +1,6 @@
+```{post} October 11, 2021
+```
+
 # How to create a vector-based web map and host it on GitHub
 
 <iframe height="650" name="Spatial Signatures in Great Britain" src="https://urbangrammarai.xyz/great-britain/" width="100%"></iframe>
