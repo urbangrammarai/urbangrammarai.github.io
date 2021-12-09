@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2021-09-16T12:33:18.917173+00:00</updated>
+  <updated>2021-12-09T16:51:06.125597+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post1.html</id>
     <title>Firing up the engines</title>
@@ -308,5 +308,16 @@ comes with a dedicated contextily.providers module, which contains a
 hard-coded list of providers scraped from the list used by leaflet
 (as of version 1.1.0).</summary>
     <published>2021-08-03T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post16_turing_talk.html</id>
+    <title>Urban Grammar in the Turing Cath Up</title>
+    <updated>2021-12-09T00:00:00+00:00</updated>
+    <content type="html">&lt;p&gt;Last month, on November 23rd, Dani gave a quick overview of the Urban Grammar project at the monthly catch up of the Alan Turing Institute. This is an internal call open to all fellows and staff. Dani gave an overview of the project, and covered in a bit more detail the aspects that have been completed already, including the development of a Spatial Signature classification for Great Britain.&lt;/p&gt;
+&lt;p&gt;There is no video of the talk, but you can check out the slides used &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati/"&gt;here&lt;/a&gt; in the talks page of the project or, if you prefer to download a PDF version, you can do so &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati/index.pdf"&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post16_turing_talk.html" rel="alternate"/>
+    <summary>Last month, on November 23rd, Dani gave a quick overview of the Urban Grammar project at the monthly catch up of the Alan Turing Institute. This is an internal call open to all fellows and staff. Dani gave an overview of the project, and covered in a bit more detail the aspects that have been completed already, including the development of a Spatial Signature classification for Great Britain.There is no video of the talk, but you can check out the slides used here in the talks page of the project or, if you prefer to download a PDF version, you can do so here.</summary>
+    <published>2021-12-09T00:00:00+00:00</published>
   </entry>
 </feed>

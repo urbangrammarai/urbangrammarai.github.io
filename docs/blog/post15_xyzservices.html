@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>xyzservices: a unified source of XYZ tile providers in Python &#8212; Urban Grammar AI  documentation</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,10 +24,10 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -36,7 +37,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
      
 <link
   rel="alternate"
@@ -198,7 +202,7 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="xyzservices-a-unified-source-of-xyz-tile-providers-in-python">
+                 <section class="tex2jax_ignore mathjax_ignore" id="xyzservices-a-unified-source-of-xyz-tile-providers-in-python">
 <h1>xyzservices: a unified source of XYZ tile providers in Python<a class="headerlink" href="#xyzservices-a-unified-source-of-xyz-tile-providers-in-python" title="Permalink to this headline">¶</a></h1>
 <p><em>Within the project, we often need to map the results within different contexts ranging from static to interactive maps. We felt that it could be a smoother experience and built <code class="docutils literal notranslate"><span class="pre">xyzservices</span></code>.</em></p>
 <p>A Python ecosystem offers numerous tools for the visualisation of data
@@ -210,32 +214,32 @@ providers.</p>
 use of XYZ tiles. I’ll try to explain the rationale why we did that,
 without going into the details of the package. If you want those
 details, check its <a class="reference external" href="https://xyzservices.readthedocs.io/en/latest/">documentation</a>.</p>
-<div class="section" id="the-situation">
+<section id="the-situation">
 <h2>The situation<a class="headerlink" href="#the-situation" title="Permalink to this headline">¶</a></h2>
 <p>Let me quickly look at a few popular packages and their approach to tile
 management - <code class="docutils literal notranslate"><span class="pre">contextily</span></code>, <code class="docutils literal notranslate"><span class="pre">folium</span></code>, <code class="docutils literal notranslate"><span class="pre">ipyleaflet</span></code> and <code class="docutils literal notranslate"><span class="pre">holoviews</span></code>.</p>
-<div class="section" id="contextily">
+<section id="contextily">
 <h3>contextily<a class="headerlink" href="#contextily" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">contextily</span></code> brings contextual base maps to static <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> plots. It
 comes with a dedicated <code class="docutils literal notranslate"><span class="pre">contextily.providers</span></code> module, which contains <a class="reference external" href="https://github.com/geopandas/contextily/blob/v1.1.0/contextily/_providers.py">a
 hard-coded list of providers</a> scraped from <a class="reference external" href="http://leaflet-extras.github.io/leaflet-providers/preview/">the list used by leaflet</a>
 (as of version 1.1.0).</p>
-</div>
-<div class="section" id="folium">
+</section>
+<section id="folium">
 <h3>folium<a class="headerlink" href="#folium" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">folium</span></code> is a lightweight interface to a JavaScript leaflet library. It
 providers built-in support for 6 types of tiles and allows passing any
 XYZ URL and its attribution to a map. It means that it mostly relies on
 external sources of tile providers.</p>
-</div>
-<div class="section" id="ipyleaflet">
+</section>
+<section id="ipyleaflet">
 <h3>ipyleaflet<a class="headerlink" href="#ipyleaflet" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ipyleaflet</span></code> brings leaflet support to Jupyter notebooks and comes with
 a bit more options than <code class="docutils literal notranslate"><span class="pre">folium</span></code>. It has a very similar approach as
 <code class="docutils literal notranslate"><span class="pre">contextily</span></code> does - it has <a class="reference external" href="https://github.com/jupyter-widgets/ipyleaflet/blob/0.14.0/ipyleaflet/basemaps.py">a hard-coded list</a> of about 37 providers in
 its <code class="docutils literal notranslate"><span class="pre">basemaps</span></code> module.</p>
-</div>
-<div class="section" id="holoviews">
+</section>
+<section id="holoviews">
 <h3>holoviews<a class="headerlink" href="#holoviews" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">holoviews</span></code> provides a Python interface to the Bokeh library and its
 list of supported base maps is also <a class="reference external" href="https://github.com/holoviz/holoviews/blob/v1.14.5/holoviews/element/tiles.py">hard-coded</a>.</p>
@@ -243,9 +247,9 @@ list of supported base maps is also <a class="reference external" href="https://
 <p>Each package has to maintain the list of base maps, ensure that they all
 work, respond to users requiring more, update links… That is a lot of
 duplicated maintenance burden. We think it is avoidable.</p>
-</div>
-</div>
-<div class="section" id="the-vision">
+</section>
+</section>
+<section id="the-vision">
 <h2>The vision<a class="headerlink" href="#the-vision" title="Permalink to this headline">¶</a></h2>
 <p>All XYZ tile providers have a single lightweight home and a clean API
 supporting the rest of the ecosystem. All the other packages use the
@@ -302,8 +306,8 @@ them in every package.</p></li>
 initial version of the package is out now and installable from PyPI and
 conda-forge. We hope to have as many developers as possible on board to
 allow for the consolidation of the ecosystem in the future.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
      
@@ -318,6 +322,10 @@ allow for the consolidation of the ecosystem in the future.</p>
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
+     Next: 
+    <a href="post16_turing_talk.html">
+      Urban Grammar in the Turing Cath Up 
+    </a>
     
   </span>
 </div>
@@ -327,10 +335,9 @@ allow for the consolidation of the ecosystem in the future.</p>
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
               
           </main>
           
@@ -338,20 +345,19 @@ allow for the consolidation of the ecosystem in the future.</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2020-, Dani Arribas-Bel, Martin Fleischmann.<br/>
+    &copy; Copyright 2020-, Dani Arribas-Bel, Martin Fleischmann.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
 </p>
     </div>
     
