@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2021-12-09T17:10:57.239232+00:00</updated>
+  <updated>2021-12-10T11:27:18.615354+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
@@ -311,7 +311,7 @@ hard-coded list of providers scraped from the list used by leaflet
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post16_turing_talk.html</id>
-    <title>Urban Grammar in the Turing Cath Up</title>
+    <title>Urban Grammar in the Turing Catch Up</title>
     <updated>2021-12-09T00:00:00+00:00</updated>
     <content type="html">&lt;p&gt;Last month, on November 23rd, Dani gave a quick overview of the Urban Grammar project at the monthly catch up of the Alan Turing Institute. This is an internal call open to all fellows and staff. Dani gave an overview of the project, and covered in a bit more detail the aspects that have been completed already, including the development of a Spatial Signature classification for Great Britain.&lt;/p&gt;
 &lt;p&gt;There is no video of the talk, but you can check out the slides used &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati/"&gt;here&lt;/a&gt; in the talks page of the project or, if you prefer to download a PDF version, you can do so &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati/index.pdf"&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -319,5 +319,17 @@ hard-coded list of providers scraped from the list used by leaflet
     <link href="https://urbangrammarai.xyz/blog/post16_turing_talk.html" rel="alternate"/>
     <summary>Last month, on November 23rd, Dani gave a quick overview of the Urban Grammar project at the monthly catch up of the Alan Turing Institute. This is an internal call open to all fellows and staff. Dani gave an overview of the project, and covered in a bit more detail the aspects that have been completed already, including the development of a Spatial Signature classification for Great Britain.There is no video of the talk, but you can check out the slides used here in the talks page of the project or, if you prefer to download a PDF version, you can do so here.</summary>
     <published>2021-12-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post17_casa_talk.html</id>
+    <title>British Spatial Signatures talk at CASA</title>
+    <updated>2021-12-10T00:00:00+00:00</updated>
+    <content type="html">&lt;p&gt;On Monday November 29th, Dani gave a talk on the Spatial Signatures project at the &lt;a class="reference external" href="https://ucl.ac.uk/barlett/casa"&gt;CASA&lt;/a&gt; seminars. The talk covered known bits from &lt;a class="reference external" href="https://urbangrammarai.xyz/talks"&gt;previous talks&lt;/a&gt;, mostly about framing of the problem and the foundational blocks of the Spatial Signatures but, more importantly, presented for the first time our results from the British signatures. The audience was engaging and had many super interesting questions. Thanks!&lt;/p&gt;
+&lt;p&gt;CASA recorded and published the video on YouTube:&lt;/p&gt;
+&lt;p&gt;The slides used are &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_casa/index.html"&gt;here&lt;/a&gt; or, if you prefer it, &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_casa/index.pdf"&gt;here is the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt; file&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post17_casa_talk.html" rel="alternate"/>
+    <summary>On Monday November 29th, Dani gave a talk on the Spatial Signatures project at the CASA seminars. The talk covered known bits from previous talks, mostly about framing of the problem and the foundational blocks of the Spatial Signatures but, more importantly, presented for the first time our results from the British signatures. The audience was engaging and had many super interesting questions. Thanks!CASA recorded and published the video on YouTube:The slides used are here or, if you prefer it, here is the PDF file.</summary>
+    <published>2021-12-10T00:00:00+00:00</published>
   </entry>
 </feed>
