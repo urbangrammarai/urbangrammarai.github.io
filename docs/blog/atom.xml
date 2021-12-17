@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2021-12-10T11:27:18.615354+00:00</updated>
+  <updated>2021-12-17T10:45:04.774624+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
@@ -331,5 +331,16 @@ hard-coded list of providers scraped from the list used by leaflet
     <link href="https://urbangrammarai.xyz/blog/post17_casa_talk.html" rel="alternate"/>
     <summary>On Monday November 29th, Dani gave a talk on the Spatial Signatures project at the CASA seminars. The talk covered known bits from previous talks, mostly about framing of the problem and the foundational blocks of the Spatial Signatures but, more importantly, presented for the first time our results from the British signatures. The audience was engaging and had many super interesting questions. Thanks!CASA recorded and published the video on YouTube:The slides used are here or, if you prefer it, here is the PDF file.</summary>
     <published>2021-12-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post18_turing20.html</id>
+    <title>British Spatial Signatures at Towards urban analytics 2.0</title>
+    <updated>2021-12-17T00:00:00+00:00</updated>
+    <content type="html">&lt;p&gt;On Tuesday, November 30th, Martin gave a lighting talk on the Spatial Signatures of Great Britain at the Alan Turing Insititute event &lt;a class="reference external" href="https://www.turing.ac.uk/events/towards-urban-analytics-20"&gt;Towards urban analytics 2.0&lt;/a&gt; that was in person in Leeds, UK. The talk introduced the classification of Great Britain that is now available in the form of &lt;a class="reference external" href="http://urbangrammarai.xyz/great-britain/"&gt;an interactive map&lt;/a&gt; and for download either from the &lt;a class="reference external" href="https://data.cdrc.ac.uk/dataset/spatial-signatures-great-britain"&gt;Consumer Data Research Centre’s open data portal&lt;/a&gt; or the archived version from &lt;a class="reference external" href="https://doi.org/10.6084/m9.figshare.16691575.v1"&gt;figshare&lt;/a&gt;. While there was no space for a Q&amp;amp;A directly after the talk, it has raised an interest leading to several great informal discussions afterwards.&lt;/p&gt;
+&lt;p&gt;The slides from the talk are &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati_leeds/index.html"&gt;here&lt;/a&gt; or &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati_leeds/index.pdf"&gt;here is the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt; file&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post18_turing20.html" rel="alternate"/>
+    <summary>On Tuesday, November 30th, Martin gave a lighting talk on the Spatial Signatures of Great Britain at the Alan Turing Insititute event Towards urban analytics 2.0 that was in person in Leeds, UK. The talk introduced the classification of Great Britain that is now available in the form of an interactive map and for download either from the Consumer Data Research Centre’s open data portal or the archived version from figshare. While there was no space for a Q&amp;A directly after the talk, it has raised an interest leading to several great informal discussions afterwards.The slides from the talk are here or here is the PDF file.</summary>
+    <published>2021-12-17T00:00:00+00:00</published>
   </entry>
 </feed>
