@@ -222,7 +222,13 @@ Finally, you can add the created layer to the map.
 mapPbfLayer.addTo(map);
 ```
 
-At this point, you should be able to see your vector tiles on your map with no styles. It should look like this:
+At this point, you should be able to see your vector tiles on your map with no styles. However, to be able to use it locally, you need to start a server first. An easy way is to do it with Python. In the terminal, navigate to the folder with your html file (something like `cd path/to/my_folder`) and start the http server:
+
+```bash
+python -m http.server 8000
+```
+
+If you now open http://localhost:8000 in your browser, you should be able to open your html file (it will open automatically if it is called `index.html`) and see your map. It should look like this:
 
 ![Screenshot 2021-10-07 at 19.22.44.png](https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/Screenshot_2021-10-07_at_19.22.44.png)
 
