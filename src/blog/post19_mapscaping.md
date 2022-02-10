@@ -1,7 +1,7 @@
 ```{post} February 10th, 2022
 ```
 
-# The Urban Grammar at MapScaping podcast!
+# The Urban Grammar on MapScaping podcast!
 
 Last month, Dani had a chance to speak with Daniel from the [Mapscaping podcast](https://mapscaping.com/podcast/) about the Urban Grammar project. You can listen to the conversation over at the podcast's website:
 
