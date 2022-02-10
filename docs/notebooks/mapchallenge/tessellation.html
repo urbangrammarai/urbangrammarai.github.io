@@ -34,8 +34,8 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -377,7 +377,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -419,8 +419,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>import os
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
 
 os.environ.get(&#39;GDS_ENV_VERSION&#39;)
 </pre></div>
@@ -442,8 +441,7 @@ os.environ.get(&#39;GDS_ENV_VERSION&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>import geopandas as gpd
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import geopandas as gpd
 import momepy as mm
 import osmnx as ox
 import pygeos
@@ -470,8 +468,7 @@ Matplotlib created a temporary config/cache directory at /tmp/matplotlib-dq2ou8_
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[187]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>def pipeline(lat, lon, path, prefix, dist=250, figsize=(12, 12)):
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def pipeline(lat, lon, path, prefix, dist=250, figsize=(12, 12)):
     point = (lat, lon)
     gdf = ox.geometries.geometries_from_point(point, dist=dist, tags={&#39;building&#39;:True})
 
@@ -622,8 +619,7 @@ Matplotlib created a temporary config/cache directory at /tmp/matplotlib-dq2ou8_
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[186]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(33.9488360, -118.2372975, path=&#39;./&#39;, prefix=&#39;la_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(33.9488360, -118.2372975, path=&#39;./&#39;, prefix=&#39;la_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -651,8 +647,7 @@ Figure 7 saved to ./la_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[188]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(41.3907594, 2.1573404, path=&#39;./&#39;, prefix=&#39;bcn_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(41.3907594, 2.1573404, path=&#39;./&#39;, prefix=&#39;bcn_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -676,8 +671,7 @@ Figure 7 saved to ./bcn_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[189]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(38.995888, -77.135073, path=&#39;./&#39;, prefix=&#39;atl_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(38.995888, -77.135073, path=&#39;./&#39;, prefix=&#39;atl_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -703,8 +697,7 @@ Figure 7 saved to ./atl_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[190]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(44.4942640, 11.3473233, path=&#39;./&#39;, prefix=&#39;bol_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(44.4942640, 11.3473233, path=&#39;./&#39;, prefix=&#39;bol_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -730,8 +723,7 @@ Figure 7 saved to ./bol_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[193]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(-15.8038355, -47.8918796, path=&#39;./&#39;, prefix=&#39;bra_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(-15.8038355, -47.8918796, path=&#39;./&#39;, prefix=&#39;bra_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -755,8 +747,7 @@ Figure 7 saved to ./bra_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -791,7 +782,7 @@ Figure 7 saved to ./bra_07.png
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     

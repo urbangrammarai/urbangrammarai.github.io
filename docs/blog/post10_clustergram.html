@@ -34,8 +34,8 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -397,7 +397,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -459,8 +459,7 @@ options to match your publication style.</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>from clustergram import Clustergram
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from clustergram import Clustergram
 import urbangrammar_graphics as ugg
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -472,8 +471,7 @@ from sklearn.preprocessing import scale
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>sns.set(style=&#39;whitegrid&#39;)
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sns.set(style=&#39;whitegrid&#39;)
 </pre></div>
 </div>
 </div>
@@ -486,8 +484,7 @@ from sklearn.preprocessing import scale
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>iris = sns.load_dataset(&quot;iris&quot;)
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>iris = sns.load_dataset(&quot;iris&quot;)
 g = sns.pairplot(iris, hue=&quot;species&quot;, palette=ugg.COLORS[1:4])
 g.fig.suptitle(&quot;Iris flowers&quot;, y=1.01)
 </pre></div>
@@ -516,8 +513,7 @@ Text(0.5, 1.01, &#39;Iris flowers&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>data = scale(iris.drop(columns=[&#39;species&#39;]))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data = scale(iris.drop(columns=[&#39;species&#39;]))
 </pre></div>
 </div>
 </div>
@@ -525,8 +521,7 @@ Text(0.5, 1.01, &#39;Iris flowers&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cgram = Clustergram(range(1, 10), n_init=1000)
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cgram = Clustergram(range(1, 10), n_init=1000)
 cgram.fit(data)
 </pre></div>
 </div>
@@ -551,8 +546,7 @@ K=9 fitted in 3.2460429668426514 seconds.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
 ax.yaxis.grid(False)
 sns.despine(offset=10)
 ax.set_title(&#39;K-Means (scikit-learn)&#39;)
@@ -583,8 +577,7 @@ number of clusters for Iris data is three.</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>fig, axs = plt.subplots(2, figsize=(10, 10), sharex=True)
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fig, axs = plt.subplots(2, figsize=(10, 10), sharex=True)
 cgram.silhouette_score().plot(xlabel=&quot;Number of clusters (k)&quot;, ylabel=&quot;Silhouette score&quot;, color=ugg.COLORS[1], ax=axs[0])
 cgram.calinski_harabasz_score().plot(xlabel=&quot;Number of clusters (k)&quot;, ylabel=&quot;Calinski-Harabasz score&quot;, color=ugg.COLORS[1], ax=axs[1])
 sns.despine(offset=10)
@@ -607,8 +600,7 @@ sns.despine(offset=10)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>penguins = sns.load_dataset(&quot;penguins&quot;)
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>penguins = sns.load_dataset(&quot;penguins&quot;)
 </pre></div>
 </div>
 </div>
@@ -616,8 +608,7 @@ sns.despine(offset=10)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>g = sns.pairplot(penguins, hue=&quot;species&quot;, palette=ugg.COLORS[3:])
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>g = sns.pairplot(penguins, hue=&quot;species&quot;, palette=ugg.COLORS[3:])
 g.fig.suptitle(&quot;Palmer penguins&quot;, y=1.01)
 </pre></div>
 </div>
@@ -643,8 +634,7 @@ Text(0.5, 1.01, &#39;Palmer penguins&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>data = scale(penguins.drop(columns=[&#39;species&#39;, &#39;island&#39;, &#39;sex&#39;]).dropna())
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data = scale(penguins.drop(columns=[&#39;species&#39;, &#39;island&#39;, &#39;sex&#39;]).dropna())
 </pre></div>
 </div>
 </div>
@@ -652,8 +642,7 @@ Text(0.5, 1.01, &#39;Palmer penguins&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cgram = Clustergram(range(1, 10), n_init=1000)
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cgram = Clustergram(range(1, 10), n_init=1000)
 cgram.fit(data)
 </pre></div>
 </div>
@@ -678,8 +667,7 @@ K=9 fitted in 7.696599721908569 seconds.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
 ax.yaxis.grid(False)
 sns.despine(offset=10)
 ax.set_title(&#39;K-Means (scikit-learn)&#39;)
@@ -710,8 +698,7 @@ groups.</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>cgram = Clustergram(range(1, 10), n_init=100, method=&quot;gmm&quot;)
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cgram = Clustergram(range(1, 10), n_init=100, method=&quot;gmm&quot;)
 cgram.fit(data)
 ax = cgram.plot(figsize=(10, 8), line_style=dict(color=ugg.COLORS[1]), cluster_style={&quot;color&quot;: ugg.COLORS[2]})
 ax.yaxis.grid(False)
@@ -763,7 +750,8 @@ additional insight, and it is upon us how we interpret it.</p>
 </section>
 
 <div class="section">
-     
+    
+
 <div class="section">
   <span style="float: left">
      Previous:
@@ -810,7 +798,7 @@ additional insight, and it is upon us how we interpret it.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     
