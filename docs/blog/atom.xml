@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-02-10T13:34:35.411782+00:00</updated>
+  <updated>2022-02-10T13:46:46.270794+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -385,12 +385,12 @@ hard-coded list of providers scraped from the list used by leaflet
     <updated>2022-02-10T00:00:00+00:00</updated>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Last month, Dani had a chance to speak with Daniel from the &lt;a class="reference external" href="https://mapscaping.com/podcast/"&gt;Mapscaping podcast&lt;/a&gt; about the Urban Grammar project. You can listen to the conversation over at the podcast’s website:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="https://mapscaping.com/wp-content/uploads/2021/06/Mapscaping_Logo_Small_Transparent-Kopi.png" src="https://mapscaping.com/podcast/urban-grammar-form-function-culture-and-satellite-imagery/" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://mapscaping.com/podcast/urban-grammar-form-function-culture-and-satellite-imagery/"&gt;&lt;img alt="mapscaping logo" src="https://mapscaping.com/wp-content/uploads/2021/06/Mapscaping_Logo_Small_Transparent-Kopi.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Or on your preferred purveyor of podcasts (&lt;a class="reference external" href="https://podcasts.apple.com/us/podcast/mapscaping-podcast-gis-geospatial-remote-sensing-earth/id1452297085"&gt;Apple Podcasts&lt;/a&gt;, &lt;a class="reference external" href="https://www.stitcher.com/show/the-mapscaping-podcast"&gt;Stitcher&lt;/a&gt;, &lt;a class="reference external" href="https://podcasts.google.com/feed/aHR0cHM6Ly9tYXBzY2FwaW5nLnBvZGJlYW4uY29tL2ZlZWQueG1s"&gt;Google Podcasts&lt;/a&gt;, &lt;a class="reference external" href="https://open.spotify.com/show/57EmXdDgrUNYxtrer6LVsI"&gt;Spotify&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://urbangrammarai.xyz/blog/post19_mapscaping.html" rel="alternate"/>
-    <summary>Last month, Dani had a chance to speak with Daniel from the Mapscaping podcast about the Urban Grammar project. You can listen to the conversation over at the podcast’s website:https://mapscaping.com/wp-content/uploads/2021/06/Mapscaping_Logo_Small_Transparent-Kopi.pngOr on your preferred purveyor of podcasts (Apple Podcasts, Stitcher, Google Podcasts, Spotify).</summary>
+    <summary>Last month, Dani had a chance to speak with Daniel from the Mapscaping podcast about the Urban Grammar project. You can listen to the conversation over at the podcast’s website:mapscaping logoOr on your preferred purveyor of podcasts (Apple Podcasts, Stitcher, Google Podcasts, Spotify).</summary>
     <published>2022-02-10T00:00:00+00:00</published>
   </entry>
 </feed>
