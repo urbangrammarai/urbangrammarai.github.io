@@ -131,6 +131,10 @@
         <a class="nav-link" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2 - Spatial Signatures</a>
       </li>
       
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/signature_ai/index">WP3 - Signature AI</a>
+      </li>
+      
     </ul>
 
 </nav>
@@ -180,7 +184,7 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="contribution-to-tobler-speeding-up-areal-interpolation">
+                 <section id="contribution-to-tobler-speeding-up-areal-interpolation">
 <h1>Contribution to <code class="docutils literal notranslate"><span class="pre">tobler</span></code>: Speeding up areal interpolation<a class="headerlink" href="#contribution-to-tobler-speeding-up-areal-interpolation" title="Permalink to this headline">¶</a></h1>
 <p>Have you ever needed to link two sources of data, each attached to a different geometry? In our work in the <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>, we do. We have to transfer data from various sources, linked to output areas, urban blocks or other spatial units to our own bespoke set of geographies. Therefore, we often need to do areal interpolation to correctly map data from one layer to another. Luckily, the open-source Python ecosystem can help.</p>
 <p><a class="reference external" href="https://pysal.org/tobler/">Tobler</a>, a part of <a class="reference external" href="https://pysal.org">PySAL family</a>, is a library for areal interpolation and dasymetric mapping which already offered what we needed. However, our data tends to be large, up to 15 million rows on which we need to interpolate several hundreds of thousands of rows of input data. That can take a while, so each performance improvement can help a lot.</p>
