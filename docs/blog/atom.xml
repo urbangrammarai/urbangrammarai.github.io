@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-03-09T15:16:21.497056+00:00</updated>
+  <updated>2022-03-09T16:42:19.180600+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -364,6 +364,22 @@ hard-coded list of providers scraped from the list used by leaflet
 </content>
     <link href="https://urbangrammarai.xyz/blog/post17_casa_talk.html" rel="alternate"/>
     <summary>On Monday November 29th, Dani gave a talk on the Spatial Signatures project at the CASA seminars. The talk covered known bits from previous talks, mostly about framing of the problem and the foundational blocks of the Spatial Signatures but, more importantly, presented for the first time our results from the British signatures. The audience was engaging and had many super interesting questions. Thanks!CASA recorded and published the video on YouTube:The slides used are here or, if you prefer it, here is the PDF file.</summary>
+    <published>2021-12-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post20_third_advisory_board.html</id>
+    <title>Third Advisory Board</title>
+    <updated>2021-12-10T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;On December 9th. 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.&lt;/p&gt;
+&lt;p&gt;The session started with an overview of the current progress focusing on the current progress and explanation of the whole process of generating spatial signatures from data acquistion to empirical exploration. We then spent
+some time discussed the open infrastruture built around the project resulting in an open data product and maximum transparency of the process behind it. We followed by the focused discussion on dissemination and impact of the classification.&lt;/p&gt;
+&lt;p&gt;Three hours later, we finished with a lot of ideas and potential research avenues and collaborations to be explored. We hope that the situation permits another Advisory board meeting soon and hopefully, in person.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post20_third_advisory_board.html" rel="alternate"/>
+    <summary>On December 9th. 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.The session started with an overview of the current progress focusing on the current progress and explanation of the whole process of generating spatial signatures from data acquistion to empirical exploration. We then spent
+some time discussed the open infrastruture built around the project resulting in an open data product and maximum transparency of the process behind it. We followed by the focused discussion on dissemination and impact of the classification.Three hours later, we finished with a lot of ideas and potential research avenues and collaborations to be explored. We hope that the situation permits another Advisory board meeting soon and hopefully, in person.</summary>
     <published>2021-12-10T00:00:00+00:00</published>
   </entry>
   <entry>
