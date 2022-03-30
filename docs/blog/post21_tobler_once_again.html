@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Form-based Signatures at ISUF 2021 &#8212; Urban Grammar AI  documentation</title>
+    <title>Contribution to tobler once again: Areal interpolation even faster &#8212; Urban Grammar AI  documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -169,16 +169,37 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section id="form-based-signatures-at-isuf-2021">
-<h1>Form-based Signatures at ISUF 2021<a class="headerlink" href="#form-based-signatures-at-isuf-2021" title="Permalink to this headline">¶</a></h1>
-<p>On June 30th, Martin presented a classification of Great Britain based on the form
-component of Spatial Signatures at the International Seminar on Urban Form 2021, which
-was held virtually in Glasgow, Scotland. This was the first time we have presented results covering the
-whole GB, albeit using a single component only (function has been temporarily excluded). The work was received positively and spurred
-a bit of discussion. Within a few months, the results should be published in the conference proceedings.</p>
-<p>You can have a look at Martin’s presentation at:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8d4e1uVMg3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>The slides used are <a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf">here</a> or, if you prefer it, <a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf/index.pdf">here is the <code class="docutils literal notranslate"><span class="pre">PDF</span></code> file</a> (24Mb).</p>
+                 <section id="contribution-to-tobler-once-again-areal-interpolation-even-faster">
+<h1>Contribution to <code class="docutils literal notranslate"><span class="pre">tobler</span></code> once again: Areal interpolation even faster<a class="headerlink" href="#contribution-to-tobler-once-again-areal-interpolation-even-faster" title="Permalink to this headline">¶</a></h1>
+<p>Last year, we needed areal interpolation to transfer data from various administrative
+and statistical spatial units like Output areas to enclosed tessellation cells. To do
+that, we used the <a class="reference external" href="https://pysal.org/tobler/">Tobler</a> Python package from <a class="reference external" href="https://pysal.org">PySAL
+family</a>. And since we needed to scale it to a national level, we
+spent some time refactoring the tools to make it much more performant. All that is
+discussed in <a class="reference internal" href="post6_tobler.html#post6_tobler"><span class="std std-ref">this blog post</span></a>.</p>
+<p>After a year, we needed areal interpolation again. This time, we took a slightly
+different approach. We did not want to partition the data a priori. We also knew that
+the first part of the function would work well as we had already reimplemented it
+before. However, we hit another bottleneck. This time in the second part of the code, we
+did not touch before. What has happened?</p>
+<p>It is a bit technical. We need to store a relation between source and target geometries.
+Say that we have 100 000 source geometries and 1 000 000 target ones. We essentially
+want an array of 100 000 rows and 1 000 000. That does not fit in memory. But since a
+lot of the cells of such an array would say 0, we can omit them and use a sparse array
+(or sparse matrix) format, which behaves like a normal dense array but is way more
+memory efficient. However, there are multiple ways of storing the data in a sparse
+array. Tobler was using DOK - Dictionary of Keys. That is really fast if you need to
+access individual records quickly. But that is not the application we have in tobler. We
+need quick row indexing (apart from a few other things). Fortunately, the fix was
+simple. We replaced DOK with CSR - Compressed Sparse Row matrix, and the results we
+miraculous. While the small test benchmark was about 45x faster, our actual
+interpolation was faster by several orders of magnitude. The original code did not
+finish after hours. The new once was done in under a second.</p>
+<p>Small things, like storage formats, matter. If you want to see the effect of different
+sparse array formats, see <a class="reference external" href="https://gist.github.com/martinfleis/7f68536a0fe6f3f30f1b834484d9cbab">this
+notebook</a>. And the
+change in tobler is <a class="reference external" href="https://github.com/pysal/tobler/pull/160">here</a> and will be part of
+the next release.</p>
 </section>
 
 <div class="section">
@@ -188,17 +209,13 @@ a bit of discussion. Within a few months, the results should be published in the
   <span style="float: left">
      Previous:
     
-    <a href="post12_gsoc.html">
-       Google Summer of Code
+    <a href="post19_mapscaping.html">
+       The Urban Grammar on MapScaping podcast!
     </a>
     
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
-     Next: 
-    <a href="post14_ati.html">
-      Signatures for (all of) GB at Turing Urban Analytics 
-    </a>
     
   </span>
 </div>

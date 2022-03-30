@@ -163,6 +163,56 @@
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
+      <a href="post21_tobler_once_again.html"
+        >Contribution to tobler once again: Areal interpolation even faster</a
+      >
+    </h2>
+
+    <ul class="ablog-archive">
+      <li>
+          29 March 2022 
+      </li>
+            
+    </ul>
+    <div class="ablog-post-excerpt docutils container">
+<p>Last year, we needed areal interpolation to transfer data from various administrative
+and statistical spatial units like Output areas to enclosed tessellation cells. To do
+that, we used the <a class="reference external" href="https://pysal.org/tobler/">Tobler</a> Python package from <a class="reference external" href="https://pysal.org">PySAL
+family</a>. And since we needed to scale it to a national level, we
+spent some time refactoring the tools to make it much more performant. All that is
+discussed in <a class="reference internal" href="post6_tobler.html#post6_tobler"><span class="std std-ref">this blog post</span></a>.</p>
+<p>After a year, we needed areal interpolation again. This time, we took a slightly
+different approach. We did not want to partition the data a priori. We also knew that
+the first part of the function would work well as we had already reimplemented it
+before. However, we hit another bottleneck. This time in the second part of the code, we
+did not touch before. What has happened?</p>
+<p>It is a bit technical. We need to store a relation between source and target geometries.
+Say that we have 100 000 source geometries and 1 000 000 target ones. We essentially
+want an array of 100 000 rows and 1 000 000. That does not fit in memory. But since a
+lot of the cells of such an array would say 0, we can omit them and use a sparse array
+(or sparse matrix) format, which behaves like a normal dense array but is way more
+memory efficient. However, there are multiple ways of storing the data in a sparse
+array. Tobler was using DOK - Dictionary of Keys. That is really fast if you need to
+access individual records quickly. But that is not the application we have in tobler. We
+need quick row indexing (apart from a few other things). Fortunately, the fix was
+simple. We replaced DOK with CSR - Compressed Sparse Row matrix, and the results we
+miraculous. While the small test benchmark was about 45x faster, our actual
+interpolation was faster by several orders of magnitude. The original code did not
+finish after hours. The new once was done in under a second.</p>
+<p>Small things, like storage formats, matter. If you want to see the effect of different
+sparse array formats, see <a class="reference external" href="https://gist.github.com/martinfleis/7f68536a0fe6f3f30f1b834484d9cbab">this
+notebook</a>. And the
+change in tobler is <a class="reference external" href="https://github.com/pysal/tobler/pull/160">here</a> and will be part of
+the next release.</p>
+</div>
+
+    <p class="ablog-post-expand"><a href="post21_tobler_once_again.html"><em>Read more ...</em></a></p>
+    <hr />
+  </div>
+  
+
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="post19_mapscaping.html"
         >The Urban Grammar on MapScaping podcast!</a
       >
@@ -211,7 +261,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

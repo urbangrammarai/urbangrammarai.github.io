@@ -193,6 +193,37 @@
 <section id="updates">
 <h2>Updates<a class="headerlink" href="#updates" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li class="ablog-post"><p class="ablog-post-title">29 March - <a class="reference internal" href="blog/post21_tobler_once_again.html">Contribution to tobler once again: Areal interpolation even faster</a></p>
+<p class="ablog-post-excerpt">Last year, we needed areal interpolation to transfer data from various administrative
+and statistical spatial units like Output areas to enclosed tessellation cells. To do
+that, we used the <a class="reference external" href="https://pysal.org/tobler/">Tobler</a> Python package from <a class="reference external" href="https://pysal.org">PySAL
+family</a>. And since we needed to scale it to a national level, we
+spent some time refactoring the tools to make it much more performant. All that is
+discussed in <a class="reference internal" href="blog/post6_tobler.html#post6_tobler"><span class="std std-ref">this blog post</span></a>.</p>
+<p class="ablog-post-excerpt">After a year, we needed areal interpolation again. This time, we took a slightly
+different approach. We did not want to partition the data a priori. We also knew that
+the first part of the function would work well as we had already reimplemented it
+before. However, we hit another bottleneck. This time in the second part of the code, we
+did not touch before. What has happened?</p>
+<p class="ablog-post-excerpt">It is a bit technical. We need to store a relation between source and target geometries.
+Say that we have 100 000 source geometries and 1 000 000 target ones. We essentially
+want an array of 100 000 rows and 1 000 000. That does not fit in memory. But since a
+lot of the cells of such an array would say 0, we can omit them and use a sparse array
+(or sparse matrix) format, which behaves like a normal dense array but is way more
+memory efficient. However, there are multiple ways of storing the data in a sparse
+array. Tobler was using DOK - Dictionary of Keys. That is really fast if you need to
+access individual records quickly. But that is not the application we have in tobler. We
+need quick row indexing (apart from a few other things). Fortunately, the fix was
+simple. We replaced DOK with CSR - Compressed Sparse Row matrix, and the results we
+miraculous. While the small test benchmark was about 45x faster, our actual
+interpolation was faster by several orders of magnitude. The original code did not
+finish after hours. The new once was done in under a second.</p>
+<p class="ablog-post-excerpt">Small things, like storage formats, matter. If you want to see the effect of different
+sparse array formats, see <a class="reference external" href="https://gist.github.com/martinfleis/7f68536a0fe6f3f30f1b834484d9cbab">this
+notebook</a>. And the
+change in tobler is <a class="reference external" href="https://github.com/pysal/tobler/pull/160">here</a> and will be part of
+the next release.</p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title">10 February - <a class="reference internal" href="blog/post19_mapscaping.html">The Urban Grammar on MapScaping podcast!</a></p>
 <p class="ablog-post-excerpt">Last month, Dani had a chance to speak with Daniel from the <a class="reference external" href="https://mapscaping.com/podcast/">Mapscaping podcast</a> about the Urban Grammar project. You can listen to the conversation over at the podcast’s website:</p>
 <p class="ablog-post-excerpt"><a class="reference external" href="https://mapscaping.com/podcast/urban-grammar-form-function-culture-and-satellite-imagery/"><img alt="mapscaping logo" src="https://mapscaping.com/wp-content/uploads/2021/06/Mapscaping_Logo_Small_Transparent-Kopi.png" /></a></p>
@@ -358,9 +389,6 @@ you can have a look at an edited version of the video at:</p>
 <p class="ablog-post-excerpt">Martin brings with him a theoretical background in urban morphology combined with a <em>lot</em> of experience in Python open source development around geospatial. There could not be a better combination for the project. As the postdoctoral researcher, Martin will be heavily involved in the implementation of much of the code required to develop the idea of Spatial Signatures, teach a computer to recognise them from satellite imagery, and use them to develop an Urban Grammar. At the same time, he is also joining the <a class="reference external" href="https://www.liverpool.ac.uk/geographic-data-science/">Geographic Data Science Lab</a> and getting involved in its day to day life, participating in internal seminars, coordinating the Brown Bags series and, more generally, chipping in where possible to make the lab a great place to be part of.</p>
 <p class="ablog-post-excerpt">Welcome Martin, this will be a fun ride!</p>
 </li>
-<li class="ablog-post"><p class="ablog-post-title">15 April - <a class="reference internal" href="blog/post1.html">Firing up the engines</a></p>
-<p class="ablog-post-excerpt">This is the first post going out form the <a class="reference external" href="https://www.turing.ac.uk/research/research-projects/urban-grammar">Urban Grammar project</a>. We will use this blog to keep track of progress on the project and to announce milestones we are reaching along the way. If you are interested in cities, satellites and AI, keep an eye on the blog and feel free to get in touch with either <a class="reference external" href="mailto:darribas-bel&#37;&#52;&#48;turing&#46;ac&#46;uk">Dani</a> or <a class="reference external" href="mailto:M&#46;Fleischmann&#37;&#52;&#48;liverpool&#46;ac&#46;uk">Martin</a>!</p>
-</li>
 </ul>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
@@ -423,7 +451,7 @@ you can have a look at an edited version of the video at:</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

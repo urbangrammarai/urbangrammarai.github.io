@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-03-09T16:42:19.180600+00:00</updated>
+  <updated>2022-03-30T15:03:32.651090+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -409,5 +409,70 @@ some time discussed the open infrastruture built around the project resulting in
     <link href="https://urbangrammarai.xyz/blog/post19_mapscaping.html" rel="alternate"/>
     <summary>Last month, Dani had a chance to speak with Daniel from the Mapscaping podcast about the Urban Grammar project. You can listen to the conversation over at the podcast’s website:mapscaping logoOr on your preferred purveyor of podcasts (Apple Podcasts, Stitcher, Google Podcasts, Spotify).</summary>
     <published>2022-02-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post21_tobler_once_again.html</id>
+    <title>Contribution to tobler once again: Areal interpolation even faster</title>
+    <updated>2022-03-29T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Last year, we needed areal interpolation to transfer data from various administrative
+and statistical spatial units like Output areas to enclosed tessellation cells. To do
+that, we used the &lt;a class="reference external" href="https://pysal.org/tobler/"&gt;Tobler&lt;/a&gt; Python package from &lt;a class="reference external" href="https://pysal.org"&gt;PySAL
+family&lt;/a&gt;. And since we needed to scale it to a national level, we
+spent some time refactoring the tools to make it much more performant. All that is
+discussed in &lt;a class="reference internal" href="blog/post6_tobler.html#post6_tobler"&gt;&lt;span class="std std-ref"&gt;this blog post&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After a year, we needed areal interpolation again. This time, we took a slightly
+different approach. We did not want to partition the data a priori. We also knew that
+the first part of the function would work well as we had already reimplemented it
+before. However, we hit another bottleneck. This time in the second part of the code, we
+did not touch before. What has happened?&lt;/p&gt;
+&lt;p&gt;It is a bit technical. We need to store a relation between source and target geometries.
+Say that we have 100 000 source geometries and 1 000 000 target ones. We essentially
+want an array of 100 000 rows and 1 000 000. That does not fit in memory. But since a
+lot of the cells of such an array would say 0, we can omit them and use a sparse array
+(or sparse matrix) format, which behaves like a normal dense array but is way more
+memory efficient. However, there are multiple ways of storing the data in a sparse
+array. Tobler was using DOK - Dictionary of Keys. That is really fast if you need to
+access individual records quickly. But that is not the application we have in tobler. We
+need quick row indexing (apart from a few other things). Fortunately, the fix was
+simple. We replaced DOK with CSR - Compressed Sparse Row matrix, and the results we
+miraculous. While the small test benchmark was about 45x faster, our actual
+interpolation was faster by several orders of magnitude. The original code did not
+finish after hours. The new once was done in under a second.&lt;/p&gt;
+&lt;p&gt;Small things, like storage formats, matter. If you want to see the effect of different
+sparse array formats, see &lt;a class="reference external" href="https://gist.github.com/martinfleis/7f68536a0fe6f3f30f1b834484d9cbab"&gt;this
+notebook&lt;/a&gt;. And the
+change in tobler is &lt;a class="reference external" href="https://github.com/pysal/tobler/pull/160"&gt;here&lt;/a&gt; and will be part of
+the next release.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post21_tobler_once_again.html" rel="alternate"/>
+    <summary>Last year, we needed areal interpolation to transfer data from various administrative
+and statistical spatial units like Output areas to enclosed tessellation cells. To do
+that, we used the Tobler Python package from PySAL
+family. And since we needed to scale it to a national level, we
+spent some time refactoring the tools to make it much more performant. All that is
+discussed in this blog post.After a year, we needed areal interpolation again. This time, we took a slightly
+different approach. We did not want to partition the data a priori. We also knew that
+the first part of the function would work well as we had already reimplemented it
+before. However, we hit another bottleneck. This time in the second part of the code, we
+did not touch before. What has happened?It is a bit technical. We need to store a relation between source and target geometries.
+Say that we have 100 000 source geometries and 1 000 000 target ones. We essentially
+want an array of 100 000 rows and 1 000 000. That does not fit in memory. But since a
+lot of the cells of such an array would say 0, we can omit them and use a sparse array
+(or sparse matrix) format, which behaves like a normal dense array but is way more
+memory efficient. However, there are multiple ways of storing the data in a sparse
+array. Tobler was using DOK - Dictionary of Keys. That is really fast if you need to
+access individual records quickly. But that is not the application we have in tobler. We
+need quick row indexing (apart from a few other things). Fortunately, the fix was
+simple. We replaced DOK with CSR - Compressed Sparse Row matrix, and the results we
+miraculous. While the small test benchmark was about 45x faster, our actual
+interpolation was faster by several orders of magnitude. The original code did not
+finish after hours. The new once was done in under a second.Small things, like storage formats, matter. If you want to see the effect of different
+sparse array formats, see this
+notebook. And the
+change in tobler is here and will be part of
+the next release.</summary>
+    <published>2022-03-29T00:00:00+00:00</published>
   </entry>
 </feed>
