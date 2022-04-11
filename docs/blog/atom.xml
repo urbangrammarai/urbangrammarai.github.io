@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-03-30T15:03:32.651090+00:00</updated>
+  <updated>2022-04-11T11:07:15.783312+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -371,14 +371,14 @@ hard-coded list of providers scraped from the list used by leaflet
     <title>Third Advisory Board</title>
     <updated>2021-12-10T00:00:00+00:00</updated>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;On December 9th. 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.&lt;/p&gt;
+&lt;p&gt;On December 9th 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.&lt;/p&gt;
 &lt;p&gt;The session started with an overview of the current progress focusing on the current progress and explanation of the whole process of generating spatial signatures from data acquistion to empirical exploration. We then spent
 some time discussed the open infrastruture built around the project resulting in an open data product and maximum transparency of the process behind it. We followed by the focused discussion on dissemination and impact of the classification.&lt;/p&gt;
 &lt;p&gt;Three hours later, we finished with a lot of ideas and potential research avenues and collaborations to be explored. We hope that the situation permits another Advisory board meeting soon and hopefully, in person.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://urbangrammarai.xyz/blog/post20_third_advisory_board.html" rel="alternate"/>
-    <summary>On December 9th. 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.The session started with an overview of the current progress focusing on the current progress and explanation of the whole process of generating spatial signatures from data acquistion to empirical exploration. We then spent
+    <summary>On December 9th 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.The session started with an overview of the current progress focusing on the current progress and explanation of the whole process of generating spatial signatures from data acquistion to empirical exploration. We then spent
 some time discussed the open infrastruture built around the project resulting in an open data product and maximum transparency of the process behind it. We followed by the focused discussion on dissemination and impact of the classification.Three hours later, we finished with a lot of ideas and potential research avenues and collaborations to be explored. We hope that the situation permits another Advisory board meeting soon and hopefully, in person.</summary>
     <published>2021-12-10T00:00:00+00:00</published>
   </entry>
@@ -409,6 +409,36 @@ some time discussed the open infrastruture built around the project resulting in
     <link href="https://urbangrammarai.xyz/blog/post19_mapscaping.html" rel="alternate"/>
     <summary>Last month, Dani had a chance to speak with Daniel from the Mapscaping podcast about the Urban Grammar project. You can listen to the conversation over at the podcast’s website:mapscaping logoOr on your preferred purveyor of podcasts (Apple Podcasts, Stitcher, Google Podcasts, Spotify).</summary>
     <published>2022-02-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post22_fourth_advisory_board.html</id>
+    <title>Third Advisory Board</title>
+    <updated>2022-03-18T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;On March 17th 2022, the (hopefully) last online Advisory Board meeting was held over
+Zoom. The assumption is that the final one in June will happen as an in-person meeting
+in Liverpool.&lt;/p&gt;
+&lt;p&gt;It was the first meeting when the discussion could focus on the third WP dealing with
+developing an AI model to detect signatures from satellite imagery. However, AI was not
+the only point of discussion as we covered an overview of the current progress on the
+publications, open data, dissemination, and future plans for an impact strategy. The
+final section of the meeting was dedicated to the remaining time on the project and
+tried to answer the question, “what should be done by the end of the year?”.&lt;/p&gt;
+&lt;p&gt;We enjoyed a fruitful discussion and are looking forward to meeting all board members in
+Liverpool soon.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post22_fourth_advisory_board.html" rel="alternate"/>
+    <summary>On March 17th 2022, the (hopefully) last online Advisory Board meeting was held over
+Zoom. The assumption is that the final one in June will happen as an in-person meeting
+in Liverpool.It was the first meeting when the discussion could focus on the third WP dealing with
+developing an AI model to detect signatures from satellite imagery. However, AI was not
+the only point of discussion as we covered an overview of the current progress on the
+publications, open data, dissemination, and future plans for an impact strategy. The
+final section of the meeting was dedicated to the remaining time on the project and
+tried to answer the question, “what should be done by the end of the year?”.We enjoyed a fruitful discussion and are looking forward to meeting all board members in
+Liverpool soon.</summary>
+    <published>2022-03-18T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post21_tobler_once_again.html</id>
@@ -474,5 +504,42 @@ notebook. And the
 change in tobler is here and will be part of
 the next release.</summary>
     <published>2022-03-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post23_gisruk.html</id>
+    <title>GISRUK talk</title>
+    <updated>2022-04-11T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;On April 7th, we had a chance to attend the first large in-person academic conference
+since the project started more than two years ago. Martin joined &lt;a class="reference external" href="http://liverpool.gisruk.org/"&gt;GISRUK&lt;/a&gt;, coincidentally
+organised by the Geographic Data Science Lab, and presented ongoing work on developing
+an AI model to detect spatial signatures based on satellite imagery. The talk focused on
+the progress we have made so far and specifically on geographical questions arising when
+we try to link granular geometry of signatures to satellite images and rectangular chips
+sampled from them.&lt;/p&gt;
+&lt;p&gt;We have received good feedback and suggestions for the next steps we are currently
+trying to implement in our plans. For anyone interested, the slides presented during the
+conference are available
+&lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202204_gisruk/index.html"&gt;here&lt;/a&gt; or as a &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202204_gisruk/index.pdf"&gt;PDF (33MB)
+here&lt;/a&gt;. The extended abstract
+of the talk is also available in &lt;a class="reference external" href="https://doi.org/10.5281/zenodo.6411620"&gt;the conference
+proceedings&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post23_gisruk.html" rel="alternate"/>
+    <summary>On April 7th, we had a chance to attend the first large in-person academic conference
+since the project started more than two years ago. Martin joined GISRUK, coincidentally
+organised by the Geographic Data Science Lab, and presented ongoing work on developing
+an AI model to detect spatial signatures based on satellite imagery. The talk focused on
+the progress we have made so far and specifically on geographical questions arising when
+we try to link granular geometry of signatures to satellite images and rectangular chips
+sampled from them.We have received good feedback and suggestions for the next steps we are currently
+trying to implement in our plans. For anyone interested, the slides presented during the
+conference are available
+here or as a PDF (33MB)
+here. The extended abstract
+of the talk is also available in the conference
+proceedings.</summary>
+    <published>2022-04-11T00:00:00+00:00</published>
   </entry>
 </feed>

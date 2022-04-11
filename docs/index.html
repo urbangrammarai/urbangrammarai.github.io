@@ -193,6 +193,22 @@
 <section id="updates">
 <h2>Updates<a class="headerlink" href="#updates" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li class="ablog-post"><p class="ablog-post-title">11 April - <a class="reference internal" href="blog/post23_gisruk.html">GISRUK talk</a></p>
+<p class="ablog-post-excerpt">On April 7th, we had a chance to attend the first large in-person academic conference
+since the project started more than two years ago. Martin joined <a class="reference external" href="http://liverpool.gisruk.org/">GISRUK</a>, coincidentally
+organised by the Geographic Data Science Lab, and presented ongoing work on developing
+an AI model to detect spatial signatures based on satellite imagery. The talk focused on
+the progress we have made so far and specifically on geographical questions arising when
+we try to link granular geometry of signatures to satellite images and rectangular chips
+sampled from them.</p>
+<p class="ablog-post-excerpt">We have received good feedback and suggestions for the next steps we are currently
+trying to implement in our plans. For anyone interested, the slides presented during the
+conference are available
+<a class="reference external" href="https://urbangrammarai.xyz/talks/202204_gisruk/index.html">here</a> or as a <a class="reference external" href="https://urbangrammarai.xyz/talks/202204_gisruk/index.pdf">PDF (33MB)
+here</a>. The extended abstract
+of the talk is also available in <a class="reference external" href="https://doi.org/10.5281/zenodo.6411620">the conference
+proceedings</a>.</p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title">29 March - <a class="reference internal" href="blog/post21_tobler_once_again.html">Contribution to tobler once again: Areal interpolation even faster</a></p>
 <p class="ablog-post-excerpt">Last year, we needed areal interpolation to transfer data from various administrative
 and statistical spatial units like Output areas to enclosed tessellation cells. To do
@@ -224,6 +240,19 @@ notebook</a>. And the
 change in tobler is <a class="reference external" href="https://github.com/pysal/tobler/pull/160">here</a> and will be part of
 the next release.</p>
 </li>
+<li class="ablog-post"><p class="ablog-post-title">18 March - <a class="reference internal" href="blog/post22_fourth_advisory_board.html">Third Advisory Board</a></p>
+<p class="ablog-post-excerpt">On March 17th 2022, the (hopefully) last online Advisory Board meeting was held over
+Zoom. The assumption is that the final one in June will happen as an in-person meeting
+in Liverpool.</p>
+<p class="ablog-post-excerpt">It was the first meeting when the discussion could focus on the third WP dealing with
+developing an AI model to detect signatures from satellite imagery. However, AI was not
+the only point of discussion as we covered an overview of the current progress on the
+publications, open data, dissemination, and future plans for an impact strategy. The
+final section of the meeting was dedicated to the remaining time on the project and
+tried to answer the question, “what should be done by the end of the year?”.</p>
+<p class="ablog-post-excerpt">We enjoyed a fruitful discussion and are looking forward to meeting all board members in
+Liverpool soon.</p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title">10 February - <a class="reference internal" href="blog/post19_mapscaping.html">The Urban Grammar on MapScaping podcast!</a></p>
 <p class="ablog-post-excerpt">Last month, Dani had a chance to speak with Daniel from the <a class="reference external" href="https://mapscaping.com/podcast/">Mapscaping podcast</a> about the Urban Grammar project. You can listen to the conversation over at the podcast’s website:</p>
 <p class="ablog-post-excerpt"><a class="reference external" href="https://mapscaping.com/podcast/urban-grammar-form-function-culture-and-satellite-imagery/"><img alt="mapscaping logo" src="https://mapscaping.com/wp-content/uploads/2021/06/Mapscaping_Logo_Small_Transparent-Kopi.png" /></a></p>
@@ -235,7 +264,7 @@ the next release.</p>
 <p class="ablog-post-excerpt">The slides from the talk are <a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati_leeds/index.html">here</a> or <a class="reference external" href="https://urbangrammarai.xyz/talks/202111_ati_leeds/index.pdf">here is the <code class="docutils literal notranslate"><span class="pre">PDF</span></code> file</a>.</p>
 </li>
 <li class="ablog-post"><p class="ablog-post-title">10 December - <a class="reference internal" href="blog/post20_third_advisory_board.html">Third Advisory Board</a></p>
-<p class="ablog-post-excerpt">On December 9th. 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.</p>
+<p class="ablog-post-excerpt">On December 9th 2021, we held the meeting of the Advisory Board for the project. Still being limited by the global pandemic, we had a frutiful Zoom call filled with an exciting discussion on the opportunities Spatial Signatures offer.</p>
 <p class="ablog-post-excerpt">The session started with an overview of the current progress focusing on the current progress and explanation of the whole process of generating spatial signatures from data acquistion to empirical exploration. We then spent
 some time discussed the open infrastruture built around the project resulting in an open data product and maximum transparency of the process behind it. We followed by the focused discussion on dissemination and impact of the classification.</p>
 <p class="ablog-post-excerpt">Three hours later, we finished with a lot of ideas and potential research avenues and collaborations to be explored. We hope that the situation permits another Advisory board meeting soon and hopefully, in person.</p>
@@ -376,18 +405,6 @@ you can have a look at an edited version of the video at:</p>
 <p class="ablog-post-excerpt">We think the natural approach is to include enhancements made within the area of urban morphometrics to <a class="reference external" href="http://docs.momepy.org"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> an existing toolkit for urban morphology. <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2</a> heavily builds on <code class="docutils literal notranslate"><span class="pre">momepy</span></code>’s code and every relevant piece of code we made is now merged back into <code class="docutils literal notranslate"><span class="pre">momepy</span></code>. That covers both performance-focused changes to implementation (<a class="reference external" href="https://github.com/martinfleis/momepy/pull/219">#219</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/209">#209</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/207">#207</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/205">#205</a>), mostly based on <code class="docutils literal notranslate"><span class="pre">pygeos</span></code> and vectorization, and new additions.</p>
 <p class="ablog-post-excerpt">Two key features of Spatial Signatures, the concepts of <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/Parallelized_enclosures.html">enclosures</a> and <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/enclosed_tessellation.html">enclosed tessellation</a> are now available in <code class="docutils literal notranslate"><span class="pre">momepy.elements</span></code> module and you can create both using only a few lines of code:</p>
 <p class="ablog-post-excerpt">See the detailed guidance in <a class="reference external" href="http://docs.momepy.org/en/latest/user_guide/elements/enclosed.html">momepy’s documentation</a>.</p>
-</li>
-<li class="ablog-post"><p class="ablog-post-title">01 October - <a class="reference internal" href="blog/post3.html">First Advisory Board</a></p>
-<p class="ablog-post-excerpt">On October 1st. 2020, Dani and Martin held the first meeting of the Advisory Board for the project. We are thrilled to have a board that includes <a class="reference external" href="https://www.linkedin.com/in/edwardes/">Alistair Edwardes</a>, <a class="reference external" href="https://www.ncl.ac.uk/curds/people/staffprofile/rachelfranklin.html#background">Rachel Franklin</a>, <a class="reference external" href="https://www.linkedin.com/in/izzysargent">Isabel Sargent</a> and <a class="reference external" href="http://www.dpi.inpe.br/DPI/institucional/pessoal/servidores/antonio-miguel-vieira-monteiro">Antonio Miguel Vieira Monteiro</a>.</p>
-<p class="ablog-post-excerpt">The meeting took place, as it’s become customary in 2020, on Zoom. Dani provided an overview of the main components of the project, and Martin updated on progress so far; throughout the three hours of the meeting, there was plenty of discussion and great questions about what the project is trying to do and how it’ll tackle its main challenges. This is by no means a full replacement of the physical meeting we would have had in Liverpool for a full day, but it was an excellent way to connect and kickstart the role of the Advisory Board.</p>
-<p class="ablog-post-excerpt">One of the conclusions from the discussion was that we might adapt to the current situation by trying to have these meetings a bit more frequent (initially only four were scheduled for the entire project) and of shorter duration than a full day (maybe up to three hours). This will allow us to focus on specific aspects of the project for every meeting. Next one will hopefully take place early in the next year and, by then, we might even have something in the form of deliverables to show!</p>
-</li>
-<li class="ablog-post"><p class="ablog-post-title">01 July - <a class="reference internal" href="blog/post2.html">Welcome to Martin Fleischmann</a></p>
-<p class="ablog-post-excerpt"><img src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/martin.jpg?raw=true" alt="Martin Fleischmann" class="bg-primary" width="200px" style="float:left;margin-right: 10px;"> The project is thrilled to welcome Martin Fleischmann as the postdoctoral researcher who will work with me (Dani) for the next two years of the Fellowship. Here is a quick bio of Martin:</p>
-<p class="ablog-post-excerpt">Martin Fleischmann is research associate in the Geographic Data Science Lab at the University of Liverpool and a member of the Urban Design Studies Unit at the University of Strathclyde. His research focuses on urban morphology and geographic data science focusing on quantitative analysis and classification of urban form, remote sensing and AI.</p>
-<p class="ablog-post-excerpt">He is the author of <code class="docutils literal notranslate"><span class="pre">momepy</span></code>, the open source urban morphology measuring toolkit for Python and member of development teams of GeoPandas, the open source Python package for geographic data and PySAL, the Python library for spatial analysis.</p>
-<p class="ablog-post-excerpt">Martin brings with him a theoretical background in urban morphology combined with a <em>lot</em> of experience in Python open source development around geospatial. There could not be a better combination for the project. As the postdoctoral researcher, Martin will be heavily involved in the implementation of much of the code required to develop the idea of Spatial Signatures, teach a computer to recognise them from satellite imagery, and use them to develop an Urban Grammar. At the same time, he is also joining the <a class="reference external" href="https://www.liverpool.ac.uk/geographic-data-science/">Geographic Data Science Lab</a> and getting involved in its day to day life, participating in internal seminars, coordinating the Brown Bags series and, more generally, chipping in where possible to make the lab a great place to be part of.</p>
-<p class="ablog-post-excerpt">Welcome Martin, this will be a fun ride!</p>
 </li>
 </ul>
 <div class="toctree-wrapper compound">
