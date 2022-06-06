@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-04-11T11:07:15.783312+00:00</updated>
+  <updated>2022-06-06T20:59:54.173693+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post1.html</id>
     <title>Firing up the engines</title>
@@ -541,5 +541,41 @@ here. The extended abstract
 of the talk is also available in the conference
 proceedings.</summary>
     <published>2022-04-11T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post24_os_visit.html</id>
+    <title>OS visit</title>
+    <updated>2022-05-19T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;On May 17th and 18th, Martin and Dani spent a week visiting the Ordnance
+Survey in Southampton. The trip was planned as an institutional visit to
+exchange ideas, discuss the project and, more generally, interact with our
+advisory board member, Dr. Isabel Sargent and her team at OS Research.&lt;/p&gt;
+&lt;p&gt;We had a fantastic time. We presented our current work on using computer
+vision, a bit of geographic magic, and satellite imagery to automate the
+recognition of our upcoming spatial signatures for Great Britain. You can
+check out the slides we used for that presentation in our usual &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/"&gt;talks
+repository&lt;/a&gt; in our two common formats:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202205_OS/index.html"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;HTML&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for the
+browser&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202205_OS/index.pdf"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for download&lt;/p&gt;
+&lt;p&gt;Beyond the purely scheduled, we had the oportunity to see OS from the inside
+and to chat to a lot of really clever people about our project, its value, and
+potential solutions to the challenges we’re currently facing.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post24_os_visit.html" rel="alternate"/>
+    <summary>On May 17th and 18th, Martin and Dani spent a week visiting the Ordnance
+Survey in Southampton. The trip was planned as an institutional visit to
+exchange ideas, discuss the project and, more generally, interact with our
+advisory board member, Dr. Isabel Sargent and her team at OS Research.We had a fantastic time. We presented our current work on using computer
+vision, a bit of geographic magic, and satellite imagery to automate the
+recognition of our upcoming spatial signatures for Great Britain. You can
+check out the slides we used for that presentation in our usual talks
+repository in our two common formats:HTML for the
+browserPDF for downloadBeyond the purely scheduled, we had the oportunity to see OS from the inside
+and to chat to a lot of really clever people about our project, its value, and
+potential solutions to the challenges we’re currently facing.</summary>
+    <published>2022-05-19T00:00:00+00:00</published>
   </entry>
 </feed>

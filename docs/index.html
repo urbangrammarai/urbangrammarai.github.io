@@ -193,6 +193,23 @@
 <section id="updates">
 <h2>Updates<a class="headerlink" href="#updates" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li class="ablog-post"><p class="ablog-post-title">19 May - <a class="reference internal" href="blog/post24_os_visit.html">OS visit</a></p>
+<p class="ablog-post-excerpt">On May 17th and 18th, Martin and Dani spent a week visiting the Ordnance
+Survey in Southampton. The trip was planned as an institutional visit to
+exchange ideas, discuss the project and, more generally, interact with our
+advisory board member, Dr. Isabel Sargent and her team at OS Research.</p>
+<p class="ablog-post-excerpt">We had a fantastic time. We presented our current work on using computer
+vision, a bit of geographic magic, and satellite imagery to automate the
+recognition of our upcoming spatial signatures for Great Britain. You can
+check out the slides we used for that presentation in our usual <a class="reference external" href="https://urbangrammarai.xyz/talks/">talks
+repository</a> in our two common formats:</p>
+<p class="ablog-post-excerpt"><a class="reference external" href="https://urbangrammarai.xyz/talks/202205_OS/index.html"><code class="docutils literal notranslate"><span class="pre">HTML</span></code></a> for the
+browser</p>
+<p class="ablog-post-excerpt"><a class="reference external" href="https://urbangrammarai.xyz/talks/202205_OS/index.pdf"><code class="docutils literal notranslate"><span class="pre">PDF</span></code></a> for download</p>
+<p class="ablog-post-excerpt">Beyond the purely scheduled, we had the oportunity to see OS from the inside
+and to chat to a lot of really clever people about our project, its value, and
+potential solutions to the challenges we’re currently facing.</p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title">11 April - <a class="reference internal" href="blog/post23_gisruk.html">GISRUK talk</a></p>
 <p class="ablog-post-excerpt">On April 7th, we had a chance to attend the first large in-person academic conference
 since the project started more than two years ago. Martin joined <a class="reference external" href="http://liverpool.gisruk.org/">GISRUK</a>, coincidentally
@@ -398,13 +415,6 @@ you can have a look at an edited version of the video at:</p>
 <p class="ablog-post-excerpt">Five cities, five different urban patterns. Morphological tessellation is in principle Voronoi tessellation based on building footprint polygons. In practice, we first shrink our polygons (you need a gap between adjacent buildings) by a small margin, then generate a dense array of points along the polygon boundary which is passed to Voronoi algorithm. Finally, resulting polygons are dissolved based on the building it belongs to, and morphological tessellation is done. See by yourself how each step looks and compares across different patterns on a matrix below. If you click on the image, you can see the <a class="reference external" href="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/matrix_lowres.png?raw=true">full resolution (16.2 MB)</a>.</p>
 <p class="ablog-post-excerpt">Do you want to play with the algorithm and create your own sequences? We have a <a class="reference external" href="https://nbviewer.jupyter.org/github/urbangrammarai/urbangrammarai.github.io/blob/mapchallenge/src/notebooks/mapchallenge/tessellation.ipynb">notebook</a> just for you! And if you’re going to generate tessellation on your data, <a class="reference external" href="http://docs.momepy.org/en/stable/user_guide/elements/tessellation.html"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> has you covered. For further details head to Martin’s blog post about <a class="reference external" href="https://martinfleischmann.net/morphological-tessellation/">a paper on tessellation</a> he has published earlier this year.</p>
 <p class="ablog-post-excerpt">Stay tuned for new advances in this space!</p>
-</li>
-<li class="ablog-post"><p class="ablog-post-title">02 November - <a class="reference internal" href="blog/post4.html">Implementing morphological functions to the ecosystem</a></p>
-<p class="ablog-post-excerpt">This blog post covers some of the efforts the team has made to contribute code developed for the project to the broader Python eco-system for (geographic) data science. Processing of data within <a class="reference external" href="https://urbangrammarai.xyz/data_processing/index">WP1</a> and morphometric assessment within <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2</a> entail the development of new bespoke algorithms and implementation of some which are currently available in the Python ecosystem. However, even those already existing were often not performant enough for the scale of this project.</p>
-<p class="ablog-post-excerpt">As part of the data processing stage of the project, we have refactored some of them to gain the performance enhancements we needed. Since we strongly believe in replicability of research, all software developed within Urban Grammar AI project should be available for other researchers, optimally packaged in a friendly shape of a Python library. At the same time, we want to support open-source software which we use for the research.</p>
-<p class="ablog-post-excerpt">We think the natural approach is to include enhancements made within the area of urban morphometrics to <a class="reference external" href="http://docs.momepy.org"><code class="docutils literal notranslate"><span class="pre">momepy</span></code></a> an existing toolkit for urban morphology. <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2</a> heavily builds on <code class="docutils literal notranslate"><span class="pre">momepy</span></code>’s code and every relevant piece of code we made is now merged back into <code class="docutils literal notranslate"><span class="pre">momepy</span></code>. That covers both performance-focused changes to implementation (<a class="reference external" href="https://github.com/martinfleis/momepy/pull/219">#219</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/209">#209</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/207">#207</a>, <a class="reference external" href="https://github.com/martinfleis/momepy/pull/205">#205</a>), mostly based on <code class="docutils literal notranslate"><span class="pre">pygeos</span></code> and vectorization, and new additions.</p>
-<p class="ablog-post-excerpt">Two key features of Spatial Signatures, the concepts of <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/Parallelized_enclosures.html">enclosures</a> and <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/spatial_unit/enclosed_tessellation.html">enclosed tessellation</a> are now available in <code class="docutils literal notranslate"><span class="pre">momepy.elements</span></code> module and you can create both using only a few lines of code:</p>
-<p class="ablog-post-excerpt">See the detailed guidance in <a class="reference external" href="http://docs.momepy.org/en/latest/user_guide/elements/enclosed.html">momepy’s documentation</a>.</p>
 </li>
 </ul>
 <div class="toctree-wrapper compound">
