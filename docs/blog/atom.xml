@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-06-06T21:06:07.975368+00:00</updated>
+  <updated>2022-06-07T07:10:54.256323+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -541,6 +541,24 @@ here. The extended abstract
 of the talk is also available in the conference
 proceedings.</summary>
     <published>2022-04-11T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post25_ceus_paper.html</id>
+    <title>CEUS paper</title>
+    <updated>2022-04-25T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This week saw the first peer-reviewed publication related to the Urban Grammar
+see the light of day. Full coordinates of the paper are available here:&lt;/p&gt;
+&lt;p&gt;Singleton, A.; Arribas-Bel, D.; Murray, J.; Fleischmann, M. (2022). “Estimating generalized measures of local neighbourhood context from multispectral satellite images using a convolutional neural network”. &lt;em&gt;Computers, Environment and Urban Systems&lt;/em&gt;, 95. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;10.1016/j.compenvurbsys.2022.101802&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0198971522000461"&gt;Published Version&lt;/a&gt; (Open Access)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/GDSL-UL/sat_cnn"&gt;Code repository&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GitHub&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://dataverse.harvard.edu/dataverse/sat_cnn"&gt;Data repository&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Dataverse&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post25_ceus_paper.html" rel="alternate"/>
+    <summary>This week saw the first peer-reviewed publication related to the Urban Grammar
+see the light of day. Full coordinates of the paper are available here:Singleton, A.; Arribas-Bel, D.; Murray, J.; Fleischmann, M. (2022). “Estimating generalized measures of local neighbourhood context from multispectral satellite images using a convolutional neural network”. Computers, Environment and Urban Systems, 95. 10.1016/j.compenvurbsys.2022.101802Published Version (Open Access)Code repository@GitHubData repository@Dataverse</summary>
+    <published>2022-04-25T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post24_os_visit.html</id>
