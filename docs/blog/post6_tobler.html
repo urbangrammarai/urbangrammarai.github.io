@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Contribution to tobler: Speeding up areal interpolation &#8212; Urban Grammar AI  documentation</title>
     
@@ -32,12 +32,13 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -185,18 +186,18 @@
               
               <div>
                  <section id="contribution-to-tobler-speeding-up-areal-interpolation">
-<h1>Contribution to <code class="docutils literal notranslate"><span class="pre">tobler</span></code>: Speeding up areal interpolation<a class="headerlink" href="#contribution-to-tobler-speeding-up-areal-interpolation" title="Permalink to this headline">¶</a></h1>
+<h1>Contribution to <code class="docutils literal notranslate"><span class="pre">tobler</span></code>: Speeding up areal interpolation<a class="headerlink" href="#contribution-to-tobler-speeding-up-areal-interpolation" title="Permalink to this heading">¶</a></h1>
 <p>Have you ever needed to link two sources of data, each attached to a different geometry? In our work in the <a class="reference external" href="https://urbangrammarai.github.io/spatial_signatures/index">WP2</a>, we do. We have to transfer data from various sources, linked to output areas, urban blocks or other spatial units to our own bespoke set of geographies. Therefore, we often need to do areal interpolation to correctly map data from one layer to another. Luckily, the open-source Python ecosystem can help.</p>
 <p><a class="reference external" href="https://pysal.org/tobler/">Tobler</a>, a part of <a class="reference external" href="https://pysal.org">PySAL family</a>, is a library for areal interpolation and dasymetric mapping which already offered what we needed. However, our data tends to be large, up to 15 million rows on which we need to interpolate several hundreds of thousands of rows of input data. That can take a while, so each performance improvement can help a lot.</p>
 <section id="speeding-up-existing-functions">
-<h2>Speeding up existing functions<a class="headerlink" href="#speeding-up-existing-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Speeding up existing functions<a class="headerlink" href="#speeding-up-existing-functions" title="Permalink to this heading">¶</a></h2>
 <p>We have looked into the existing code of <code class="docutils literal notranslate"><span class="pre">tobler</span></code> and contributed to the refactoring if its <code class="docutils literal notranslate"><span class="pre">area_interpolate</span></code> function. The original implementation was using custom code for spatial indexing, which was replaced by a performant vectorised implementation based on the more recent <a class="reference external" href="https://pygeos.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">pygeos</span></code></a> project.</p>
 <p>With sample data, we’ve been able to speed up the interpolation from 2.4 seconds to less than 400 milliseconds, having the same result 6x faster.</p>
 <p>Such an improvement is great, but it still uses only a single core (as most of the geospatial code to be honest), leaving the rest in a modern computer (four or more cores is not uncommon these days…) lazily laying around. We have tried to change this and contributed a (still experimental) parallel implementation of the same algorithm (based on <a class="reference external" href="https://joblib.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">joblib</span></code></a>).</p>
 <p>The resulting improvements depend a lot on the input data structure, and we are still working of further tweaking, but certain combinations can provide significant speedups, which can later save us some time.</p>
 </section>
 <section id="new-addition">
-<h2>New addition<a class="headerlink" href="#new-addition" title="Permalink to this headline">¶</a></h2>
+<h2>New addition<a class="headerlink" href="#new-addition" title="Permalink to this heading">¶</a></h2>
 <p>Interpolation is not always the best way of transferring data from one layer to the other, especially for categorical variables. We have found ourselves in need of a spatial join based on the largest intersection between geometries - the category from the largest intersection gets joined to the target geometry. Such a function was not available (at least we have not found one) so we have developed it. Once it was done and battle-tested on our application, we have contributed it as a new addition to <code class="docutils literal notranslate"><span class="pre">tobler</span></code>. Everyone can now use it as <code class="docutils literal notranslate"><span class="pre">area_join</span></code>.</p>
 <p>## Full list of contributions</p>
 <p>The complete list of pull requests implementing code resulting from the Urban Grammar AI project is below:</p>
@@ -258,7 +259,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
 </p>
     </div>
     

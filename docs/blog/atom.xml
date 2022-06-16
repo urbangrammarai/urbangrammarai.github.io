@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-06-07T07:10:54.256323+00:00</updated>
+  <updated>2022-06-16T18:51:38.630465+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -559,6 +559,60 @@ see the light of day. Full coordinates of the paper are available here:&lt;/p&gt
     <summary>This week saw the first peer-reviewed publication related to the Urban Grammar
 see the light of day. Full coordinates of the paper are available here:Singleton, A.; Arribas-Bel, D.; Murray, J.; Fleischmann, M. (2022). “Estimating generalized measures of local neighbourhood context from multispectral satellite images using a convolutional neural network”. Computers, Environment and Urban Systems, 95. 10.1016/j.compenvurbsys.2022.101802Published Version (Open Access)Code repository@GitHubData repository@Dataverse</summary>
     <published>2022-04-25T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post27_chicago.html</id>
+    <title>Chicago visit</title>
+    <updated>2022-05-05T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The first week of May, Dani visited the University of Chicago. As part of the
+trip, he (re-)connected with folks at the &lt;a class="reference external" href="https://spatial.uchicago.edu"&gt;Center for Spatial Data Science&lt;/a&gt;
+and met a bunch of new friends at the &lt;a class="reference external" href="https://miurban.uchicago.edu"&gt;Mansueto Institute for Urban
+Innovation&lt;/a&gt;. All in all, it was a fantastic week where there was even a bit
+of time to discuss all things urban form and function.&lt;/p&gt;
+&lt;p&gt;On May 4th, he delivered the lecture “‘Open by Default’ - Developing
+reproducible, computational research” on open workflows for modern
+computational research at one of the GIS courses offered at Chicago and
+taught by Dr. Marynia Kolak. The
+slides of the talk are available at the Urban Grammar’s &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/"&gt;talks
+repository&lt;/a&gt; in our two common formats:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202205_uc/index.html"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;HTML&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for the
+browser&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202205_uc/index.pdf"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PDF&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for download&lt;/p&gt;
+&lt;p&gt;This was a particularly tricky talk to conceive and prepare. Conceptually, it
+was a bit out of our “comfort zone” in that it is not really about the
+research we are doing at the Urban Grammar, but about the &lt;em&gt;process&lt;/em&gt; we follow
+to realize it. It was also hard to structure it in a way that made sense because
+it pulled from many different aspects of the project, from the approach we
+take to writing slide decks to the computational infrastructure on which all
+of our computations rely. We are nevertheless happy with the outcome. It’s not
+ideal, and we will probably refine it in successive iterations (we’re planning
+on giving similar talks in the near future, stay tuned!), but this is a great
+start.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post27_chicago.html" rel="alternate"/>
+    <summary>The first week of May, Dani visited the University of Chicago. As part of the
+trip, he (re-)connected with folks at the Center for Spatial Data Science
+and met a bunch of new friends at the Mansueto Institute for Urban
+Innovation. All in all, it was a fantastic week where there was even a bit
+of time to discuss all things urban form and function.On May 4th, he delivered the lecture “‘Open by Default’ - Developing
+reproducible, computational research” on open workflows for modern
+computational research at one of the GIS courses offered at Chicago and
+taught by Dr. Marynia Kolak. The
+slides of the talk are available at the Urban Grammar’s talks
+repository in our two common formats:HTML for the
+browserPDF for downloadThis was a particularly tricky talk to conceive and prepare. Conceptually, it
+was a bit out of our “comfort zone” in that it is not really about the
+research we are doing at the Urban Grammar, but about the process we follow
+to realize it. It was also hard to structure it in a way that made sense because
+it pulled from many different aspects of the project, from the approach we
+take to writing slide decks to the computational infrastructure on which all
+of our computations rely. We are nevertheless happy with the outcome. It’s not
+ideal, and we will probably refine it in successive iterations (we’re planning
+on giving similar talks in the near future, stay tuned!), but this is a great
+start.</summary>
+    <published>2022-05-05T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post24_os_visit.html</id>

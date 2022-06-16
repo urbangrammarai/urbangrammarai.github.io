@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Clustergam: visualisation of cluster analysis &#8212; Urban Grammar AI  documentation</title>
     
@@ -32,6 +32,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -39,7 +40,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -448,7 +449,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Clustergam:-visualisation-of-cluster-analysis">
-<h1>Clustergam: visualisation of cluster analysis<a class="headerlink" href="#Clustergam:-visualisation-of-cluster-analysis" title="Permalink to this headline">¶</a></h1>
+<h1>Clustergam: visualisation of cluster analysis<a class="headerlink" href="#Clustergam:-visualisation-of-cluster-analysis" title="Permalink to this heading">¶</a></h1>
 <p>In this post, we introduce a new Python package to generate clustergrams from clustering solutions. The library has been developed as part of the Urban Grammar project, and it is compatible with <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> and GPU-enabled libraries such as <code class="docutils literal notranslate"><span class="pre">cuML</span></code> or <code class="docutils literal notranslate"><span class="pre">cuDF</span></code> within <code class="docutils literal notranslate"><span class="pre">RAPIDS.AI</span></code>.</p>
 <p>When we want to do some cluster analysis to identify groups in our data, we often use algorithms like K-Means, which require the specification of a number of clusters. But the issue is that we usually don’t know how many clusters there are.</p>
 <p>There are many methods on how to determine the correct number, like silhouettes or elbow plot, to name a few. But they usually don’t give much insight into what is happening between different options, so the numbers are a bit abstract.</p>
@@ -457,7 +458,7 @@ implementation, ported it to Python and created <code class="docutils literal no
 <p><code class="docutils literal notranslate"><span class="pre">clustergram</span></code> currently supports K-Means and using <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> (inlcuding Mini-Batch implementation) and RAPIDS.AI <code class="docutils literal notranslate"><span class="pre">cuML</span></code> (if you have a CUDA-enabled GPU), Gaussian Mixture Model (<code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> only) and hierarchical clustering based on <code class="docutils literal notranslate"><span class="pre">scipy.hierarchy</span></code>. Alternatively, we can create clustergram based on labels and data derived from alternative custom clustering algorithms. It provides a sklearn-like API and plots clustergram using matplotlib, which gives it a wide range of styling
 options to match your publication style.</p>
 <section id="Install">
-<h2>Install<a class="headerlink" href="#Install" title="Permalink to this headline">¶</a></h2>
+<h2>Install<a class="headerlink" href="#Install" title="Permalink to this heading">¶</a></h2>
 <p>You can install clustergram from conda or pip:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install clustergram -c conda-forge
 </pre></div>
@@ -490,7 +491,7 @@ from sklearn.preprocessing import scale
 <p>Let us look at some examples to understand how clustergram looks and what to do with it.</p>
 </section>
 <section id="Iris-flower-data-set">
-<h2>Iris flower data set<a class="headerlink" href="#Iris-flower-data-set" title="Permalink to this headline">¶</a></h2>
+<h2>Iris flower data set<a class="headerlink" href="#Iris-flower-data-set" title="Permalink to this heading">¶</a></h2>
 <p>The first example which we try to analyse using clustergram is the famous Iris flower data set. It contains data on three species of Iris flowers measuring sepal width and length and petal width and length. We can start with some exploration:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -606,7 +607,7 @@ sns.despine(offset=10)
 <p>These plots would suggest 3-4 clusters, similarly to clustergram, but they are not very conclusive.</p>
 </section>
 <section id="Palmer-penguins-data-set">
-<h2>Palmer penguins data set<a class="headerlink" href="#Palmer-penguins-data-set" title="Permalink to this headline">¶</a></h2>
+<h2>Palmer penguins data set<a class="headerlink" href="#Palmer-penguins-data-set" title="Permalink to this heading">¶</a></h2>
 <p>Now let’s try different data, one where clusters are a bit more complicated to assess. Palmer penguins contain similar data as Iris example, but it measures several attributes of three species of penguins.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -810,7 +811,7 @@ additional insight, and it is upon us how we interpret it.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
 </p>
     </div>
     
