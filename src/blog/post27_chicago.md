@@ -4,9 +4,9 @@
 # Chicago visit
 
 The first week of May, Dani visited the University of Chicago. As part of the
-trip, he (re-)connected with folks at the [Center for Spatial Data Science]()
+trip, he (re-)connected with folks at the [Center for Spatial Data Science](https://spatial.uchicago.edu)
 and met a bunch of new friends at the [Mansueto Institute for Urban
-Innovation](). All in all, it was a fantastic week where there was even a bit
+Innovation](https://miurban.uchicago.edu). All in all, it was a fantastic week where there was even a bit
 of time to discuss all things urban form and function.
 
 On May 4th, he delivered the lecture "'Open by Default' - Developing
