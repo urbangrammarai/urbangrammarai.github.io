@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-06-16T18:51:38.630465+00:00</updated>
+  <updated>2022-06-24T09:02:43.532554+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -649,5 +649,18 @@ browserPDF for downloadBeyond the purely scheduled, we had the oportunity to see
 and to chat to a lot of really clever people about our project, its value, and
 potential solutions to the challenges we’re currently facing.</summary>
     <published>2022-05-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post26_isufitaly.html</id>
+    <title>ISUF Italy</title>
+    <updated>2022-06-09T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;In early June, Martin attended the 6th ISUF Italy &lt;a class="reference external" href="http://conference.isufitaly.com/index.php/Bologna2022/NewStrategies"&gt;conference&lt;/a&gt; &lt;em&gt;“Morphology and Urban Design. New strategies for a changing society”&lt;/em&gt;, organised by the University of Bologna in a hybrid mode (Martin was present online). We took the opportunity to talk about  &lt;em&gt;Detecting urban typology from multispectral satellite imagery using neural networks&lt;/em&gt;, where we combined the work we currently focus on in the Urban Grammar project and the one published in a recent &lt;a class="reference internal" href="blog/post25_ceus_paper.html#post25_ceus_paper"&gt;&lt;span class="std std-ref"&gt;CEUS paper&lt;/span&gt;&lt;/a&gt;. It allowed us to illustrate the application of remote sensing and neural networks on urban form in both supervised (detection of signatures from Sentinel 2) and unsupervised (the &lt;a class="reference internal" href="blog/post25_ceus_paper.html#post25_ceus_paper"&gt;&lt;span class="std std-ref"&gt;CEUS paper&lt;/span&gt;&lt;/a&gt;) use cases. With the audience composed of the ISUF community revolving heavilty around architecture, the talk started an engaging discussion on the current limits of openly available satellite imagery in the context of urban morphology.&lt;/p&gt;
+&lt;p&gt;The talk itself was not recorded but the slides are available from &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/"&gt;the usual place&lt;/a&gt; on &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202206_isufitaly/index.html"&gt;HTML&lt;/a&gt; (this time we couldn’t build a PDF for download satisfactorily).&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post26_isufitaly.html" rel="alternate"/>
+    <summary>In early June, Martin attended the 6th ISUF Italy conference “Morphology and Urban Design. New strategies for a changing society”, organised by the University of Bologna in a hybrid mode (Martin was present online). We took the opportunity to talk about  Detecting urban typology from multispectral satellite imagery using neural networks, where we combined the work we currently focus on in the Urban Grammar project and the one published in a recent CEUS paper. It allowed us to illustrate the application of remote sensing and neural networks on urban form in both supervised (detection of signatures from Sentinel 2) and unsupervised (the CEUS paper) use cases. With the audience composed of the ISUF community revolving heavilty around architecture, the talk started an engaging discussion on the current limits of openly available satellite imagery in the context of urban morphology.The talk itself was not recorded but the slides are available from the usual place on HTML (this time we couldn’t build a PDF for download satisfactorily).</summary>
+    <published>2022-06-09T00:00:00+00:00</published>
   </entry>
 </feed>
