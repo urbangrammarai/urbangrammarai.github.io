@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-06-24T09:02:43.532554+00:00</updated>
+  <updated>2022-07-05T12:08:51.059591+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -662,5 +662,27 @@ potential solutions to the challenges we’re currently facing.</summary>
     <link href="https://urbangrammarai.xyz/blog/post26_isufitaly.html" rel="alternate"/>
     <summary>In early June, Martin attended the 6th ISUF Italy conference “Morphology and Urban Design. New strategies for a changing society”, organised by the University of Bologna in a hybrid mode (Martin was present online). We took the opportunity to talk about  Detecting urban typology from multispectral satellite imagery using neural networks, where we combined the work we currently focus on in the Urban Grammar project and the one published in a recent CEUS paper. It allowed us to illustrate the application of remote sensing and neural networks on urban form in both supervised (detection of signatures from Sentinel 2) and unsupervised (the CEUS paper) use cases. With the audience composed of the ISUF community revolving heavilty around architecture, the talk started an engaging discussion on the current limits of openly available satellite imagery in the context of urban morphology.The talk itself was not recorded but the slides are available from the usual place on HTML (this time we couldn’t build a PDF for download satisfactorily).</summary>
     <published>2022-06-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post28_dib_paper.html</id>
+    <title>Data in Brief paper</title>
+    <updated>2022-06-10T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This month saw a new paper/open data product of the Urban Gramar sphere see the light of day. As part of the spin-off &lt;a class="reference external" href="https://github.com/gdsl-itinerant"&gt;ITINERANT project&lt;/a&gt;, and in collaboration with &lt;a class="reference external" href="https://www.liverpool.ac.uk/geographic-data-science/"&gt;GDSL&lt;/a&gt; colleagues Krasen Samardzhiev, &lt;a class="reference external" href="https://aelissa.github.io/"&gt;Alessia Calafiore&lt;/a&gt;, and &lt;a class="reference external" href="https://www.franciscorowe.com/"&gt;Francisco Rowe&lt;/a&gt;, we published an open data product and data descriptor that presents a new classification of signatures &lt;em&gt;entirely&lt;/em&gt; based on function. Here are the coordinates where you can find everything:&lt;/p&gt;
+&lt;p&gt;Samardzhiev, K.; Fleischmann, M.; Arribas-Bel, D.; Calafiore, A.; Rowe, F. (2022).
+“Functional signatures in Great Britain: A dataset”.
+&lt;em&gt;Data in Brief&lt;/em&gt;, 43.
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;10.1016/j.dib.2022.108335&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doi.org/10.1016/j.dib.2022.108335"&gt;Published Version&lt;/a&gt; (Open Access)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/gdsl-itinerant/functional_areas"&gt;Code repository&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Github&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doi.org/10.6084/m9.figshare.c.5906981.v1"&gt;Data product&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Figshare&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post28_dib_paper.html" rel="alternate"/>
+    <summary>This month saw a new paper/open data product of the Urban Gramar sphere see the light of day. As part of the spin-off ITINERANT project, and in collaboration with GDSL colleagues Krasen Samardzhiev, Alessia Calafiore, and Francisco Rowe, we published an open data product and data descriptor that presents a new classification of signatures entirely based on function. Here are the coordinates where you can find everything:Samardzhiev, K.; Fleischmann, M.; Arribas-Bel, D.; Calafiore, A.; Rowe, F. (2022).
+“Functional signatures in Great Britain: A dataset”.
+Data in Brief, 43.
+10.1016/j.dib.2022.108335Published Version (Open Access)Code repository@GithubData product@Figshare</summary>
+    <published>2022-06-10T00:00:00+00:00</published>
   </entry>
 </feed>
