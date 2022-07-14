@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-07-14T10:34:27.802973+00:00</updated>
+  <updated>2022-07-14T10:39:43.466582+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
@@ -687,7 +687,7 @@ Data in Brief, 43.
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post29_obd.html</id>
-    <title>*”Open by Default” talk at the RSS</title>
+    <title>“Open by Default” talk at the RSS Merseyside</title>
     <updated>2022-07-14T00:00:00+00:00</updated>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Last month, Dani participated in the “Using open data sources” event put

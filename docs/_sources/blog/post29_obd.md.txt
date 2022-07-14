@@ -1,7 +1,7 @@
 ```{post} July 14, 2022
 ```
 
-# *"Open by Default" talk at the RSS
+# *"Open by Default"* talk at the RSS Merseyside
 
 Last month, Dani participated in the "Using open data sources" event put
 together by the lovely folks at the [Merseyside chapter of the RSS](https://rss.org.uk/merseyside/)
