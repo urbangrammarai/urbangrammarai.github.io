@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-07-14T10:39:43.466582+00:00</updated>
+  <updated>2022-07-14T10:53:05.404167+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
@@ -696,7 +696,7 @@ and &lt;a class="reference external" href="https://twitter.com/hipyliv"&gt;HiPy&
 default - Developing reproducible, computational research”. You can find the
 slides on the &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/"&gt;usual place&lt;/a&gt; (or
 &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202206_rss_merseyside/index.html"&gt;here&lt;/a&gt;
-and in [PDF[(https://urbangrammarai.xyz/talks/202206_rss_merseyside/index.pdf) directly).
+and in &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202206_rss_merseyside/index.pdf"&gt;PDF&lt;/a&gt; directly).
 The video is also available on &lt;a class="reference external" href="https://www.youtube.com/watch?v=u3hYWLYApoA&amp;amp;t=3531s"&gt;YouTube&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;This was a similar, albeit refined, talk to the one he did in &lt;a class="reference internal" href="blog/post27_chicago.html#post27_chicago"&gt;&lt;span class="std std-ref"&gt;Chicago&lt;/span&gt;&lt;/a&gt; and it is great
 it is now available to watch online.&lt;/p&gt;
@@ -709,7 +709,7 @@ and HiPy. There, he delivered the talk “Open by
 default - Developing reproducible, computational research”. You can find the
 slides on the usual place (or
 here
-and in [PDF[(https://urbangrammarai.xyz/talks/202206_rss_merseyside/index.pdf) directly).
+and in PDF directly).
 The video is also available on YouTube:This was a similar, albeit refined, talk to the one he did in Chicago and it is great
 it is now available to watch online.</summary>
     <published>2022-07-14T00:00:00+00:00</published>
