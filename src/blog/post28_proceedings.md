@@ -18,6 +18,7 @@ The code we used to generate the morphosignatures is available on the [WP2 Jupyt
 
 - [Form-based signatures](https://urbangrammarai.xyz/spatial_signatures/clusters/form_signatures_GB.html)
 - [Second level form signatures](https://urbangrammarai.xyz/spatial_signatures/clusters/leve2_form.html)
+
 The dataset is available from [https://doi.org/10.6084/m9.figshare.20337633.v1](https://doi.org/10.6084/m9.figshare.20337633.v1) and contains a GeoPackage with the morphosignatures geometries.
 
 ## Citing the morphosignatures
