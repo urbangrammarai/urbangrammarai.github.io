@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-07-14T10:53:05.404167+00:00</updated>
+  <updated>2022-07-19T10:08:08.244510+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
@@ -541,6 +541,38 @@ here. The extended abstract
 of the talk is also available in the conference
 proceedings.</summary>
     <published>2022-04-11T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post28_proceedings.html</id>
+    <title>Form-based Signatures paper and data</title>
+    <updated>2022-04-20T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Last year, &lt;a class="reference internal" href="blog/post13_isuf.html#post13_isuf"&gt;&lt;span class="std std-ref"&gt;we attended&lt;/span&gt;&lt;/a&gt; the International Seminar on Urban Form 2021,
+which was held virtually in Glasgow, Scotland and presented a classification of Great
+Britain based on the form component of Spatial Signatures; we called those &lt;em&gt;morphosignatures&lt;/em&gt;. Earlier this year the
+proceedings from the conference were published, including our paper describing the work.
+On that occasion, we also published the dataset of resulting morphosignatures.&lt;/p&gt;
+&lt;p&gt;You can get the paper either from the original proceedings under DOI
+&lt;a class="reference external" href="https://doi.org/10.17868/strath.00080527"&gt;10.17868/strath.00080527&lt;/a&gt; or from our &lt;a class="reference external" href="https://github.com/urbangrammarai/isuf21_paper/raw/main/isuf_paper.pdf"&gt;Github
+repository&lt;/a&gt;
+(8MB). The bibtex citation for the paper is attached below.&lt;/p&gt;
+&lt;p&gt;The code we used to generate the morphosignatures is available on the &lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/intro.html"&gt;WP2 Jupyter book of the project&lt;/a&gt;, since a lot of it is shared with the codebase we developed to generate our main signature classification. If you want to have a peek into the specific notebooks for the clustering step (the most unique part of this exercise), you can find it at the following links:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/clusters/form_signatures_GB.html"&gt;Form-based signatures&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/clusters/leve2_form.html"&gt;Second level form signatures&lt;/a&gt;
+The dataset is available from &lt;a class="reference external" href="https://doi.org/10.6084/m9.figshare.20337633.v1"&gt;https://doi.org/10.6084/m9.figshare.20337633.v1&lt;/a&gt; and contains a GeoPackage with the morphosignatures geometries.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post28_proceedings.html" rel="alternate"/>
+    <summary>Last year, we attended the International Seminar on Urban Form 2021,
+which was held virtually in Glasgow, Scotland and presented a classification of Great
+Britain based on the form component of Spatial Signatures; we called those morphosignatures. Earlier this year the
+proceedings from the conference were published, including our paper describing the work.
+On that occasion, we also published the dataset of resulting morphosignatures.You can get the paper either from the original proceedings under DOI
+10.17868/strath.00080527 or from our Github
+repository
+(8MB). The bibtex citation for the paper is attached below.The code we used to generate the morphosignatures is available on the WP2 Jupyter book of the project, since a lot of it is shared with the codebase we developed to generate our main signature classification. If you want to have a peek into the specific notebooks for the clustering step (the most unique part of this exercise), you can find it at the following links:Form-based signaturesSecond level form signatures
+The dataset is available from https://doi.org/10.6084/m9.figshare.20337633.v1 and contains a GeoPackage with the morphosignatures geometries.</summary>
+    <published>2022-04-20T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post25_ceus_paper.html</id>
