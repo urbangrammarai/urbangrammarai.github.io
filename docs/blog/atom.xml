@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-07-19T10:08:08.244510+00:00</updated>
+  <updated>2022-07-19T13:52:42.696027+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
@@ -558,8 +558,7 @@ repository&lt;/a&gt;
 (8MB). The bibtex citation for the paper is attached below.&lt;/p&gt;
 &lt;p&gt;The code we used to generate the morphosignatures is available on the &lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/intro.html"&gt;WP2 Jupyter book of the project&lt;/a&gt;, since a lot of it is shared with the codebase we developed to generate our main signature classification. If you want to have a peek into the specific notebooks for the clustering step (the most unique part of this exercise), you can find it at the following links:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/clusters/form_signatures_GB.html"&gt;Form-based signatures&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/clusters/leve2_form.html"&gt;Second level form signatures&lt;/a&gt;
-The dataset is available from &lt;a class="reference external" href="https://doi.org/10.6084/m9.figshare.20337633.v1"&gt;https://doi.org/10.6084/m9.figshare.20337633.v1&lt;/a&gt; and contains a GeoPackage with the morphosignatures geometries.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/clusters/leve2_form.html"&gt;Second level form signatures&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://urbangrammarai.xyz/blog/post28_proceedings.html" rel="alternate"/>
@@ -570,8 +569,7 @@ proceedings from the conference were published, including our paper describing t
 On that occasion, we also published the dataset of resulting morphosignatures.You can get the paper either from the original proceedings under DOI
 10.17868/strath.00080527 or from our Github
 repository
-(8MB). The bibtex citation for the paper is attached below.The code we used to generate the morphosignatures is available on the WP2 Jupyter book of the project, since a lot of it is shared with the codebase we developed to generate our main signature classification. If you want to have a peek into the specific notebooks for the clustering step (the most unique part of this exercise), you can find it at the following links:Form-based signaturesSecond level form signatures
-The dataset is available from https://doi.org/10.6084/m9.figshare.20337633.v1 and contains a GeoPackage with the morphosignatures geometries.</summary>
+(8MB). The bibtex citation for the paper is attached below.The code we used to generate the morphosignatures is available on the WP2 Jupyter book of the project, since a lot of it is shared with the codebase we developed to generate our main signature classification. If you want to have a peek into the specific notebooks for the clustering step (the most unique part of this exercise), you can find it at the following links:Form-based signaturesSecond level form signatures</summary>
     <published>2022-04-20T00:00:00+00:00</published>
   </entry>
   <entry>
