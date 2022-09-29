@@ -10,23 +10,24 @@ This is the map we have created for the Urban Grammar AI project. It is created 
 This post will walk you through the whole process of generation of the map, step by step, so you can create your own. It is a bit longer than usual, so a quick outline for better orientation:
 
 - Vector tiles
-	- Zoom levels
-	- Tile format and compression
-	- Generate tiles
+  - Zoom levels
+  - Tile format and compression
+  - Generate tiles
 - Leaflet.js map
-	- Load leaflet.js
-	- Create the map
-	- Add a base map
-	- Add vector tiles
-	- Style the tiles
+  - Load leaflet.js
+  - Create the map
+  - Add a base map
+  - Add vector tiles
+  - Style the tiles
 - GitHub Pages
 
 Bonus:
+
 - Further styling and interactivity
-	- Labels on top of the map
-	- Popup information
-	- Conditional formatting based on the zoom level
-	- Legend and details
+  - Labels on top of the map
+  - Popup information
+  - Conditional formatting based on the zoom level
+  - Legend and details
 
 By the end of this tutorial, you will be able to take your vector data and turn them into a fully-fledged vector map hosted on GitHub with no cost involved, for everyone to enjoy.
 
@@ -54,7 +55,7 @@ For the signature geometry that represents neighbourhood-level classification, l
 
 ### Tile format and compression
 
-In later steps, you will use the `Leaflet.VectorGrid` plugin to load the tiles. To make that work, you need them as uncompressed protobuf files (not Mapbox vector tiles), which gives you another two options - `-no-tile-compression' to control the compression and `--output-to-directory` telling `tippecanoe` to use directories, instead of `mbtiles`.
+In later steps, you will use the `Leaflet.VectorGrid` plugin to load the tiles. To make that work, you need them as uncompressed protobuf files (not Mapbox vector tiles), which gives you another two options - `-no-tile-compression' to control the compression and`--output-to-directory`telling`tippecanoe`to use directories, instead of`mbtiles`.
 
 We have [used](https://urbangrammarai.xyz/spatial_signatures/data_product/vector_tile.html#generate-tiles) a few more options, but you may not need those.
 
@@ -87,12 +88,12 @@ The whole map and a JavaScript code will be served from a single HTML file saved
     <title>Spatial Signatures in Great Britain</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- load leaflet.js -->
+  <!-- load leaflet.js -->
 </head>
 
 <body style='margin:0'>
-		<!-- div containing map -->
-		<!-- specification of leaflet map -->
+  <!-- div containing map -->
+  <!-- specification of leaflet map -->
 </body>
 
 </html>
@@ -129,7 +130,7 @@ You need two things - a `div` object where the map will live and a bit of JavaSc
 <div id="map" style="width: 100vw; height: 100vh; background: #fdfdfd"></div>
 ```
 
-This div is empty, but the important bit is `id=" map" `, which will link it to the JavaScript. It also has some basic styles ensuring that it covers the whole screen (`width: 100vw; height: 100vh;`) and has an almost-white background (`background: #fdfdfd`).
+This div is empty, but the important bit is `id="map"`, which will link it to the JavaScript. It also has some basic styles ensuring that it covers the whole screen (`width: 100vw; height: 100vh;`) and has an almost-white background (`background: #fdfdfd`).
 
 The second part is the actual JavaScript generating the map.
 
@@ -198,7 +199,7 @@ var mapVectorTileOptions = {
 };
 ```
 
-The snippet creates a variable (`mapVectorTileOptions`) and specifies that the tiles should be rendered using leaflet (`rendererFactory: L.canvas.tile`), they should allow interactivity (`interactive: true) as we will need it later, it sets the attribution (`attribution: '(C) Martin Fleischmann") and min and max zoom levels.
+The snippet creates a variable (`mapVectorTileOptions`) and specifies that the tiles should be rendered using leaflet (`rendererFactory: L.canvas.tile`), they should allow interactivity (`interactive: true`) as we will need it later, it sets the attribution (`attribution: '(C) Martin Fleischmann'`) and min and max zoom levels.
 
 **Vector tile layer**
 
@@ -228,7 +229,7 @@ At this point, you should be able to see your vector tiles on your map with no s
 python -m http.server 8000
 ```
 
-If you now open http://localhost:8000 in your browser, you should be able to open your html file (it will open automatically if it is called `index.html`) and see your map. It should look like this:
+If you now open <http://localhost:8000> in your browser, you should be able to open your html file (it will open automatically if it is called `index.html`) and see your map. It should look like this:
 
 ![Screenshot 2021-10-07 at 19.22.44.png](https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/Screenshot_2021-10-07_at_19.22.44.png)
 
@@ -274,7 +275,7 @@ var vectorTileStyling = {
     signatures_4326: function(properties) {
         return ({
             fill: true,
-			fillColor: cmap[properties.signature_type],
+   fillColor: cmap[properties.signature_type],
             fillOpacity: 0.9,
             weight: 1,
             color: "#ffffff",
@@ -289,9 +290,9 @@ You need to create a function mapping the styles to geometries based on the sign
 Then you just need to edit the vector tile options (the `mapVectorTileOptions` dictionary from above) and add tile styling.
 
 ```jsx
-		...
-		minZoom: 6,
-		vectorTileLayerStyles: vectorTileStyling,  // this line is new
+  ...
+  minZoom: 6,
+  vectorTileLayerStyles: vectorTileStyling,  // this line is new
 };
 ```
 
@@ -374,11 +375,11 @@ This is the whole code of the page for reference.
             signatures_4326: function(properties) {
                 return ({
                     fill: true,
-										fillColor: cmap[properties.signature_type],
-				            fillOpacity: 0.9,
-				            weight: 1,
-				            color: "#ffffff",
-				            opacity: 1.0,
+          fillColor: cmap[properties.signature_type],
+                fillOpacity: 0.9,
+                weight: 1,
+                color: "#ffffff",
+                opacity: 1.0,
                 });
             }
         }
@@ -485,7 +486,7 @@ The white outline can be a bit think when you zoom out, but there is a way how y
 // define styling of vector tiles
 var vectorTileStyling = {
     signatures_4326: function(properties, zoom) {
-				// set line weight conditionally based on zoom
+    // set line weight conditionally based on zoom
         var weight = 0;
         if (zoom > 12) {
             weight = 1.0;
