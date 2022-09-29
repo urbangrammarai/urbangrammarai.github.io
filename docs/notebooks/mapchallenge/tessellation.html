@@ -1,14 +1,15 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Generate illustrations of tessellation &#8212; Urban Grammar AI  documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,22 +24,26 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
      
 <link
   rel="alternate"
@@ -127,6 +132,10 @@
       
       <li class="nav-item ">
         <a class="nav-link" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2 - Spatial Signatures</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/signature_ai/index">WP3 - Signature AI</a>
       </li>
       
     </ul>
@@ -373,11 +382,12 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
 /* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
 div.rendered_html table {
   border: none;
   border-collapse: collapse;
@@ -386,10 +396,14 @@ div.rendered_html table {
   font-size: 12px;
   table-layout: fixed;
 }
+.jp-RenderedHTMLCommon thead,
 div.rendered_html thead {
   border-bottom: 1px solid black;
   vertical-align: bottom;
 }
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
 div.rendered_html tr,
 div.rendered_html th,
 div.rendered_html td {
@@ -401,12 +415,15 @@ div.rendered_html td {
   max-width: none;
   border: none;
 }
+.jp-RenderedHTMLCommon th,
 div.rendered_html th {
   font-weight: bold;
 }
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
 div.rendered_html tbody tr:nth-child(odd) {
   background: #f5f5f5;
 }
+.jp-RenderedHTMLCommon tbody tr:hover,
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
@@ -415,8 +432,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>import os
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
 
 os.environ.get(&#39;GDS_ENV_VERSION&#39;)
 </pre></div>
@@ -431,15 +447,14 @@ os.environ.get(&#39;GDS_ENV_VERSION&#39;)
 &#39;6.0alpha&#39;
 </pre></div></div>
 </div>
-<div class="section" id="Generate-illustrations-of-tessellation">
-<h1>Generate illustrations of tessellation<a class="headerlink" href="#Generate-illustrations-of-tessellation" title="Permalink to this headline">¶</a></h1>
+<section id="Generate-illustrations-of-tessellation">
+<h1>Generate illustrations of tessellation<a class="headerlink" href="#Generate-illustrations-of-tessellation" title="Permalink to this heading">¶</a></h1>
 <p>This notebook contains one function <code class="docutils literal notranslate"><span class="pre">pipeline</span></code>, which for a given point (lat, lon) generates a sequence of seven images illustrating the process of creation of morphologicla tessellation within 250m buffer. The function is used to generate animations and figures in the blogpost.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>import geopandas as gpd
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import geopandas as gpd
 import momepy as mm
 import osmnx as ox
 import pygeos
@@ -466,8 +481,7 @@ Matplotlib created a temporary config/cache directory at /tmp/matplotlib-dq2ou8_
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[187]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>def pipeline(lat, lon, path, prefix, dist=250, figsize=(12, 12)):
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def pipeline(lat, lon, path, prefix, dist=250, figsize=(12, 12)):
     point = (lat, lon)
     gdf = ox.geometries.geometries_from_point(point, dist=dist, tags={&#39;building&#39;:True})
 
@@ -618,8 +632,7 @@ Matplotlib created a temporary config/cache directory at /tmp/matplotlib-dq2ou8_
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[186]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(33.9488360, -118.2372975, path=&#39;./&#39;, prefix=&#39;la_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(33.9488360, -118.2372975, path=&#39;./&#39;, prefix=&#39;la_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -647,8 +660,7 @@ Figure 7 saved to ./la_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[188]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(41.3907594, 2.1573404, path=&#39;./&#39;, prefix=&#39;bcn_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(41.3907594, 2.1573404, path=&#39;./&#39;, prefix=&#39;bcn_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -672,8 +684,7 @@ Figure 7 saved to ./bcn_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[189]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(38.995888, -77.135073, path=&#39;./&#39;, prefix=&#39;atl_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(38.995888, -77.135073, path=&#39;./&#39;, prefix=&#39;atl_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -699,8 +710,7 @@ Figure 7 saved to ./atl_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[190]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(44.4942640, 11.3473233, path=&#39;./&#39;, prefix=&#39;bol_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(44.4942640, 11.3473233, path=&#39;./&#39;, prefix=&#39;bol_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -726,8 +736,7 @@ Figure 7 saved to ./bol_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[193]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>pipeline(-15.8038355, -47.8918796, path=&#39;./&#39;, prefix=&#39;bra_&#39;, figsize=(15, 15))
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pipeline(-15.8038355, -47.8918796, path=&#39;./&#39;, prefix=&#39;bra_&#39;, figsize=(15, 15))
 </pre></div>
 </div>
 </div>
@@ -751,12 +760,11 @@ Figure 7 saved to ./bra_07.png
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
-</div>
+</section>
 
 <div class="section">
    
@@ -765,10 +773,9 @@ Figure 7 saved to ./bra_07.png
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
               
           </main>
           
@@ -776,20 +783,19 @@ Figure 7 saved to ./bra_07.png
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2020-, Dani Arribas-Bel, Martin Fleischmann.<br/>
+    &copy; Copyright 2020-, Dani Arribas-Bel, Martin Fleischmann.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
     </div>
     

@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Form-based Signatures paper and data &#8212; Urban Grammar AI  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Urban Grammar AI Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><center>
+  <a class="navbar-brand" href="../index.html">
+    <img src="../_static/logo.svg" alt="logo">
+  </a>
+  <p style="font-size:1.3em">Urban Grammar AI</p>
+  <p style="font-size:1em">research project</p>
+</center>
+
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..."
+    aria-label="Search the docs ..." autocomplete="off">
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+    
+
+
+
+    <ul class="nav bd-sidenav">
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="../overview.html">Project overview</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/blog/archive">Updates</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/talks/">Public talks</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/data_processing/index">WP1 - Data processing</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2 - Spatial Signatures</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/signature_ai/index">WP3 - Signature AI</a>
+      </li>
+      
+    </ul>
+
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-the-morphosignatures">
+   Citing the morphosignatures
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section id="form-based-signatures-paper-and-data">
+<h1>Form-based Signatures paper and data<a class="headerlink" href="#form-based-signatures-paper-and-data" title="Permalink to this heading">¶</a></h1>
+<p>Last year, <a class="reference internal" href="post13_isuf.html#post13_isuf"><span class="std std-ref">we attended</span></a> the International Seminar on Urban Form 2021,
+which was held virtually in Glasgow, Scotland and presented a classification of Great
+Britain based on the form component of Spatial Signatures; we called those <em>morphosignatures</em>. Earlier this year the
+proceedings from the conference were published, including our paper describing the work.
+On that occasion, we also published the dataset of resulting morphosignatures.</p>
+<p>You can get the paper either from the original proceedings under DOI
+<a class="reference external" href="https://doi.org/10.17868/strath.00080527">10.17868/strath.00080527</a> or from our <a class="reference external" href="https://github.com/urbangrammarai/isuf21_paper/raw/main/isuf_paper.pdf">Github
+repository</a>
+(8MB). The bibtex citation for the paper is attached below.</p>
+<p>The code we used to generate the morphosignatures is available on the <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/intro.html">WP2 Jupyter book of the project</a>, since a lot of it is shared with the codebase we developed to generate our main signature classification. If you want to have a peek into the specific notebooks for the clustering step (the most unique part of this exercise), you can find it at the following links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/clusters/form_signatures_GB.html">Form-based signatures</a></p></li>
+<li><p><a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/clusters/leve2_form.html">Second level form signatures</a></p></li>
+</ul>
+<p>The dataset is available from <a class="reference external" href="https://doi.org/10.6084/m9.figshare.20337633.v1">https://doi.org/10.6084/m9.figshare.20337633.v1</a> and contains a GeoPackage with the morphosignatures geometries.</p>
+<section id="citing-the-morphosignatures">
+<h2>Citing the morphosignatures<a class="headerlink" href="#citing-the-morphosignatures" title="Permalink to this heading">¶</a></h2>
+<p>Finally, if you use the morphosignatures in your own work, you can cite them with the following reference:</p>
+<blockquote>
+<div><p>Fleischmann, Martin and Arribas-Bel, Daniel; (<a class="reference external" href="https://strathprints.strath.ac.uk/view/year/2022.html">2022</a>) <em>Classifying urban form at national scale : the British morphosignatures</em>. In: Annual Conference Proceedings of the XXVIII International Seminar on Urban Form. University of Strathclyde Publishing, Glasgow, pp. 895-905. ISBN <a class="reference external" href="https://strathprints.strath.ac.uk/view/isbn/9781914241161.html">9781914241161</a></p>
+</div></blockquote>
+<p>And, if you write in LaTeX, you can use the follow <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> snippet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@incollection</span><span class="p">{</span><span class="n">fleischmannmartin2022Classifying</span><span class="p">,</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">Classifying</span> <span class="n">Urban</span> <span class="n">Form</span> <span class="n">at</span> <span class="n">National</span> <span class="n">Scale</span> <span class="p">:</span> <span class="n">The</span> <span class="p">{{</span><span class="n">British</span><span class="p">}}</span> <span class="n">Morphosignatures</span><span class="p">},</span>
+  <span class="n">shorttitle</span> <span class="o">=</span> <span class="p">{</span><span class="n">Classifying</span> <span class="n">Urban</span> <span class="n">Form</span> <span class="n">at</span> <span class="n">National</span> <span class="n">Scale</span><span class="p">},</span>
+  <span class="n">booktitle</span> <span class="o">=</span> <span class="p">{</span><span class="n">Annual</span> <span class="p">{{</span><span class="n">Conference</span> <span class="n">Proceedings</span><span class="p">}}</span> <span class="n">of</span> <span class="n">the</span> <span class="p">{{</span><span class="n">XXVIII</span> <span class="n">International</span> <span class="n">Seminar</span><span class="p">}}</span> <span class="n">on</span> <span class="p">{{</span><span class="n">Urban</span> <span class="n">Form</span><span class="p">}}},</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Fleischmann</span><span class="p">,</span> <span class="n">Martin</span> <span class="ow">and</span> <span class="p">{</span><span class="n">Arribas</span><span class="o">-</span><span class="n">Bel</span><span class="p">,</span> <span class="n">Daniel</span><span class="p">}},</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2022</span><span class="p">},</span>
+  <span class="n">pages</span> <span class="o">=</span> <span class="p">{</span><span class="mi">895</span><span class="o">--</span><span class="mi">905</span><span class="p">},</span>
+  <span class="n">publisher</span> <span class="o">=</span> <span class="p">{{</span><span class="n">University</span> <span class="n">of</span> <span class="n">Strathclyde</span> <span class="n">Publishing</span><span class="p">}},</span>
+  <span class="n">address</span> <span class="o">=</span> <span class="p">{{</span><span class="n">Glasgow</span><span class="p">}},</span>
+  <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.17868</span><span class="o">/</span><span class="n">STRATH</span><span class="mf">.00080527</span><span class="p">},</span>
+  <span class="n">isbn</span> <span class="o">=</span> <span class="p">{</span><span class="mi">978</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">914241</span><span class="o">-</span><span class="mi">16</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="post23_gisruk.html">
+       GISRUK talk
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="post25_ceus_paper.html">
+      CEUS paper 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020-, Dani Arribas-Bel, Martin Fleischmann.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

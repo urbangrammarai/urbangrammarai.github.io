@@ -6,6 +6,6 @@ dependencies:
   - sphinx
   - nbsphinx
   - ablog
-  - pydata-sphinx-theme
+  - pydata-sphinx-theme<0.8
   - myst-parser
   - python=3.7

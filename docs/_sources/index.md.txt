@@ -31,4 +31,5 @@ Public talks <https://urbangrammarai.xyz/talks/>
 
 WP1 - Data processing <https://urbangrammarai.xyz/data_processing/index>
 WP2 - Spatial Signatures <https://urbangrammarai.xyz/spatial_signatures/index>
+WP3 - Signature AI <https://urbangrammarai.xyz/signature_ai/index>
 ```

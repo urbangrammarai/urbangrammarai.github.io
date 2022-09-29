@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>CEUS paper &#8212; Urban Grammar AI  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Urban Grammar AI Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><center>
+  <a class="navbar-brand" href="../index.html">
+    <img src="../_static/logo.svg" alt="logo">
+  </a>
+  <p style="font-size:1.3em">Urban Grammar AI</p>
+  <p style="font-size:1em">research project</p>
+</center>
+
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..."
+    aria-label="Search the docs ..." autocomplete="off">
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+    
+
+
+
+    <ul class="nav bd-sidenav">
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="../overview.html">Project overview</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/blog/archive">Updates</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/talks/">Public talks</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/data_processing/index">WP1 - Data processing</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2 - Spatial Signatures</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/signature_ai/index">WP3 - Signature AI</a>
+      </li>
+      
+    </ul>
+
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section id="ceus-paper">
+<h1>CEUS paper<a class="headerlink" href="#ceus-paper" title="Permalink to this heading">¶</a></h1>
+<p>This week saw the first peer-reviewed publication related to the Urban Grammar
+see the light of day. Full coordinates of the paper are available here:</p>
+<blockquote>
+<div><p>Singleton, A.; Arribas-Bel, D.; Murray, J.; Fleischmann, M. (2022). “Estimating generalized measures of local neighbourhood context from multispectral satellite images using a convolutional neural network”. <em>Computers, Environment and Urban Systems</em>, 95. <code class="docutils literal notranslate"><span class="pre">10.1016/j.compenvurbsys.2022.101802</span></code></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0198971522000461">Published Version</a> (Open Access)</p></li>
+<li><p><a class="reference external" href="https://github.com/GDSL-UL/sat_cnn">Code repository&#64;<code class="docutils literal notranslate"><span class="pre">GitHub</span></code></a></p></li>
+<li><p><a class="reference external" href="https://dataverse.harvard.edu/dataverse/sat_cnn">Data repository&#64;<code class="docutils literal notranslate"><span class="pre">Dataverse</span></code></a></p></li>
+<li><p><a class="reference external" href="https://studio.unfolded.ai/public/c40f0a5b-a1f8-48af-8b7d-7c258942cf0d">Interactive map&#64;<code class="docutils literal notranslate"><span class="pre">Unfolded</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bibtex</span></code> citation:</p></li>
+</ul>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">SINGLETON2022101802</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
+<span class="s">            Estimating generalized measures of local neighbourhood context from</span>
+<span class="s">            multispectral satellite images using a convolutional neural network</span>
+<span class="s">        }</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Computers, Environment and Urban Systems}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{95}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{101802}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2022}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">issn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{0198-9715}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1016/j.compenvurbsys.2022.101802}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://www.sciencedirect.com/science/article/pii/S0198971522000461}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Alex Singleton and Dani Arribas-Bel and John Murray and Martin Fleischmann}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">keywords</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
+<span class="s">            Deep learning, Convolutional neural networks, Urban morphology,</span>
+<span class="s">            Multispectral satellite imagery, Cluster analysis</span>
+<span class="s">        }</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="na">abstract</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{</span>
+<span class="s">            The increased availability of high-resolution multispectral imagery captured by</span>
+<span class="s">            remote sensing platforms provides new opportunities for the characterisation and differentiation</span>
+<span class="s">            of urban context. The discovery of generalized latent representations from such data are however</span>
+<span class="s">            under researched within the social sciences. As such, this paper exploits advances in machine</span>
+<span class="s">            learning to implement a new method of capturing measures of urban context from multispectral</span>
+<span class="s">            satellite imagery at a very small area level through the application of a convolutional</span>
+<span class="s">            autoencoder (CAE). The utility of outputs from the CAE is enhanced through the application of spatial</span>
+<span class="s">            weighting, and the smoothed outputs are then summarised using cluster analysis to generate a typology</span>
+<span class="s">            comprising seven groups describing salient patterns of differentiated urban context. The limits of</span>
+<span class="s">            the technique are discussed with reference to the resolution of the satellite data utilised within</span>
+<span class="s">            the study and the interaction between the geography of the input data and the learned structure.</span>
+<span class="s">            The method is implemented within the context of Great Britain, however, is applicable to any</span>
+<span class="s">            location where similar high resolution multispectral imagery are available.</span>
+<span class="s">        }</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This is technically not an Urban Grammar paper 100%, as
+it was a collab initiated and led by <a class="reference external" href="https://www.alex-singleton.com/">Alex Singleton</a> and
+<a class="reference external" href="https://uk.linkedin.com/in/murraydata">John Murray</a>, both from the
+<a class="reference external" href="https://www.liverpool.ac.uk/geographic-data-science/">Geographic Data Science Lab</a>.
+But it was a project we got involved in because of the Urban Grammar and its
+output is very much in line with the spirit of our project.
+A propos of the publication, Alex did a Twitter thread that summarises better
+than anything I could do the gist of the paper, why it’s important, and some
+of our thinking into how this feeds into broader efforts to measure and
+understand neighborhood context.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">New paper w/ <a href="https://twitter.com/MurrayData?ref_src=twsrc%5Etfw">@murraydata</a>, <a href="https://twitter.com/martinfleis?ref_src=twsrc%5Etfw">@martinfleis</a> and <a href="https://twitter.com/darribas?ref_src=twsrc%5Etfw">@darribas</a> that uses open-source satellite imagery to create measures of local neighbourhood context. Open Access published version here: <a href="https://t.co/dyunv1KMUc">https://t.co/dyunv1KMUc</a> - all data and code: <a href="https://t.co/4Qi1ps3UrI">https://t.co/4Qi1ps3UrI</a> 1/11 <a href="https://t.co/45W4LELsgP">pic.twitter.com/45W4LELsgP</a></p>&mdash; Alex Singleton (@alexsingleton) <a href="https://twitter.com/alexsingleton/status/1518537575778168833?ref_src=twsrc%5Etfw">April 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>We are hugely excited about our results and the posibilities that using
+satellite technology, combined with a bit of machine learning and computer
+vision, opens up for building an understanding of cities at neighborhood
+level. The paper is open access, and the open data product we built around is,
+well… open; so, if you’re interested in this space (pun intended!) there is
+plenty for you to play with. If any of it stirs your interest further, do get
+in touch, we’d love to talk!</p>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="post28_proceedings.html">
+       Form-based Signatures paper and data
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     Next: 
+    <a href="post27_chicago.html">
+      Chicago visit 
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020-, Dani Arribas-Bel, Martin Fleischmann.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
