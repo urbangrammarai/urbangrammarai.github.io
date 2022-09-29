@@ -3,7 +3,7 @@
 
 # How to create a vector-based web map and host it on GitHub
 
-<iframe height="650" name="Spatial Signatures in Great Britain" src="https://urbangrammarai.xyz/great-britain/" width="100%"></iframe>
+<iframe height="650" name="Spatial Signatures in Great Britain" src="https://urbangrammarai.xyz/great-britain/" width="100%" frameborder="0"></iframe>
 
 This is the map we have created for the Urban Grammar AI project. It is created using open source software stack and hosted on GitHub, for free.
 
