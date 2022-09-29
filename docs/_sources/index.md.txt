@@ -23,6 +23,7 @@ This project develops a conceptual framework to characterise urban structure thr
 overview
 Updates <https://urbangrammarai.xyz/blog/archive>
 Public talks <https://urbangrammarai.xyz/talks/>
+papers
 ```
 
 ```{toctree}
