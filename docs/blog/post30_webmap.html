@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>How to create a vector-based web map and host it on GitHub &#8212; Urban Grammar AI  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Urban Grammar AI Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><center>
+  <a class="navbar-brand" href="../index.html">
+    <img src="../_static/logo.svg" alt="logo">
+  </a>
+  <p style="font-size:1.3em">Urban Grammar AI</p>
+  <p style="font-size:1em">research project</p>
+</center>
+
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..."
+    aria-label="Search the docs ..." autocomplete="off">
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+    
+
+
+
+    <ul class="nav bd-sidenav">
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="../overview.html">Project overview</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/blog/archive">Updates</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/talks/">Public talks</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/data_processing/index">WP1 - Data processing</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2 - Spatial Signatures</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="https://urbangrammarai.xyz/signature_ai/index">WP3 - Signature AI</a>
+      </li>
+      
+    </ul>
+
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vector-tiles">
+   Vector tiles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zoom-levels">
+     Zoom levels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tile-format-and-compression">
+     Tile format and compression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-tiles">
+     Generate tiles
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leaflet-js-map">
+   Leaflet.js map
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-leaflet-js">
+     Load leaflet.js
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-the-map">
+     Create the map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-base-map">
+     Add a base map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-vector-tiles">
+     Add vector tiles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#style-the-tiles">
+     Style the tiles
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-pages">
+   GitHub Pages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-styling-and-interactivity">
+   Further styling and interactivity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#labels-on-top-of-the-map">
+     Labels on top of the map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#popup-information">
+     Popup information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conditional-formatting-based-on-the-zoom-level">
+     Conditional formatting based on the zoom level
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend-and-details">
+     Legend and details
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section id="how-to-create-a-vector-based-web-map-and-host-it-on-github">
+<h1>How to create a vector-based web map and host it on GitHub<a class="headerlink" href="#how-to-create-a-vector-based-web-map-and-host-it-on-github" title="Permalink to this heading">¶</a></h1>
+<iframe height="650" name="Spatial Signatures in Great Britain" src="https://urbangrammarai.xyz/great-britain/" width="100%"></iframe>
+<p>This is the map we have created for the Urban Grammar AI project. It is created using open source software stack and hosted on GitHub, for free.</p>
+<p>This post will walk you through the whole process of generation of the map, step by step, so you can create your own. It is a bit longer than usual, so a quick outline for better orientation:</p>
+<ul class="simple">
+<li><p>Vector tiles</p>
+<ul>
+<li><p>Zoom levels</p></li>
+<li><p>Tile format and compression</p></li>
+<li><p>Generate tiles</p></li>
+</ul>
+</li>
+<li><p>Leaflet.js map</p>
+<ul>
+<li><p>Load leaflet.js</p></li>
+<li><p>Create the map</p></li>
+<li><p>Add a base map</p></li>
+<li><p>Add vector tiles</p></li>
+<li><p>Style the tiles</p></li>
+</ul>
+</li>
+<li><p>GitHub Pages</p></li>
+</ul>
+<p>Bonus:</p>
+<ul class="simple">
+<li><p>Further styling and interactivity</p>
+<ul>
+<li><p>Labels on top of the map</p></li>
+<li><p>Popup information</p></li>
+<li><p>Conditional formatting based on the zoom level</p></li>
+<li><p>Legend and details</p></li>
+</ul>
+</li>
+</ul>
+<p>By the end of this tutorial, you will be able to take your vector data and turn them into a fully-fledged vector map hosted on GitHub with no cost involved, for everyone to enjoy.</p>
+<section id="vector-tiles">
+<h2>Vector tiles<a class="headerlink" href="#vector-tiles" title="Permalink to this heading">¶</a></h2>
+<p>Web maps are (usually) based on tiles. That means that every dataset is turned into a large set of tiny squares representing small portions of the map. And if you want to zoom in and out, you need those tiles for every zoom level. So the first step in our process will be the creation of vector tiles.</p>
+<p>The easiest option is to use <code class="docutils literal notranslate"><span class="pre">tippecanoe</span></code>, a tool created by Mapbox that allows you to create vector tiles from any GeoJSON input. You should export only the columns you need and make sure that the geometry is in EPSG:4326 projection (lat/long) - that is what <code class="docutils literal notranslate"><span class="pre">tippecanoe</span></code> expects. Something like this will do if you have your data in <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gdf</span><span class="p">[[</span><span class="s2">&quot;signature_type&quot;</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">4326</span><span class="p">)</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s2">&quot;signatures_4326.geojson&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now you have a <code class="docutils literal notranslate"><span class="pre">signatures_4326.geojson</span></code> with geometry and a column encoding the signature type. It means that it is time to use <code class="docutils literal notranslate"><span class="pre">tippecanoe</span></code> (check the <a class="reference external" href="https://github.com/mapbox/tippecanoe#installation">installation instructions</a>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">tippecanoe</span></code> is a command-line tool, so fire up your favourite terminal, or use it within a Jupyter notebook (as <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/data_product/vector_tile.html">we did</a>). There are some options to set but let’s talk about the most important ones (you can check the rest in the <a class="reference external" href="https://github.com/mapbox/tippecanoe#usage">documentation</a>).</p>
+<section id="zoom-levels">
+<h3>Zoom levels<a class="headerlink" href="#zoom-levels" title="Permalink to this heading">¶</a></h3>
+<p>Every map has a range of zoom levels at which the shown data is meaningful. If you’re comparing states, you don’t need to zoom to a level of a street, and if you’re showing building-level data, you don’t need a zoom to see the whole continent.</p>
+<p>Zoom level 0 means you are zoomed out to see the whole world. It is a single tile. Zoom level 1 is a bit closer and is split into 4 tiles. Zoom level 2 has 16 tiles, level 3 has 64 and so on. Zoom level 16, which shows a street-level detail, consists of 4 294 967 296 tiles if you want to create them for the whole world. That is a lot of data, so you need to be mindful of which detail you actually need because the difference between zooming up to level 15 and up to level 16 is huge. OpenStreetMap has a <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Zoom_levels">nice guide on zoom levels</a> if you are interested in more details.</p>
+<p>For the signature geometry that represents neighbourhood-level classification, level 15 feels like the reasonable maximum, so you have the first option - <code class="docutils literal notranslate"><span class="pre">-z15</span></code></p>
+</section>
+<section id="tile-format-and-compression">
+<h3>Tile format and compression<a class="headerlink" href="#tile-format-and-compression" title="Permalink to this heading">¶</a></h3>
+<p>In later steps, you will use the <code class="docutils literal notranslate"><span class="pre">Leaflet.VectorGrid</span></code> plugin to load the tiles. To make that work, you need them as uncompressed protobuf files (not Mapbox vector tiles), which gives you another two options - <code class="docutils literal notranslate"><span class="pre">-no-tile-compression'</span> <span class="pre">to</span> <span class="pre">control</span> <span class="pre">the</span> <span class="pre">compression</span> <span class="pre">and</span></code>–output-to-directory<code class="docutils literal notranslate"><span class="pre">telling</span></code>tippecanoe<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">use</span> <span class="pre">directories,</span> <span class="pre">instead</span> <span class="pre">of</span></code>mbtiles`.</p>
+<p>We have <a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/data_product/vector_tile.html#generate-tiles">used</a> a few more options, but you may not need those.</p>
+</section>
+<section id="generate-tiles">
+<h3>Generate tiles<a class="headerlink" href="#generate-tiles" title="Permalink to this heading">¶</a></h3>
+<p>You have all you need to create the tiles:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tippecanoe -z15 <span class="se">\</span>
+           --no-tile-compression <span class="se">\</span>
+           --output-to-directory<span class="o">=</span>tiles/ <span class="se">\</span>
+           signatures_4326.geojson
+</pre></div>
+</div>
+<p>The command above sets the maximum zoom to 15 so you don’t create overly detailed tiles (<code class="docutils literal notranslate"><span class="pre">z15</span></code>), disables tile compression (<code class="docutils literal notranslate"><span class="pre">--no-tile-compression</span></code>) and saves the result to the <code class="docutils literal notranslate"><span class="pre">tiles/</span></code> directory (<code class="docutils literal notranslate"><span class="pre">--output-to-directory=tiles/</span></code>), based on your GeoJSON file (<code class="docutils literal notranslate"><span class="pre">signatures_4326.geojson</span></code>).</p>
+<p>This step may take a bit of time, but once it is done, you will see thousands of files in the <code class="docutils literal notranslate"><span class="pre">tiles/</span></code> folder. It is time to show them on a map.</p>
+</section>
+</section>
+<section id="leaflet-js-map">
+<h2>Leaflet.js map<a class="headerlink" href="#leaflet-js-map" title="Permalink to this heading">¶</a></h2>
+<p>One of the best tools for interactive maps is <code class="docutils literal notranslate"><span class="pre">leaflet.js</span></code>, an open-source JavaScript library. With the right plugins, it is an ideal tool for almost any web map.</p>
+<p>The whole map and a JavaScript code will be served from a single HTML file saved in the same folder where the <code class="docutils literal notranslate"><span class="pre">tiles</span></code> folder is. Let’s start with some basic structure, with comments as a placeholder you will fill later:</p>
+<div class="highlight-HTML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Spatial Signatures in Great Britain<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!-- load leaflet.js --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">style</span><span class="o">=</span><span class="s">&#39;margin:0&#39;</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!-- div containing map --&gt;</span>
+  <span class="cm">&lt;!-- specification of leaflet map --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<section id="load-leaflet-js">
+<h3>Load leaflet.js<a class="headerlink" href="#load-leaflet-js" title="Permalink to this heading">¶</a></h3>
+<p>To load the <code class="docutils literal notranslate"><span class="pre">leaflet.js</span></code>, you need to get its source script and CSS styles. Both are usually fetched over the web. You can then replace <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">load</span> <span class="pre">leaflet.js</span> <span class="pre">--&gt;</span></code> with the following snippet:</p>
+<div class="highlight-HTML notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- load leaflet.js --&gt;</span>
+<span class="cm">&lt;!-- load CSS --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span><span class="p">/&gt;</span>
+
+<span class="cm">&lt;!-- load JS --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>However, the basic <code class="docutils literal notranslate"><span class="pre">leaflet.js</span></code> is not able to work with vector tiles, so you need to load a <code class="docutils literal notranslate"><span class="pre">Leaflet.VectorGrid</span></code> extension on top. Just add this to the snippet:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- load VectorGrid extension --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>At this moment, you have everything you need to create the map in your file.</p>
+</section>
+<section id="create-the-map">
+<h3>Create the map<a class="headerlink" href="#create-the-map" title="Permalink to this heading">¶</a></h3>
+<p>You need two things - a <code class="docutils literal notranslate"><span class="pre">div</span></code> object where the map will live and a bit of JavaScript specifying what the map should do. The former is easy:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- div containing map --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 100vw; height: 100vh; background: #fdfdfd&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>This div is empty, but the important bit is <code class="docutils literal notranslate"><span class="pre">id=&quot;map&quot;</span></code>, which will link it to the JavaScript. It also has some basic styles ensuring that it covers the whole screen (<code class="docutils literal notranslate"><span class="pre">width:</span> <span class="pre">100vw;</span> <span class="pre">height:</span> <span class="pre">100vh;</span></code>) and has an almost-white background (<code class="docutils literal notranslate"><span class="pre">background:</span> <span class="pre">#fdfdfd</span></code>).</p>
+<p>The second part is the actual JavaScript generating the map.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>&lt;!-- specification of leaflet map --&gt;
+&lt;script&gt;
+// create map
+var map = L.map(&#39;map&#39;, {
+    center: [53.4107, -2.9704],
+    minZoom: 6,
+    maxZoom: 15,
+    zoomControl: true,
+    zoom: 12,
+});
+
+// other map specifications
+&lt;/script&gt;
+</pre></div>
+</div>
+<p>Let’s unpack this. This creates a variable called <code class="docutils literal notranslate"><span class="pre">map</span></code> (<code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">map</span></code>), which is a leaflet map object (<code class="docutils literal notranslate"><span class="pre">L.map</span></code>). The object is linked to the HTML element (in this case <code class="docutils literal notranslate"><span class="pre">div</span></code>) with the id <code class="docutils literal notranslate"><span class="pre">map</span></code> you created above (“map”). It also has a dictionary with some basic specification, that is setting the centre of the map to Liverpool (<code class="docutils literal notranslate"><span class="pre">center:</span> <span class="pre">[53.4107,</span> <span class="pre">-2.9704]</span></code> where the numbers are latitude and longitude), limiting zoom levels to 6-15 (<code class="docutils literal notranslate"><span class="pre">minZoom:</span> <span class="pre">6</span></code> and <code class="docutils literal notranslate"><span class="pre">maxZoom:</span> <span class="pre">15</span></code>), turning on zoom control (+- buttons) (<code class="docutils literal notranslate"><span class="pre">zoomControl:</span> <span class="pre">true</span></code>) and setting the default zoom to 12 (<code class="docutils literal notranslate"><span class="pre">zoom:</span> <span class="pre">12</span></code>). The zoom level 6, selected as a minimum, is approximately the level on which you see the whole of Great Britain. Since spatial signatures cover only GB, there’s no need to zoom further away. Maximum zoom 15 mirrors the maximum zoom of tiles we generated earlier. You would get no tiles if you zoomed closer than that.</p>
+<p>The map object is ready! There’s nothing there now, but that will change soon.</p>
+</section>
+<section id="add-a-base-map">
+<h3>Add a base map<a class="headerlink" href="#add-a-base-map" title="Permalink to this heading">¶</a></h3>
+<p>It is nice to have some base map in there before adding other layers, just to make sure everything works. You can add a default OpenStreetMap or something more subtle as a CartoDB Positron map.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// add background basemap
+var mapBaseLayer = L.tileLayer(
+    &#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png&#39;, {
+        attribution: &#39;(C) OpenStreetMap contributors (C) CARTO&#39;
+    }
+).addTo(map);
+</pre></div>
+</div>
+<p>This creates a leaflet tile layer (<code class="docutils literal notranslate"><span class="pre">L.tileLayer</span></code>) with the URL of CartoDB raster XYZ tiles and attribution of the origin of tiles. Finally, it adds the layer to our map (<code class="docutils literal notranslate"><span class="pre">.addTo(map)</span></code>). Now you can actually see a real map.</p>
+</section>
+<section id="add-vector-tiles">
+<h3>Add vector tiles<a class="headerlink" href="#add-vector-tiles" title="Permalink to this heading">¶</a></h3>
+<p>Now for the key part - vector tiles. We need to define quite a few things here.</p>
+<p><strong>URL</strong></p>
+<p>Let’s first set an URL to each tile.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// get vector tiles URL
+var mapUrl = &quot;tiles/{z}/{x}/{y}.pbf&quot;;
+</pre></div>
+</div>
+<p>Tiles are in the <code class="docutils literal notranslate"><span class="pre">tiles/</span></code> folder where <code class="docutils literal notranslate"><span class="pre">tippecanoe</span></code> dumped them. They are organised into folders, following the XYZ tiling standard. That means that they are organised according to zoom level (<code class="docutils literal notranslate"><span class="pre">{z}</span></code>) and tile coordinates within each level (<code class="docutils literal notranslate"><span class="pre">{x}</span></code> and <code class="docutils literal notranslate"><span class="pre">{y}</span></code>). You then need to specify the URL to tiles with placeholders that will be automatically filled by <code class="docutils literal notranslate"><span class="pre">leaflet.js</span></code>. Here you save the URL to the variable <code class="docutils literal notranslate"><span class="pre">mapUrl</span></code>.</p>
+<p><strong>Options</strong></p>
+<p>Another variable you may want to specify is a dictionary with options for the tiles.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// define options of vector tiles
+var mapVectorTileOptions = {
+    rendererFactory: L.canvas.tile,
+    interactive: true,
+    attribution: &#39;(C) Martin Fleischmann&#39;,
+    maxNativeZoom: 15,
+    minZoom: 6,
+};
+</pre></div>
+</div>
+<p>The snippet creates a variable (<code class="docutils literal notranslate"><span class="pre">mapVectorTileOptions</span></code>) and specifies that the tiles should be rendered using leaflet (<code class="docutils literal notranslate"><span class="pre">rendererFactory:</span> <span class="pre">L.canvas.tile</span></code>), they should allow interactivity (<code class="docutils literal notranslate"><span class="pre">interactive:</span> <span class="pre">true</span></code>) as we will need it later, it sets the attribution (<code class="docutils literal notranslate"><span class="pre">attribution:</span> <span class="pre">'(C)</span> <span class="pre">Martin</span> <span class="pre">Fleischmann'</span></code>) and min and max zoom levels.</p>
+<p><strong>Vector tile layer</strong></p>
+<p>Now you can define the vector tile layer itself.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// create VectorGrid layer
+var mapPbfLayer = new L.VectorGrid.Protobuf(
+    mapUrl, mapVectorTileOptions
+)
+</pre></div>
+</div>
+<p>This creates a new variable (<code class="docutils literal notranslate"><span class="pre">mapPbfLayer</span></code>) to store vector grid protobuf layer (<code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">L.VectorGrid.Protobuf)</span></code> based on the URL and tile options specified above.</p>
+<p><strong>Add to map</strong></p>
+<p>Finally, you can add the created layer to the map.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// add VectorGrid layer to map
+mapPbfLayer.addTo(map);
+</pre></div>
+</div>
+<p>At this point, you should be able to see your vector tiles on your map with no styles. However, to be able to use it locally, you need to start a server first. An easy way is to do it with Python. In the terminal, navigate to the folder with your html file (something like <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">path/to/my_folder</span></code>) and start the http server:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m http.server <span class="m">8000</span>
+</pre></div>
+</div>
+<p>If you now open <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> in your browser, you should be able to open your html file (it will open automatically if it is called <code class="docutils literal notranslate"><span class="pre">index.html</span></code>) and see your map. It should look like this:</p>
+<p><img alt="Screenshot 2021-10-07 at 19.22.44.png" src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/Screenshot_2021-10-07_at_19.22.44.png" /></p>
+</section>
+<section id="style-the-tiles">
+<h3>Style the tiles<a class="headerlink" href="#style-the-tiles" title="Permalink to this heading">¶</a></h3>
+<p>The GeoJSON used to create these tiles has a single attribute column called <code class="docutils literal notranslate"><span class="pre">signature_type</span></code>. What you want to do now is to use this column to style the map to your liking.</p>
+<p>Let’s assume that you know which RGB colours should apply to which signature type code. Let’s save those in a dictionary, so you can use them later.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// mapping of colors to signature types
+const cmap = {
+    &quot;0_0&quot;: &quot;#f2e6c7&quot;,
+    &quot;1_0&quot;: &quot;#8fa37e&quot;,
+    &quot;3_0&quot;: &quot;#d7a59f&quot;,
+    &quot;4_0&quot;: &quot;#d7ded1&quot;,
+    &quot;5_0&quot;: &quot;#c3abaf&quot;,
+    &quot;6_0&quot;: &quot;#e4cbc8&quot;,
+    &quot;7_0&quot;: &quot;#c2d0d9&quot;,
+    &quot;8_0&quot;: &quot;#f0d17d&quot;,
+    &quot;2_0&quot;: &quot;#678ea6&quot;,
+    &quot;2_1&quot;: &quot;#94666e&quot;,
+    &quot;2_2&quot;: &quot;#efc758&quot;,
+    &quot;9_0&quot;: &quot;#3b6e8c&quot;,
+    &quot;9_1&quot;: &quot;#333432&quot;,
+    &quot;9_2&quot;: &quot;#ab888e&quot;,
+    &quot;9_3&quot;: &quot;#c1c1c0&quot;,
+    &quot;9_4&quot;: &quot;#bc5b4f&quot;,
+    &quot;9_5&quot;: &quot;#a7b799&quot;,
+    &quot;9_6&quot;: &quot;#c1c1c0&quot;,
+    &quot;9_7&quot;: &quot;#c1c1c0&quot;,
+    &quot;9_8&quot;: &quot;#c1c1c0&quot;
+};
+</pre></div>
+</div>
+<p>This dictionary is easy left side encodes the signature type code, right side the colour as a HEX code.</p>
+<p>Having colours, let’s define a new variable with styles and unpack it a bit.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// define styling of vector tiles
+var vectorTileStyling = {
+    signatures_4326: function(properties) {
+        return ({
+            fill: true,
+   fillColor: cmap[properties.signature_type],
+            fillOpacity: 0.9,
+            weight: 1,
+            color: &quot;#ffffff&quot;,
+            opacity: 1.0,
+        });
+    }
+}
+</pre></div>
+</div>
+<p>You need to create a function mapping the styles to geometries based on the signature type property. For layer <code class="docutils literal notranslate"><span class="pre">signatures_4326</span></code> (that matches the name of input GeoJSON), you shall define a function that can use the layer properties (<code class="docutils literal notranslate"><span class="pre">function(properties)</span></code>) and specify that we want to fill each polygon with a colour (<code class="docutils literal notranslate"><span class="pre">fill:</span> <span class="pre">true),</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">fill</span> <span class="pre">colour</span> <span class="pre">should</span> <span class="pre">use</span> <span class="pre">the</span> <span class="pre">signature</span> <span class="pre">type</span> <span class="pre">to</span> <span class="pre">retrieve</span> <span class="pre">the</span> <span class="pre">colour</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">dictionary</span> <span class="pre">defined</span> <span class="pre">above</span> <span class="pre">(</span></code>fillColor: cmap[properties.signature_type]<code class="docutils literal notranslate"><span class="pre">)</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">fill</span> <span class="pre">opacity</span> <span class="pre">0.8</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">a</span> <span class="pre">bit</span> <span class="pre">of</span> <span class="pre">background</span> <span class="pre">through</span> <span class="pre">(</span></code>fillOpacity: 0.9`). It also specifies the outline of each polygon as a white line of a weight 1.</p>
+<p>Then you just need to edit the vector tile options (the <code class="docutils literal notranslate"><span class="pre">mapVectorTileOptions</span></code> dictionary from above) and add tile styling.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>  ...
+  minZoom: 6,
+  vectorTileLayerStyles: vectorTileStyling,  // this line is new
+};
+</pre></div>
+</div>
+<p>At this point, the basic map is done, and you can try to get it online or style it a bit more (scroll below for that).</p>
+<p><img alt="Screenshot 2021-10-07 at 19.42.40.png" src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/Screenshot_2021-10-07_at_19.42.40.png" /></p>
+<p>This is the whole code of the page for reference.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Spatial Signatures in Great Britain&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+    &lt;!-- load leaflet.js --&gt;
+    &lt;!-- load CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot; /&gt;
+
+    &lt;!-- load JS --&gt;
+    &lt;script src=&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- load VectorGrid extension --&gt;
+    &lt;script src=&quot;https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body style=&#39;margin:0&#39;&gt;
+    &lt;!-- div containing map --&gt;
+    &lt;div id=&quot;map&quot; style=&quot;width: 100vw; height: 100vh; background: #fdfdfd&quot;&gt;&lt;/div&gt;
+    &lt;!-- specification of leaflet map --&gt;
+    &lt;script&gt;
+        // create map
+        var map = L.map(&#39;map&#39;, {
+            center: [53.4107, -2.9704],
+            minZoom: 6,
+            maxZoom: 15,
+            zoomControl: true,
+            zoom: 12,
+        });
+
+        // add background basemap
+        var mapBaseLayer = L.tileLayer(
+            &#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png&#39;, {
+                attribution: &#39;(C) OpenStreetMap contributors (C) CARTO&#39;
+            }
+        ).addTo(map);
+
+        // get vector tiles URL
+        var mapUrl = &quot;tiles/{z}/{x}/{y}.pbf&quot;;
+
+        // mapping of colors to signature types
+        const cmap = {
+            &quot;0_0&quot;: &quot;#f2e6c7&quot;,
+            &quot;1_0&quot;: &quot;#8fa37e&quot;,
+            &quot;3_0&quot;: &quot;#d7a59f&quot;,
+            &quot;4_0&quot;: &quot;#d7ded1&quot;,
+            &quot;5_0&quot;: &quot;#c3abaf&quot;,
+            &quot;6_0&quot;: &quot;#e4cbc8&quot;,
+            &quot;7_0&quot;: &quot;#c2d0d9&quot;,
+            &quot;8_0&quot;: &quot;#f0d17d&quot;,
+            &quot;2_0&quot;: &quot;#678ea6&quot;,
+            &quot;2_1&quot;: &quot;#94666e&quot;,
+            &quot;2_2&quot;: &quot;#efc758&quot;,
+            &quot;9_0&quot;: &quot;#3b6e8c&quot;,
+            &quot;9_1&quot;: &quot;#333432&quot;,
+            &quot;9_2&quot;: &quot;#ab888e&quot;,
+            &quot;9_3&quot;: &quot;#c1c1c0&quot;,
+            &quot;9_4&quot;: &quot;#bc5b4f&quot;,
+            &quot;9_5&quot;: &quot;#a7b799&quot;,
+            &quot;9_6&quot;: &quot;#c1c1c0&quot;,
+            &quot;9_7&quot;: &quot;#c1c1c0&quot;,
+            &quot;9_8&quot;: &quot;#c1c1c0&quot;
+        };
+
+        // define styling of vector tiles
+        var vectorTileStyling = {
+            signatures_4326: function(properties) {
+                return ({
+                    fill: true,
+          fillColor: cmap[properties.signature_type],
+                fillOpacity: 0.9,
+                weight: 1,
+                color: &quot;#ffffff&quot;,
+                opacity: 1.0,
+                });
+            }
+        }
+
+        // define options of vector tiles
+        var mapVectorTileOptions = {
+            rendererFactory: L.canvas.tile,
+            interactive: true,
+            attribution: &#39;(C) Martin Fleischmann&#39;,
+            maxNativeZoom: 15,
+            minZoom: 6,
+            vectorTileLayerStyles: vectorTileStyling,
+        };
+
+        // create VectorGrid layer
+        var mapPbfLayer = new L.VectorGrid.Protobuf(
+            mapUrl, mapVectorTileOptions
+        )
+
+        // add VectorGrid layer to map
+        mapPbfLayer.addTo(map);
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="github-pages">
+<h2>GitHub Pages<a class="headerlink" href="#github-pages" title="Permalink to this heading">¶</a></h2>
+<p>You can use GitHub Pages to host the whole map online. GitHub has a size limit for individual files of 100MB. Considering that the original GeoJSON has 2.2GB, that may sound like a problem. But remember that the data are now cut to small tiles, where the size of each is a few KB. You want to create a repository on GitHub, upload your <code class="docutils literal notranslate"><span class="pre">tiles/</span></code> folder and the HTML file you have just created, called <code class="docutils literal notranslate"><span class="pre">index.html</span></code> and set up GitHub Pages hosting.</p>
+<p>Once your data are uploaded, create an empty file called <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> that tells GitHub Pages to use the repository as an HTML code as it is (what it really says is “do not use Jekyll to compile the page”) and go to Settings &gt; Pages and enable GitHub Pages.</p>
+<p>🎉  Your web map is live and accessible by anyone online. GitHub Pages settings show you the exact link. It is as easy as that.</p>
+<p><em>Tip: Once you have everything set on GitHub, use <a class="reference external" href="http://github.dev">github.dev</a> to make the further changes to the HTML file avoid download and indexing of the whole repository (just hit <code class="docutils literal notranslate"><span class="pre">.</span></code> when you are on GitHub in your repository).</em></p>
+<p>Our map lives in the <a class="reference external" href="https://github.com/urbangrammarai/great-britain">urbangrammarai/great-britain</a> repository if you want to check the source code and is available on <a class="reference external" href="https://urbangrammarai.xyz/great-britain/">https://urbangrammarai.xyz/great-britain/</a> (we use the custom domain on GitHub Pages).</p>
+</section>
+<section id="further-styling-and-interactivity">
+<h2>Further styling and interactivity<a class="headerlink" href="#further-styling-and-interactivity" title="Permalink to this heading">¶</a></h2>
+<p>You may have noticed that our map has a couple of features on top of this. Let’s quickly go through those.</p>
+<section id="labels-on-top-of-the-map">
+<h3>Labels on top of the map<a class="headerlink" href="#labels-on-top-of-the-map" title="Permalink to this heading">¶</a></h3>
+<p>You can use another XYZ base map that has just labels and load it on top of your tiles to see the names of places (or roads or something else). The order of layers matches the order in which you use <code class="docutils literal notranslate"><span class="pre">.addTo(map)</span></code>.</p>
+<p>Adding CartoDB Positron labels (this need to be after <code class="docutils literal notranslate"><span class="pre">mapPbfLayer.addTo(map)</span></code>:</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// add labels basemap
+var mapBaseLayer = L.tileLayer(
+    &#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_only_labels/{z}/{x}/{y}.png&#39;, {
+        attribution: &#39;(C) OpenStreetMap contributors (C) CARTO&#39;
+    }
+).addTo(map);
+</pre></div>
+</div>
+</section>
+<section id="popup-information">
+<h3>Popup information<a class="headerlink" href="#popup-information" title="Permalink to this heading">¶</a></h3>
+<p>You may want to show some additional information when you click on the geometry. Let’s link show the name of the signature type based on its code. First, create a dictionary with the info:</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// mapping of names to signature types to be shown in popup on click
+const popup_info = {
+    &quot;0_0&quot;: &quot;Countryside agriculture&quot;,
+    &quot;1_0&quot;: &quot;Accessible suburbia&quot;,
+    &quot;3_0&quot;: &quot;Open sprawl&quot;,
+    &quot;4_0&quot;: &quot;Wild countryside&quot;,
+    &quot;5_0&quot;: &quot;Warehouse/Park land&quot;,
+    &quot;6_0&quot;: &quot;Gridded residential quarters&quot;,
+    &quot;7_0&quot;: &quot;Urban buffer&quot;,
+    &quot;8_0&quot;: &quot;Disconnected suburbia&quot;,
+    &quot;2_0&quot;: &quot;Dense residential neighbourhoods&quot;,
+    &quot;2_1&quot;: &quot;Connected residential neighbourhoods&quot;,
+    &quot;2_2&quot;: &quot;Dense urban neighbourhoods&quot;,
+    &quot;9_0&quot;: &quot;Local urbanity&quot;,
+    &quot;9_1&quot;: &quot;Concentrated urbanity&quot;,
+    &quot;9_2&quot;: &quot;Regional urbanity&quot;,
+    &quot;9_4&quot;: &quot;Metropolitan urbanity&quot;,
+    &quot;9_5&quot;: &quot;Hyper concentrated urbanity&quot;,
+};
+</pre></div>
+</div>
+<p>Then you need to link the on click popup element to the VectorGrid object.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// create VectorGrid layer
+var mapPbfLayer = new L.VectorGrid.Protobuf(
+    mapUrl, mapVectorTileOptions
+).on(&#39;click&#39;, function (e) { // this line and below
+    L.popup()
+        .setContent(popup_info[e.layer.properties.signature_type])
+        .setLatLng(e.latlng)
+        .openOn(map);
+});
+</pre></div>
+</div>
+</section>
+<section id="conditional-formatting-based-on-the-zoom-level">
+<h3>Conditional formatting based on the zoom level<a class="headerlink" href="#conditional-formatting-based-on-the-zoom-level" title="Permalink to this heading">¶</a></h3>
+<p>The white outline can be a bit think when you zoom out, but there is a way how you can control that. You can just specify the condition to a variable and pass the variable to the tile styling dictionary.</p>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// define styling of vector tiles
+var vectorTileStyling = {
+    signatures_4326: function(properties, zoom) {
+    // set line weight conditionally based on zoom
+        var weight = 0;
+        if (zoom &gt; 12) {
+            weight = 1.0;
+        }
+        return ({
+            fill: true,
+            fillColor: cmap[properties.signature_type],
+            fillOpacity: 0.9,
+            weight: weight, // pass the weight variable instead of a value
+            color: &quot;#ffffff&quot;,
+            opacity: 1.0,
+        });
+    }
+}
+</pre></div>
+</div>
+<p>The function signature has a new <code class="docutils literal notranslate"><span class="pre">zoom</span></code> attribute you can use in the condition.</p>
+</section>
+<section id="legend-and-details">
+<h3>Legend and details<a class="headerlink" href="#legend-and-details" title="Permalink to this heading">¶</a></h3>
+<p>A legend and details are just custom HTML objects detached from the leaflet map. You can check the <a class="reference external" href="https://github.com/urbangrammarai/great-britain/blob/master/index.html">source code</a> to see how they’re done.</p>
+</section>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="post29_obd.html">
+       “Open by Default” talk at the RSS Merseyside
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2020-, Dani Arribas-Bel, Martin Fleischmann.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

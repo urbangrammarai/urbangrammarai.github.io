@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-07-19T13:52:42.696027+00:00</updated>
+  <updated>2022-09-29T21:04:46.985589+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post1.html</id>
     <title>Firing up the engines</title>
@@ -743,5 +743,21 @@ and in PDF directly).
 The video is also available on YouTube:This was a similar, albeit refined, talk to the one he did in Chicago and it is great
 it is now available to watch online.</summary>
     <published>2022-07-14T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post30_webmap.html</id>
+    <title>How to create a vector-based web map and host it on GitHub</title>
+    <updated>2022-09-29T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This is the map we have created for the Urban Grammar AI project. It is created using open source software stack and hosted on GitHub, for free.&lt;/p&gt;
+&lt;p&gt;This post will walk you through the whole process of generation of the map, step by step, so you can create your own. It is a bit longer than usual, so a quick outline for better orientation:&lt;/p&gt;
+&lt;p&gt;Vector tiles&lt;/p&gt;
+&lt;p&gt;Zoom levels&lt;/p&gt;
+&lt;p&gt;Tile format and compression&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post30_webmap.html" rel="alternate"/>
+    <summary>This is the map we have created for the Urban Grammar AI project. It is created using open source software stack and hosted on GitHub, for free.This post will walk you through the whole process of generation of the map, step by step, so you can create your own. It is a bit longer than usual, so a quick outline for better orientation:Vector tilesZoom levelsTile format and compression</summary>
+    <published>2022-09-29T00:00:00+00:00</published>
   </entry>
 </feed>
