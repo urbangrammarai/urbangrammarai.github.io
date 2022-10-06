@@ -24,6 +24,7 @@ overview
 Updates <https://urbangrammarai.xyz/blog/archive>
 Public talks <https://urbangrammarai.xyz/talks/>
 papers
+Spatial Signatures of Great Britain <https://urbangrammarai.xyz/story/>
 ```
 
 ```{toctree}
