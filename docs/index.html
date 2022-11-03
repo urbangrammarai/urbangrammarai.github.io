@@ -222,6 +222,10 @@ The video is also available on <a class="reference external" href="https://www.y
 <p class="ablog-post-excerpt">This was a similar, albeit refined, talk to the one he did in <a class="reference internal" href="blog/post27_chicago.html#post27_chicago"><span class="std std-ref">Chicago</span></a> and it is great
 it is now available to watch online.</p>
 </li>
+<li class="ablog-post"><p class="ablog-post-title">01 July - <a class="reference internal" href="blog/post31_wuf.html">World Urban Forum</a></p>
+<p class="ablog-post-excerpt">Last June, Martin and Dani attended the <a class="reference external" href="https://wuf.unhabitat.org/">World Urban Forum</a>. It was a fascinating experience in many ways. Dani wrote down his thoughts on a blog post you can read <a class="reference external" href="https://darribas.org/anotes/articles/22/wuf">here</a>.</p>
+<p class="ablog-post-excerpt"><img alt="" src="https://darribas.org/anotes/assets/img/wuf.png" /></p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title">10 June - <a class="reference internal" href="blog/post28_dib_paper.html">Data in Brief paper</a></p>
 <p class="ablog-post-excerpt">This month saw a new paper/open data product of the Urban Gramar sphere see the light of day. As part of the spin-off <a class="reference external" href="https://github.com/gdsl-itinerant">ITINERANT project</a>, and in collaboration with <a class="reference external" href="https://www.liverpool.ac.uk/geographic-data-science/">GDSL</a> colleagues Krasen Samardzhiev, <a class="reference external" href="https://aelissa.github.io/">Alessia Calafiore</a>, and <a class="reference external" href="https://www.franciscorowe.com/">Francisco Rowe</a>, we published an open data product and data descriptor that presents a new classification of signatures <em>entirely</em> based on function. Here are the coordinates where you can find everything:</p>
 <p class="ablog-post-excerpt">Samardzhiev, K.; Fleischmann, M.; Arribas-Bel, D.; Calafiore, A.; Rowe, F. (2022).
@@ -424,31 +428,6 @@ a bit of discussion. Within a few months, the results should be published in the
 <p class="ablog-post-excerpt">You can have a look at Martin’s presentation at:</p>
 <p class="ablog-post-excerpt">The slides used are <a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf">here</a> or, if you prefer it, <a class="reference external" href="https://urbangrammarai.xyz/talks/202106_isuf/index.pdf">here is the <code class="docutils literal notranslate"><span class="pre">PDF</span></code> file</a> (24Mb).</p>
 </li>
-<li class="ablog-post"><p class="ablog-post-title">04 June - <a class="reference internal" href="blog/post12_gsoc.html">Google Summer of Code</a></p>
-<p class="ablog-post-excerpt">Members of the Urban Grammar project are getting involved in developing the next
-generation set of tools for distributing processing of geospatial vector data. In its
-<a class="reference external" href="https://urbangrammarai.xyz/data_processing/index">first</a>
-<a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">part</a>, the Urban Grammar
-project heavily depends on the processing of vector geospatial data using
-<a class="reference external" href="https://geopandas.org">GeoPandas</a> Python library. However, to scale GeoPandas
-algorithms to the extent of Great Britain, we need to do more than the library can do by
-default. GeoPandas operations are currently all single-threaded, severely limiting the
-scalability of its usage and leaving most of the CPU cores just laying around, doing
-nothing. <a class="reference external" href="https://dask.org/">Dask</a> is a library that brings parallel and distributed
-computing to the ecosystem. For example, it provides a Dask DataFrame that consists of
-partitioned pandas DataFrames. Each partition can be processed by a different process
-enabling the computation to be done in parallel or even out-of-core.</p>
-<p class="ablog-post-excerpt">We are using Dask within our workflows in bespoke scripts. However, Dask could provide
-ways to scale geospatial operations in GeoPandas in a similar way it does with pandas.
-There has been some effort to build a bridge between Dask and GeoPandas, currently
-taking the shape of the <a class="reference external" href="https://github.com/geopandas/dask-geopandas">dask-geopandas</a>
-library. While that already supports basic parallelisation, which we used in our code,
-some critical components are not ready yet. That should change during this summer within
-the Google Summer of Code project Martin is (co-)mentoring. We hope that this effort
-will allow us to significantly simplify and even speed up the custom machinery we built
-to create spatial signatures in
-<a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/index">WP2</a>.</p>
-</li>
 </ul>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
@@ -517,7 +496,7 @@ to create spatial signatures in
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     

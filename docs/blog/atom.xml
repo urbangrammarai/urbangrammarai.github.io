@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-10-06T09:10:25.278967+00:00</updated>
+  <updated>2022-11-03T09:31:44.631256+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -714,6 +714,19 @@ potential solutions to the challenges we’re currently facing.</summary>
 Data in Brief, 43.
 10.1016/j.dib.2022.108335Published Version (Open Access)Code repository@GithubData product@Figshare</summary>
     <published>2022-06-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post31_wuf.html</id>
+    <title>World Urban Forum</title>
+    <updated>2022-07-01T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Last June, Martin and Dani attended the &lt;a class="reference external" href="https://wuf.unhabitat.org/"&gt;World Urban Forum&lt;/a&gt;. It was a fascinating experience in many ways. Dani wrote down his thoughts on a blog post you can read &lt;a class="reference external" href="https://darribas.org/anotes/articles/22/wuf"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://darribas.org/anotes/assets/img/wuf.png" /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post31_wuf.html" rel="alternate"/>
+    <summary>Last June, Martin and Dani attended the World Urban Forum. It was a fascinating experience in many ways. Dani wrote down his thoughts on a blog post you can read here.</summary>
+    <published>2022-07-01T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post29_obd.html</id>
