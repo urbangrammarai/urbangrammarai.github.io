@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-11-03T11:38:20.688585+00:00</updated>
+  <updated>2022-11-03T11:48:29.807933+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -722,12 +722,12 @@ Data in Brief, 43.
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Earlier this month, Martin represented the Urban Grammar at this year’s edition of &lt;a class="reference external" href="https://2022.geopython.net/"&gt;GeoPython&lt;/a&gt;. During his time there, he kept himself rather busy. Here is a quick summary with references of all the bits he participated in:&lt;/p&gt;
 &lt;p&gt;Delivered the talk “Open by Default - Developing reproducible, computational research” (slides available &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202206_geopython/index.html#/open-by-default"&gt;here&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Co-delivered the talk “State of GeoPandas”, together with Joris Vanden Bossche (slides available &lt;a class="reference external" href="https://jorisvandenbossche.github.io/talks/2022_GeoPython_geopandas"&gt;here&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Co-delivered with Joris Vanden Bossche the workshop “Scaling up vector analysis with Dask-Geopandas (materials available in this &lt;a class="reference external" href="https://github.com/martinfleis/dask-geopandas-tutorial"&gt;repo&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Co-delivered the talk “State of GeoPandas”, together with Joris Van den Bossche (slides available &lt;a class="reference external" href="https://jorisvandenbossche.github.io/talks/2022_GeoPython_geopandas"&gt;here&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Co-delivered with Joris Van den Bossche the workshop “Scaling up vector analysis with Dask-Geopandas (materials available in this &lt;a class="reference external" href="https://github.com/martinfleis/dask-geopandas-tutorial"&gt;repo&lt;/a&gt;)&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://urbangrammarai.xyz/blog/post35_geopython.html" rel="alternate"/>
-    <summary>Earlier this month, Martin represented the Urban Grammar at this year’s edition of GeoPython. During his time there, he kept himself rather busy. Here is a quick summary with references of all the bits he participated in:Delivered the talk “Open by Default - Developing reproducible, computational research” (slides available here)Co-delivered the talk “State of GeoPandas”, together with Joris Vanden Bossche (slides available here)Co-delivered with Joris Vanden Bossche the workshop “Scaling up vector analysis with Dask-Geopandas (materials available in this repo)</summary>
+    <summary>Earlier this month, Martin represented the Urban Grammar at this year’s edition of GeoPython. During his time there, he kept himself rather busy. Here is a quick summary with references of all the bits he participated in:Delivered the talk “Open by Default - Developing reproducible, computational research” (slides available here)Co-delivered the talk “State of GeoPandas”, together with Joris Van den Bossche (slides available here)Co-delivered with Joris Van den Bossche the workshop “Scaling up vector analysis with Dask-Geopandas (materials available in this repo)</summary>
     <published>2022-06-28T00:00:00+00:00</published>
   </entry>
   <entry>
