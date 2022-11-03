@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-11-03T09:39:45.268933+00:00</updated>
+  <updated>2022-11-03T10:19:42.513307+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -768,6 +768,22 @@ it is now available to watch online.</summary>
     <link href="https://urbangrammarai.xyz/blog/post32_itinerant.html" rel="alternate"/>
     <summary>Dani and Martin participated earlier this month in the stakeholder engagement workshop organised by the ITINERANT project. This was an event where the project presented final results to a series of stakeholders including the ONS Data Science Campus, the Liverpool City Region, or the UK 2070 Commission. The event was held in Liverpool but streamed online and the talks are available on YouTube now (Spatial Signatures starting at minute 23).</summary>
     <published>2022-07-27T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post33_habitat.html</id>
+    <title>Habitat paper</title>
+    <updated>2022-09-27T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This month has been a big on in terms of academic outputs. The first one has been the conceptual paper putting forth many of the ideas that underpin much of the Urban Grammar project. Here are the full coordinates:&lt;/p&gt;
+&lt;p&gt;Arribas-Bel, D., &amp;amp; Fleischmann, M. (2022). “Understanding (urban) spaces through form and function”. &lt;em&gt;Habitat International&lt;/em&gt;, 128, 102641. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;https://doi.org/10.1016/j.habitatint.2022.102641&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0197397522001382"&gt;Published version&lt;/a&gt; (Open Access)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/urbangrammarai/spatial_signatures_concept"&gt;Code repository&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Github&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://twitter.com/darribas/status/1574720386029101058"&gt;Intro thread&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Twitter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post33_habitat.html" rel="alternate"/>
+    <summary>This month has been a big on in terms of academic outputs. The first one has been the conceptual paper putting forth many of the ideas that underpin much of the Urban Grammar project. Here are the full coordinates:Arribas-Bel, D., &amp; Fleischmann, M. (2022). “Understanding (urban) spaces through form and function”. Habitat International, 128, 102641. https://doi.org/10.1016/j.habitatint.2022.102641Published version (Open Access)Code repository@GithubIntro thread@Twitter</summary>
+    <published>2022-09-27T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post30_webmap.html</id>
