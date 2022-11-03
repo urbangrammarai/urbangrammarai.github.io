@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-11-03T09:31:44.631256+00:00</updated>
+  <updated>2022-11-03T09:39:45.268933+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -756,6 +756,18 @@ and in PDF directly).
 The video is also available on YouTube:This was a similar, albeit refined, talk to the one he did in Chicago and it is great
 it is now available to watch online.</summary>
     <published>2022-07-14T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post32_itinerant.html</id>
+    <title>The Spatial Signatures on ITINERANT</title>
+    <updated>2022-07-27T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Dani and Martin participated earlier this month in the stakeholder engagement workshop organised by the ITINERANT project. This was an event where the project presented final results to a series of stakeholders including the ONS Data Science Campus, the Liverpool City Region, or the UK 2070 Commission. The event was held in Liverpool but streamed online and the talks are available on YouTube now (Spatial Signatures starting at &lt;a class="reference external" href="https://youtu.be/lhyytz7ayTY?t=1412"&gt;minute 23&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post32_itinerant.html" rel="alternate"/>
+    <summary>Dani and Martin participated earlier this month in the stakeholder engagement workshop organised by the ITINERANT project. This was an event where the project presented final results to a series of stakeholders including the ONS Data Science Campus, the Liverpool City Region, or the UK 2070 Commission. The event was held in Liverpool but streamed online and the talks are available on YouTube now (Spatial Signatures starting at minute 23).</summary>
+    <published>2022-07-27T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post30_webmap.html</id>
