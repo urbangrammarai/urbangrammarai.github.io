@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-11-03T10:19:42.513307+00:00</updated>
+  <updated>2022-11-03T10:33:44.862752+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -784,6 +784,22 @@ it is now available to watch online.</summary>
     <link href="https://urbangrammarai.xyz/blog/post33_habitat.html" rel="alternate"/>
     <summary>This month has been a big on in terms of academic outputs. The first one has been the conceptual paper putting forth many of the ideas that underpin much of the Urban Grammar project. Here are the full coordinates:Arribas-Bel, D., &amp; Fleischmann, M. (2022). “Understanding (urban) spaces through form and function”. Habitat International, 128, 102641. https://doi.org/10.1016/j.habitatint.2022.102641Published version (Open Access)Code repository@GithubIntro thread@Twitter</summary>
     <published>2022-09-27T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post34_sd.html</id>
+    <title>Scientific Data paper</title>
+    <updated>2022-09-28T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The second output of the month, a very related one to the &lt;a class="reference internal" href="blog/post33_habitat.html#post33_habitat"&gt;&lt;span class="std std-ref"&gt;previous one&lt;/span&gt;&lt;/a&gt;! If in the Habitat paper we set out to describe the core concepts behind spatial signatures, in this one we showed it is possible to deploy at scale while retaining detail and consistency. We applied the notion of spatial signatures to Great Britain to create an open data product. Here are the full coordinates:&lt;/p&gt;
+&lt;p&gt;Fleischmann, M., &amp;amp; Arribas-Bel, D. (2022). “Geographical characterisation of British urban form and function using the spatial signatures framework”. &lt;em&gt;Scientific Data&lt;/em&gt;, 9(1), 1-15. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;https://doi.org/10.1038/s41597-022-01640-8&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.nature.com/articles/s41597-022-01640-8"&gt;Published version&lt;/a&gt; (Open Access)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/urbangrammarai/spatial_signatures"&gt;Code repository&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Github&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; (&lt;a class="reference external" href="https://urbangrammarai.xyz/spatial_signatures/"&gt;Web render&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://twitter.com/martinfleis/status/1577947277309747201"&gt;Intro thread&amp;#64;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Twitter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post34_sd.html" rel="alternate"/>
+    <summary>The second output of the month, a very related one to the previous one! If in the Habitat paper we set out to describe the core concepts behind spatial signatures, in this one we showed it is possible to deploy at scale while retaining detail and consistency. We applied the notion of spatial signatures to Great Britain to create an open data product. Here are the full coordinates:Fleischmann, M., &amp; Arribas-Bel, D. (2022). “Geographical characterisation of British urban form and function using the spatial signatures framework”. Scientific Data, 9(1), 1-15. https://doi.org/10.1038/s41597-022-01640-8Published version (Open Access)Code repository@Github (Web render)Intro thread@Twitter</summary>
+    <published>2022-09-28T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post30_webmap.html</id>
