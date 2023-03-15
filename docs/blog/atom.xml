@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2023-03-15T22:40:41.679780+00:00</updated>
+  <updated>2023-03-15T23:45:25.182972+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
@@ -412,7 +412,7 @@ some time discussed the open infrastruture built around the project resulting in
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post22_fourth_advisory_board.html</id>
-    <title>Third Advisory Board</title>
+    <title>Fourth Advisory Board</title>
     <updated>2022-03-18T00:00:00+00:00</updated>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;On March 17th 2022, the (hopefully) last online Advisory Board meeting was held over
@@ -714,6 +714,28 @@ potential solutions to the challenges we’re currently facing.</summary>
 Data in Brief, 43.
 10.1016/j.dib.2022.108335Published Version (Open Access)Code repository@GithubData product@Figshare</summary>
     <published>2022-06-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post38_last_advisory_board.html</id>
+    <title>Fifth Advisory Board</title>
+    <updated>2022-06-18T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;On June 13th and 14th 2022, we held the last advisory board, but also the first one in person.
+For two days, Martin and Dani welcomed Alistair Edwardes (DEFRA) and Miguel Monteiry (INPE in Brazil)
+to discuss progress and next steps for the project. We missed Rachel Franklin (Newcastle/Turing), who
+managed to join remotely for one of the work sessions, and Isabel Sargent (Ordnance Survey). All
+in all, it was a productive visit that we hope will translate in further future collaboration and
+joint ventures with members of the board.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post38_last_advisory_board.html" rel="alternate"/>
+    <summary>On June 13th and 14th 2022, we held the last advisory board, but also the first one in person.
+For two days, Martin and Dani welcomed Alistair Edwardes (DEFRA) and Miguel Monteiry (INPE in Brazil)
+to discuss progress and next steps for the project. We missed Rachel Franklin (Newcastle/Turing), who
+managed to join remotely for one of the work sessions, and Isabel Sargent (Ordnance Survey). All
+in all, it was a productive visit that we hope will translate in further future collaboration and
+joint ventures with members of the board.</summary>
+    <published>2022-06-18T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post35_geopython.html</id>
