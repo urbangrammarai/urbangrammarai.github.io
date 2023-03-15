@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2023-03-15T21:22:42.230571+00:00</updated>
+  <updated>2023-03-15T22:40:41.679780+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
@@ -831,6 +831,18 @@ it is now available to watch online.</summary>
     <link href="https://urbangrammarai.xyz/blog/post30_webmap.html" rel="alternate"/>
     <summary>This is the map we have created for the Urban Grammar AI project. It is created using open source software stack and hosted on GitHub, for free.This post will walk you through the whole process of generation of the map, step by step, so you can create your own. It is a bit longer than usual, so a quick outline for better orientation:Vector tilesZoom levelsTile format and compression</summary>
     <published>2022-09-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post37_ons_talk.html</id>
+    <title>Talk at the ONS Data Science Seminar Series</title>
+    <updated>2022-11-15T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Earlier this month, Dani presented the spatial signatures at the ONS Data Science Seminar Series, run by their Data Science campus. The talk covered most of the work undertaken to date on the project and it is a good summary of many of its achievements. You can access the series page &lt;a class="reference external" href="https://datasciencecampus.ons.gov.uk/capability/economic-data-science-series/"&gt;here&lt;/a&gt; and watch the talk below:&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post37_ons_talk.html" rel="alternate"/>
+    <summary>Earlier this month, Dani presented the spatial signatures at the ONS Data Science Seminar Series, run by their Data Science campus. The talk covered most of the work undertaken to date on the project and it is a good summary of many of its achievements. You can access the series page here and watch the talk below:</summary>
+    <published>2022-11-15T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post36_psp_paper.html</id>
