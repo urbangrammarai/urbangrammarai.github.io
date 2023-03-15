@@ -333,10 +333,10 @@
 <section id="generate-tiles">
 <h3>Generate tiles<a class="headerlink" href="#generate-tiles" title="Permalink to this heading">¶</a></h3>
 <p>You have all you need to create the tiles:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tippecanoe -z15 <span class="se">\</span>
-           --no-tile-compression <span class="se">\</span>
-           --output-to-directory<span class="o">=</span>tiles/ <span class="se">\</span>
-           signatures_4326.geojson
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tippecanoe<span class="w"> </span>-z15<span class="w"> </span><span class="se">\</span>
+<span class="w">           </span>--no-tile-compression<span class="w"> </span><span class="se">\</span>
+<span class="w">           </span>--output-to-directory<span class="o">=</span>tiles/<span class="w"> </span><span class="se">\</span>
+<span class="w">           </span>signatures_4326.geojson
 </pre></div>
 </div>
 <p>The command above sets the maximum zoom to 15 so you don’t create overly detailed tiles (<code class="docutils literal notranslate"><span class="pre">z15</span></code>), disables tile compression (<code class="docutils literal notranslate"><span class="pre">--no-tile-compression</span></code>) and saves the result to the <code class="docutils literal notranslate"><span class="pre">tiles/</span></code> directory (<code class="docutils literal notranslate"><span class="pre">--output-to-directory=tiles/</span></code>), based on your GeoJSON file (<code class="docutils literal notranslate"><span class="pre">signatures_4326.geojson</span></code>).</p>
@@ -462,7 +462,7 @@ mapPbfLayer.addTo(map);
 </pre></div>
 </div>
 <p>At this point, you should be able to see your vector tiles on your map with no styles. However, to be able to use it locally, you need to start a server first. An easy way is to do it with Python. In the terminal, navigate to the folder with your html file (something like <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">path/to/my_folder</span></code>) and start the http server:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m http.server <span class="m">8000</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span>
 </pre></div>
 </div>
 <p>If you now open <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> in your browser, you should be able to open your html file (it will open automatically if it is called <code class="docutils literal notranslate"><span class="pre">index.html</span></code>) and see your map. It should look like this:</p>
@@ -738,6 +738,10 @@ var vectorTileStyling = {
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
+     Next: 
+    <a href="post36_psp_paper.html">
+      Population, Space and Place paper 
+    </a>
     
   </span>
 </div>

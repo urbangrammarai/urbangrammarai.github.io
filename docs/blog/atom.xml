@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2022-12-16T11:45:46.269596+00:00</updated>
+  <updated>2023-03-15T21:22:42.230571+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.33">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
   <entry>
     <id>https://urbangrammarai.xyz/blog/post1.html</id>
     <title>Firing up the engines</title>
@@ -755,7 +755,7 @@ default - Developing reproducible, computational research”. You can find the
 slides on the &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/"&gt;usual place&lt;/a&gt; (or
 &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202206_rss_merseyside/index.html"&gt;here&lt;/a&gt;
 and in &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/202206_rss_merseyside/index.pdf"&gt;PDF&lt;/a&gt; directly).
-The video is also available on &lt;a class="reference external" href="https://www.youtube.com/watch?v=u3hYWLYApoA&amp;amp;t=3531s"&gt;YouTube&lt;/a&gt;:&lt;/p&gt;
+The video is also available on &lt;a class="reference external" href="https://www.youtube.com/watch?v=u3hYWLYApoA&amp;amp;amp;t=3531s"&gt;YouTube&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;This was a similar, albeit refined, talk to the one he did in &lt;a class="reference internal" href="blog/post27_chicago.html#post27_chicago"&gt;&lt;span class="std std-ref"&gt;Chicago&lt;/span&gt;&lt;/a&gt; and it is great
 it is now available to watch online.&lt;/p&gt;
 &lt;/div&gt;
@@ -831,5 +831,20 @@ it is now available to watch online.</summary>
     <link href="https://urbangrammarai.xyz/blog/post30_webmap.html" rel="alternate"/>
     <summary>This is the map we have created for the Urban Grammar AI project. It is created using open source software stack and hosted on GitHub, for free.This post will walk you through the whole process of generation of the map, step by step, so you can create your own. It is a bit longer than usual, so a quick outline for better orientation:Vector tilesZoom levelsTile format and compression</summary>
     <published>2022-09-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post36_psp_paper.html</id>
+    <title>Population, Space and Place paper</title>
+    <updated>2022-12-07T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Earlier this month, we had a paper the Urban Grammar team contributed to come out in Population, Space and Place. This was a collaboration with Francisco Rowe, Alessia Calafiore and Krasen Samardzhiev, with whom we spun off the &lt;a class="reference external" href="https://github.com/gdsl-itinerant"&gt;ITINERANT&lt;/a&gt; project. The paper and code are both available open access/source.&lt;/p&gt;
+&lt;p&gt;Rowe, F., Calafiore, A., Arribas‐Bel, D., Samardzhiev, K., &amp;amp; Fleischmann, M. (2023). “Urban exodus? Understanding human mobility in Britain during the COVID‐19 pandemic using Meta‐Facebook data”. &lt;em&gt;Population, Space and Place&lt;/em&gt;, 29(1), e2637. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;https://doi.org/10.1002/psp.2637&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doi.org/10.1002/psp.2637"&gt;Published version&lt;/a&gt; (Open Access)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/gdsl-itinerant/human-mobility"&gt;Code repository&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post36_psp_paper.html" rel="alternate"/>
+    <summary>Earlier this month, we had a paper the Urban Grammar team contributed to come out in Population, Space and Place. This was a collaboration with Francisco Rowe, Alessia Calafiore and Krasen Samardzhiev, with whom we spun off the ITINERANT project. The paper and code are both available open access/source.Rowe, F., Calafiore, A., Arribas‐Bel, D., Samardzhiev, K., &amp; Fleischmann, M. (2023). “Urban exodus? Understanding human mobility in Britain during the COVID‐19 pandemic using Meta‐Facebook data”. Population, Space and Place, 29(1), e2637. https://doi.org/10.1002/psp.2637Published version (Open Access)Code repository</summary>
+    <published>2022-12-07T00:00:00+00:00</published>
   </entry>
 </feed>
