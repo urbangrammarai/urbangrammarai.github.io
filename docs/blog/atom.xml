@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2023-04-23T19:42:34.460766+00:00</updated>
+  <updated>2023-04-23T19:53:57.234532+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
@@ -907,6 +907,18 @@ motivation and progress in the Urban Grammar project to date. The programme of t
 </content>
     <link href="https://urbangrammarai.xyz/blog/post40_aag.html" rel="alternate"/>
     <summary>On March 26th, Dani presented ongoing work at the AAG’23 conference. The talk was part of the Urban Analytics sessions co-organised between the Alan Turing Institute, Liverpool and Leeds, and focused on progress on using deep learning to predict spatial signatures from satellite imagery. As usual, you can find the slides in the talks page, both in HTML and PDF versions.</summary>
+    <published>2023-04-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post41_taiwan.html</id>
+    <title>Participation in Taiwanese forum</title>
+    <updated>2023-04-02T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;On April 12th, Dani participated as online speaker in an event organised by the Industrial Technology Research Institute (ITRI) in Taiwan. The event, named “Masters Gathering”, and organised for the National Science and Technology Council of Taiwan Government focused on artificial intelligence in the smart city. Dani provided an overview of the Urban Grammar to the audience. Sadly, he was not able to participate live due to illness, but managed to record a short video with the presentation. You can check out the slides he used in the &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/"&gt;talks page&lt;/a&gt;, both in &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/20230412_taiwan/index.html"&gt;HTML&lt;/a&gt; and &lt;a class="reference external" href="https://urbangrammarai.xyz/talks/20230412_taiwan/index.pdf"&gt;PDF&lt;/a&gt; format.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post41_taiwan.html" rel="alternate"/>
+    <summary>On April 12th, Dani participated as online speaker in an event organised by the Industrial Technology Research Institute (ITRI) in Taiwan. The event, named “Masters Gathering”, and organised for the National Science and Technology Council of Taiwan Government focused on artificial intelligence in the smart city. Dani provided an overview of the Urban Grammar to the audience. Sadly, he was not able to participate live due to illness, but managed to record a short video with the presentation. You can check out the slides he used in the talks page, both in HTML and PDF format.</summary>
     <published>2023-04-02T00:00:00+00:00</published>
   </entry>
 </feed>
