@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://urbangrammarai.xyz/</id>
   <title>Urban Grammar AI Blog</title>
-  <updated>2023-04-23T20:00:25.277960+00:00</updated>
+  <updated>2023-09-04T11:27:25.179235+00:00</updated>
   <link href="https://urbangrammarai.xyz/"/>
   <link href="https://urbangrammarai.xyz/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
@@ -932,5 +932,19 @@ motivation and progress in the Urban Grammar project to date. The programme of t
     <link href="https://urbangrammarai.xyz/blog/post42_jrc.html" rel="alternate"/>
     <summary>On April 20th, Dani participated on a webinar organised by the Joint Research Centre and the Regional Studies association. The event was held on the occassion of the launch of a policy brief on the Future of Cities and focused on urban-rural interactions. Dani discussed the relevance of measuring the “urban” and the “rural” correctly, providing the Urban Grammar as an illustration. You can check out the slides he used in the talks page, both in HTML and PDF format.</summary>
     <published>2023-04-20T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://urbangrammarai.xyz/blog/post43.html</id>
+    <title>Clustergram published in the JOSS</title>
+    <updated>2023-09-04T00:00:00+00:00</updated>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The Python package Clustergram, developed in the early stage of this project, has now a software paper published in the Journal of Open Source Software (JOSS).&lt;/p&gt;
+&lt;p&gt;In 2021, we have developed a small package for visualisation and diagnostic of cluster analysis to help us understand various clustering solutions when delineating spatial signatures. You can see the original post &lt;a class="reference internal" href="blog/post10_clustergram.html#post10_clustergram"&gt;&lt;span class="std std-ref"&gt;here&lt;/span&gt;&lt;/a&gt;. The package was furhter improved over the years and was recently published in the JOSS.&lt;/p&gt;
+&lt;p&gt;Fleischmann, M., (2023). Clustergram: Visualization and diagnostics for cluster analysis. Journal of Open Source Software, 8(89), 5240, https://doi.org/10.21105/joss.05240&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://urbangrammarai.xyz/blog/post43.html" rel="alternate"/>
+    <summary>The Python package Clustergram, developed in the early stage of this project, has now a software paper published in the Journal of Open Source Software (JOSS).In 2021, we have developed a small package for visualisation and diagnostic of cluster analysis to help us understand various clustering solutions when delineating spatial signatures. You can see the original post here. The package was furhter improved over the years and was recently published in the JOSS.Fleischmann, M., (2023). Clustergram: Visualization and diagnostics for cluster analysis. Journal of Open Source Software, 8(89), 5240, https://doi.org/10.21105/joss.05240</summary>
+    <published>2023-09-04T00:00:00+00:00</published>
   </entry>
 </feed>
