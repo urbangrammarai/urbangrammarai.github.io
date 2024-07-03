@@ -392,19 +392,19 @@
 </div>
 <p>This div is empty, but the important bit is <code class="docutils literal notranslate"><span class="pre">id=&quot;map&quot;</span></code>, which will link it to the JavaScript. It also has some basic styles ensuring that it covers the whole screen (<code class="docutils literal notranslate"><span class="pre">width:</span> <span class="pre">100vw;</span> <span class="pre">height:</span> <span class="pre">100vh;</span></code>) and has an almost-white background (<code class="docutils literal notranslate"><span class="pre">background:</span> <span class="pre">#fdfdfd</span></code>).</p>
 <p>The second part is the actual JavaScript generating the map.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>&lt;!-- specification of leaflet map --&gt;
-&lt;script&gt;
-// create map
-var map = L.map(&#39;map&#39;, {
-    center: [53.4107, -2.9704],
-    minZoom: 6,
-    maxZoom: 15,
-    zoomControl: true,
-    zoom: 12,
-});
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">specification</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">leaflet</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="c1">// create map</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">53.4107</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2.9704</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">minZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">maxZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">zoomControl</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
+<span class="p">});</span>
 
-// other map specifications
-&lt;/script&gt;
+<span class="c1">// other map specifications</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>Let’s unpack this. This creates a variable called <code class="docutils literal notranslate"><span class="pre">map</span></code> (<code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">map</span></code>), which is a leaflet map object (<code class="docutils literal notranslate"><span class="pre">L.map</span></code>). The object is linked to the HTML element (in this case <code class="docutils literal notranslate"><span class="pre">div</span></code>) with the id <code class="docutils literal notranslate"><span class="pre">map</span></code> you created above (“map”). It also has a dictionary with some basic specification, that is setting the centre of the map to Liverpool (<code class="docutils literal notranslate"><span class="pre">center:</span> <span class="pre">[53.4107,</span> <span class="pre">-2.9704]</span></code> where the numbers are latitude and longitude), limiting zoom levels to 6-15 (<code class="docutils literal notranslate"><span class="pre">minZoom:</span> <span class="pre">6</span></code> and <code class="docutils literal notranslate"><span class="pre">maxZoom:</span> <span class="pre">15</span></code>), turning on zoom control (+- buttons) (<code class="docutils literal notranslate"><span class="pre">zoomControl:</span> <span class="pre">true</span></code>) and setting the default zoom to 12 (<code class="docutils literal notranslate"><span class="pre">zoom:</span> <span class="pre">12</span></code>). The zoom level 6, selected as a minimum, is approximately the level on which you see the whole of Great Britain. Since spatial signatures cover only GB, there’s no need to zoom further away. Maximum zoom 15 mirrors the maximum zoom of tiles we generated earlier. You would get no tiles if you zoomed closer than that.</p>
@@ -413,12 +413,12 @@ var map = L.map(&#39;map&#39;, {
 <section id="add-a-base-map">
 <h3>Add a base map<a class="headerlink" href="#add-a-base-map" title="Permalink to this heading">¶</a></h3>
 <p>It is nice to have some base map in there before adding other layers, just to make sure everything works. You can add a default OpenStreetMap or something more subtle as a CartoDB Positron map.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// add background basemap
-var mapBaseLayer = L.tileLayer(
-    &#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png&#39;, {
-        attribution: &#39;(C) OpenStreetMap contributors (C) CARTO&#39;
-    }
-).addTo(map);
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// add background basemap</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mapBaseLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+<span class="w">    </span><span class="s1">&#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">attribution</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(C) OpenStreetMap contributors (C) CARTO&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This creates a leaflet tile layer (<code class="docutils literal notranslate"><span class="pre">L.tileLayer</span></code>) with the URL of CartoDB raster XYZ tiles and attribution of the origin of tiles. Finally, it adds the layer to our map (<code class="docutils literal notranslate"><span class="pre">.addTo(map)</span></code>). Now you can actually see a real map.</p>
@@ -428,37 +428,37 @@ var mapBaseLayer = L.tileLayer(
 <p>Now for the key part - vector tiles. We need to define quite a few things here.</p>
 <p><strong>URL</strong></p>
 <p>Let’s first set an URL to each tile.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// get vector tiles URL
-var mapUrl = &quot;tiles/{z}/{x}/{y}.pbf&quot;;
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// get vector tiles URL</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mapUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tiles/{z}/{x}/{y}.pbf&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Tiles are in the <code class="docutils literal notranslate"><span class="pre">tiles/</span></code> folder where <code class="docutils literal notranslate"><span class="pre">tippecanoe</span></code> dumped them. They are organised into folders, following the XYZ tiling standard. That means that they are organised according to zoom level (<code class="docutils literal notranslate"><span class="pre">{z}</span></code>) and tile coordinates within each level (<code class="docutils literal notranslate"><span class="pre">{x}</span></code> and <code class="docutils literal notranslate"><span class="pre">{y}</span></code>). You then need to specify the URL to tiles with placeholders that will be automatically filled by <code class="docutils literal notranslate"><span class="pre">leaflet.js</span></code>. Here you save the URL to the variable <code class="docutils literal notranslate"><span class="pre">mapUrl</span></code>.</p>
 <p><strong>Options</strong></p>
 <p>Another variable you may want to specify is a dictionary with options for the tiles.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// define options of vector tiles
-var mapVectorTileOptions = {
-    rendererFactory: L.canvas.tile,
-    interactive: true,
-    attribution: &#39;(C) Martin Fleischmann&#39;,
-    maxNativeZoom: 15,
-    minZoom: 6,
-};
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// define options of vector tiles</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mapVectorTileOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">rendererFactory</span><span class="o">:</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">tile</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">interactive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">attribution</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(C) Martin Fleischmann&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">maxNativeZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">minZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <p>The snippet creates a variable (<code class="docutils literal notranslate"><span class="pre">mapVectorTileOptions</span></code>) and specifies that the tiles should be rendered using leaflet (<code class="docutils literal notranslate"><span class="pre">rendererFactory:</span> <span class="pre">L.canvas.tile</span></code>), they should allow interactivity (<code class="docutils literal notranslate"><span class="pre">interactive:</span> <span class="pre">true</span></code>) as we will need it later, it sets the attribution (<code class="docutils literal notranslate"><span class="pre">attribution:</span> <span class="pre">'(C)</span> <span class="pre">Martin</span> <span class="pre">Fleischmann'</span></code>) and min and max zoom levels.</p>
 <p><strong>Vector tile layer</strong></p>
 <p>Now you can define the vector tile layer itself.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// create VectorGrid layer
-var mapPbfLayer = new L.VectorGrid.Protobuf(
-    mapUrl, mapVectorTileOptions
-)
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// create VectorGrid layer</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mapPbfLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">VectorGrid</span><span class="p">.</span><span class="nx">Protobuf</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">mapUrl</span><span class="p">,</span><span class="w"> </span><span class="nx">mapVectorTileOptions</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>This creates a new variable (<code class="docutils literal notranslate"><span class="pre">mapPbfLayer</span></code>) to store vector grid protobuf layer (<code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">L.VectorGrid.Protobuf)</span></code> based on the URL and tile options specified above.</p>
 <p><strong>Add to map</strong></p>
 <p>Finally, you can add the created layer to the map.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// add VectorGrid layer to map
-mapPbfLayer.addTo(map);
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// add VectorGrid layer to map</span>
+<span class="nx">mapPbfLayer</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>At this point, you should be able to see your vector tiles on your map with no styles. However, to be able to use it locally, you need to start a server first. An easy way is to do it with Python. In the terminal, navigate to the folder with your html file (something like <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">path/to/my_folder</span></code>) and start the http server:</p>
@@ -472,161 +472,161 @@ mapPbfLayer.addTo(map);
 <h3>Style the tiles<a class="headerlink" href="#style-the-tiles" title="Permalink to this heading">¶</a></h3>
 <p>The GeoJSON used to create these tiles has a single attribute column called <code class="docutils literal notranslate"><span class="pre">signature_type</span></code>. What you want to do now is to use this column to style the map to your liking.</p>
 <p>Let’s assume that you know which RGB colours should apply to which signature type code. Let’s save those in a dictionary, so you can use them later.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// mapping of colors to signature types
-const cmap = {
-    &quot;0_0&quot;: &quot;#f2e6c7&quot;,
-    &quot;1_0&quot;: &quot;#8fa37e&quot;,
-    &quot;3_0&quot;: &quot;#d7a59f&quot;,
-    &quot;4_0&quot;: &quot;#d7ded1&quot;,
-    &quot;5_0&quot;: &quot;#c3abaf&quot;,
-    &quot;6_0&quot;: &quot;#e4cbc8&quot;,
-    &quot;7_0&quot;: &quot;#c2d0d9&quot;,
-    &quot;8_0&quot;: &quot;#f0d17d&quot;,
-    &quot;2_0&quot;: &quot;#678ea6&quot;,
-    &quot;2_1&quot;: &quot;#94666e&quot;,
-    &quot;2_2&quot;: &quot;#efc758&quot;,
-    &quot;9_0&quot;: &quot;#3b6e8c&quot;,
-    &quot;9_1&quot;: &quot;#333432&quot;,
-    &quot;9_2&quot;: &quot;#ab888e&quot;,
-    &quot;9_3&quot;: &quot;#c1c1c0&quot;,
-    &quot;9_4&quot;: &quot;#bc5b4f&quot;,
-    &quot;9_5&quot;: &quot;#a7b799&quot;,
-    &quot;9_6&quot;: &quot;#c1c1c0&quot;,
-    &quot;9_7&quot;: &quot;#c1c1c0&quot;,
-    &quot;9_8&quot;: &quot;#c1c1c0&quot;
-};
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// mapping of colors to signature types</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cmap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;0_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#f2e6c7&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;1_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#8fa37e&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;3_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#d7a59f&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;4_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#d7ded1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;5_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c3abaf&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;6_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#e4cbc8&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;7_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c2d0d9&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;8_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#f0d17d&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#678ea6&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2_1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#94666e&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2_2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#efc758&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#3b6e8c&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#333432&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#ab888e&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_3&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_4&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#bc5b4f&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_5&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#a7b799&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_6&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_7&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_8&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <p>This dictionary is easy left side encodes the signature type code, right side the colour as a HEX code.</p>
 <p>Having colours, let’s define a new variable with styles and unpack it a bit.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// define styling of vector tiles
-var vectorTileStyling = {
-    signatures_4326: function(properties) {
-        return ({
-            fill: true,
-   fillColor: cmap[properties.signature_type],
-            fillOpacity: 0.9,
-            weight: 1,
-            color: &quot;#ffffff&quot;,
-            opacity: 1.0,
-        });
-    }
-}
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// define styling of vector tiles</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">vectorTileStyling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">signatures_4326</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">properties</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">({</span>
+<span class="w">            </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">   </span><span class="nx">fillColor</span><span class="o">:</span><span class="w"> </span><span class="nx">cmap</span><span class="p">[</span><span class="nx">properties</span><span class="p">.</span><span class="nx">signature_type</span><span class="p">],</span>
+<span class="w">            </span><span class="nx">fillOpacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">weight</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>You need to create a function mapping the styles to geometries based on the signature type property. For layer <code class="docutils literal notranslate"><span class="pre">signatures_4326</span></code> (that matches the name of input GeoJSON), you shall define a function that can use the layer properties (<code class="docutils literal notranslate"><span class="pre">function(properties)</span></code>) and specify that we want to fill each polygon with a colour (<code class="docutils literal notranslate"><span class="pre">fill:</span> <span class="pre">true),</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">fill</span> <span class="pre">colour</span> <span class="pre">should</span> <span class="pre">use</span> <span class="pre">the</span> <span class="pre">signature</span> <span class="pre">type</span> <span class="pre">to</span> <span class="pre">retrieve</span> <span class="pre">the</span> <span class="pre">colour</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">dictionary</span> <span class="pre">defined</span> <span class="pre">above</span> <span class="pre">(</span></code>fillColor: cmap[properties.signature_type]<code class="docutils literal notranslate"><span class="pre">)</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">fill</span> <span class="pre">opacity</span> <span class="pre">0.8</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">a</span> <span class="pre">bit</span> <span class="pre">of</span> <span class="pre">background</span> <span class="pre">through</span> <span class="pre">(</span></code>fillOpacity: 0.9`). It also specifies the outline of each polygon as a white line of a weight 1.</p>
 <p>Then you just need to edit the vector tile options (the <code class="docutils literal notranslate"><span class="pre">mapVectorTileOptions</span></code> dictionary from above) and add tile styling.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>  ...
-  minZoom: 6,
-  vectorTileLayerStyles: vectorTileStyling,  // this line is new
-};
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="nx">minZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">vectorTileLayerStyles</span><span class="o">:</span><span class="w"> </span><span class="nx">vectorTileStyling</span><span class="p">,</span><span class="w">  </span><span class="c1">// this line is new</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <p>At this point, the basic map is done, and you can try to get it online or style it a bit more (scroll below for that).</p>
 <p><img alt="Screenshot 2021-10-07 at 19.42.40.png" src="https://github.com/urbangrammarai/urbangrammarai.github.io/blob/master/src/_static/Screenshot_2021-10-07_at_19.42.40.png" /></p>
 <p>This is the whole code of the page for reference.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;!</span><span class="nx">DOCTYPE</span><span class="w"> </span><span class="nx">html</span><span class="o">&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
-&lt;head&gt;
-    &lt;title&gt;Spatial Signatures in Great Britain&lt;/title&gt;
-    &lt;meta charset=&quot;utf-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span><span class="nx">Spatial</span><span class="w"> </span><span class="nx">Signatures</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">Great</span><span class="w"> </span><span class="nx">Britain</span><span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">meta</span><span class="w"> </span><span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">meta</span><span class="w"> </span><span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span><span class="w"> </span><span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
 
-    &lt;!-- load leaflet.js --&gt;
-    &lt;!-- load CSS --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot; /&gt;
+<span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">load</span><span class="w"> </span><span class="nx">leaflet</span><span class="p">.</span><span class="nx">js</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">load</span><span class="w"> </span><span class="nx">CSS</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">link</span><span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="w"> </span><span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span><span class="w"> </span><span class="p">/&gt;</span>
 
-    &lt;!-- load JS --&gt;
-    &lt;script src=&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+<span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">load</span><span class="w"> </span><span class="nx">JS</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">script</span><span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-    &lt;!-- load VectorGrid extension --&gt;
-    &lt;script src=&quot;https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
+<span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">load</span><span class="w"> </span><span class="nx">VectorGrid</span><span class="w"> </span><span class="nx">extension</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">script</span><span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;body style=&#39;margin:0&#39;&gt;
-    &lt;!-- div containing map --&gt;
-    &lt;div id=&quot;map&quot; style=&quot;width: 100vw; height: 100vh; background: #fdfdfd&quot;&gt;&lt;/div&gt;
-    &lt;!-- specification of leaflet map --&gt;
-    &lt;script&gt;
-        // create map
-        var map = L.map(&#39;map&#39;, {
-            center: [53.4107, -2.9704],
-            minZoom: 6,
-            maxZoom: 15,
-            zoomControl: true,
-            zoom: 12,
-        });
+<span class="p">&lt;</span><span class="nt">body</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="s">&#39;margin:0&#39;</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="nx">containing</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 100vw; height: 100vh; background: #fdfdfd&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">specification</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">leaflet</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="c1">// create map</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">53.4107</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2.9704</span><span class="p">],</span>
+<span class="w">            </span><span class="nx">minZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">maxZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">zoomControl</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
+<span class="w">        </span><span class="p">});</span>
 
-        // add background basemap
-        var mapBaseLayer = L.tileLayer(
-            &#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png&#39;, {
-                attribution: &#39;(C) OpenStreetMap contributors (C) CARTO&#39;
-            }
-        ).addTo(map);
+<span class="w">        </span><span class="c1">// add background basemap</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">mapBaseLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+<span class="w">            </span><span class="s1">&#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">attribution</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(C) OpenStreetMap contributors (C) CARTO&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 
-        // get vector tiles URL
-        var mapUrl = &quot;tiles/{z}/{x}/{y}.pbf&quot;;
+<span class="w">        </span><span class="c1">// get vector tiles URL</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">mapUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tiles/{z}/{x}/{y}.pbf&quot;</span><span class="p">;</span>
 
-        // mapping of colors to signature types
-        const cmap = {
-            &quot;0_0&quot;: &quot;#f2e6c7&quot;,
-            &quot;1_0&quot;: &quot;#8fa37e&quot;,
-            &quot;3_0&quot;: &quot;#d7a59f&quot;,
-            &quot;4_0&quot;: &quot;#d7ded1&quot;,
-            &quot;5_0&quot;: &quot;#c3abaf&quot;,
-            &quot;6_0&quot;: &quot;#e4cbc8&quot;,
-            &quot;7_0&quot;: &quot;#c2d0d9&quot;,
-            &quot;8_0&quot;: &quot;#f0d17d&quot;,
-            &quot;2_0&quot;: &quot;#678ea6&quot;,
-            &quot;2_1&quot;: &quot;#94666e&quot;,
-            &quot;2_2&quot;: &quot;#efc758&quot;,
-            &quot;9_0&quot;: &quot;#3b6e8c&quot;,
-            &quot;9_1&quot;: &quot;#333432&quot;,
-            &quot;9_2&quot;: &quot;#ab888e&quot;,
-            &quot;9_3&quot;: &quot;#c1c1c0&quot;,
-            &quot;9_4&quot;: &quot;#bc5b4f&quot;,
-            &quot;9_5&quot;: &quot;#a7b799&quot;,
-            &quot;9_6&quot;: &quot;#c1c1c0&quot;,
-            &quot;9_7&quot;: &quot;#c1c1c0&quot;,
-            &quot;9_8&quot;: &quot;#c1c1c0&quot;
-        };
+<span class="w">        </span><span class="c1">// mapping of colors to signature types</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">cmap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s2">&quot;0_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#f2e6c7&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;1_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#8fa37e&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;3_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#d7a59f&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;4_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#d7ded1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;5_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c3abaf&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;6_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#e4cbc8&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;7_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c2d0d9&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;8_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#f0d17d&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;2_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#678ea6&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;2_1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#94666e&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;2_2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#efc758&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#3b6e8c&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#333432&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#ab888e&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_3&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_4&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#bc5b4f&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_5&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#a7b799&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_6&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_7&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;9_8&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#c1c1c0&quot;</span>
+<span class="w">        </span><span class="p">};</span>
 
-        // define styling of vector tiles
-        var vectorTileStyling = {
-            signatures_4326: function(properties) {
-                return ({
-                    fill: true,
-          fillColor: cmap[properties.signature_type],
-                fillOpacity: 0.9,
-                weight: 1,
-                color: &quot;#ffffff&quot;,
-                opacity: 1.0,
-                });
-            }
-        }
+<span class="w">        </span><span class="c1">// define styling of vector tiles</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">vectorTileStyling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">signatures_4326</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">properties</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="p">({</span>
+<span class="w">                    </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">fillColor</span><span class="o">:</span><span class="w"> </span><span class="nx">cmap</span><span class="p">[</span><span class="nx">properties</span><span class="p">.</span><span class="nx">signature_type</span><span class="p">],</span>
+<span class="w">                </span><span class="nx">fillOpacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">weight</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">                </span><span class="p">});</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
 
-        // define options of vector tiles
-        var mapVectorTileOptions = {
-            rendererFactory: L.canvas.tile,
-            interactive: true,
-            attribution: &#39;(C) Martin Fleischmann&#39;,
-            maxNativeZoom: 15,
-            minZoom: 6,
-            vectorTileLayerStyles: vectorTileStyling,
-        };
+<span class="w">        </span><span class="c1">// define options of vector tiles</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">mapVectorTileOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">rendererFactory</span><span class="o">:</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">tile</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">interactive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">attribution</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(C) Martin Fleischmann&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">maxNativeZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">minZoom</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">vectorTileLayerStyles</span><span class="o">:</span><span class="w"> </span><span class="nx">vectorTileStyling</span><span class="p">,</span>
+<span class="w">        </span><span class="p">};</span>
 
-        // create VectorGrid layer
-        var mapPbfLayer = new L.VectorGrid.Protobuf(
-            mapUrl, mapVectorTileOptions
-        )
+<span class="w">        </span><span class="c1">// create VectorGrid layer</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">mapPbfLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">VectorGrid</span><span class="p">.</span><span class="nx">Protobuf</span><span class="p">(</span>
+<span class="w">            </span><span class="nx">mapUrl</span><span class="p">,</span><span class="w"> </span><span class="nx">mapVectorTileOptions</span>
+<span class="w">        </span><span class="p">)</span>
 
-        // add VectorGrid layer to map
-        mapPbfLayer.addTo(map);
-    &lt;/script&gt;
-&lt;/body&gt;
+<span class="w">        </span><span class="c1">// add VectorGrid layer to map</span>
+<span class="w">        </span><span class="nx">mapPbfLayer</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-&lt;/html&gt;
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -646,73 +646,73 @@ var vectorTileStyling = {
 <h3>Labels on top of the map<a class="headerlink" href="#labels-on-top-of-the-map" title="Permalink to this heading">¶</a></h3>
 <p>You can use another XYZ base map that has just labels and load it on top of your tiles to see the names of places (or roads or something else). The order of layers matches the order in which you use <code class="docutils literal notranslate"><span class="pre">.addTo(map)</span></code>.</p>
 <p>Adding CartoDB Positron labels (this need to be after <code class="docutils literal notranslate"><span class="pre">mapPbfLayer.addTo(map)</span></code>:</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// add labels basemap
-var mapBaseLayer = L.tileLayer(
-    &#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_only_labels/{z}/{x}/{y}.png&#39;, {
-        attribution: &#39;(C) OpenStreetMap contributors (C) CARTO&#39;
-    }
-).addTo(map);
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// add labels basemap</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mapBaseLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+<span class="w">    </span><span class="s1">&#39;https://{s}.basemaps.cartocdn.com/rastertiles/light_only_labels/{z}/{x}/{y}.png&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">attribution</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;(C) OpenStreetMap contributors (C) CARTO&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="popup-information">
 <h3>Popup information<a class="headerlink" href="#popup-information" title="Permalink to this heading">¶</a></h3>
 <p>You may want to show some additional information when you click on the geometry. Let’s link show the name of the signature type based on its code. First, create a dictionary with the info:</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// mapping of names to signature types to be shown in popup on click
-const popup_info = {
-    &quot;0_0&quot;: &quot;Countryside agriculture&quot;,
-    &quot;1_0&quot;: &quot;Accessible suburbia&quot;,
-    &quot;3_0&quot;: &quot;Open sprawl&quot;,
-    &quot;4_0&quot;: &quot;Wild countryside&quot;,
-    &quot;5_0&quot;: &quot;Warehouse/Park land&quot;,
-    &quot;6_0&quot;: &quot;Gridded residential quarters&quot;,
-    &quot;7_0&quot;: &quot;Urban buffer&quot;,
-    &quot;8_0&quot;: &quot;Disconnected suburbia&quot;,
-    &quot;2_0&quot;: &quot;Dense residential neighbourhoods&quot;,
-    &quot;2_1&quot;: &quot;Connected residential neighbourhoods&quot;,
-    &quot;2_2&quot;: &quot;Dense urban neighbourhoods&quot;,
-    &quot;9_0&quot;: &quot;Local urbanity&quot;,
-    &quot;9_1&quot;: &quot;Concentrated urbanity&quot;,
-    &quot;9_2&quot;: &quot;Regional urbanity&quot;,
-    &quot;9_4&quot;: &quot;Metropolitan urbanity&quot;,
-    &quot;9_5&quot;: &quot;Hyper concentrated urbanity&quot;,
-};
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// mapping of names to signature types to be shown in popup on click</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">popup_info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;0_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Countryside agriculture&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;1_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Accessible suburbia&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;3_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Open sprawl&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;4_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Wild countryside&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;5_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Warehouse/Park land&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;6_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Gridded residential quarters&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;7_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Urban buffer&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;8_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Disconnected suburbia&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Dense residential neighbourhoods&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2_1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Connected residential neighbourhoods&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;2_2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Dense urban neighbourhoods&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_0&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Local urbanity&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Concentrated urbanity&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Regional urbanity&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_4&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Metropolitan urbanity&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;9_5&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hyper concentrated urbanity&quot;</span><span class="p">,</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <p>Then you need to link the on click popup element to the VectorGrid object.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// create VectorGrid layer
-var mapPbfLayer = new L.VectorGrid.Protobuf(
-    mapUrl, mapVectorTileOptions
-).on(&#39;click&#39;, function (e) { // this line and below
-    L.popup()
-        .setContent(popup_info[e.layer.properties.signature_type])
-        .setLatLng(e.latlng)
-        .openOn(map);
-});
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// create VectorGrid layer</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mapPbfLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">VectorGrid</span><span class="p">.</span><span class="nx">Protobuf</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">mapUrl</span><span class="p">,</span><span class="w"> </span><span class="nx">mapVectorTileOptions</span>
+<span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// this line and below</span>
+<span class="w">    </span><span class="nx">L</span><span class="p">.</span><span class="nx">popup</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">popup_info</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">layer</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">signature_type</span><span class="p">])</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">setLatLng</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">latlng</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">openOn</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 </section>
 <section id="conditional-formatting-based-on-the-zoom-level">
 <h3>Conditional formatting based on the zoom level<a class="headerlink" href="#conditional-formatting-based-on-the-zoom-level" title="Permalink to this heading">¶</a></h3>
 <p>The white outline can be a bit think when you zoom out, but there is a way how you can control that. You can just specify the condition to a variable and pass the variable to the tile styling dictionary.</p>
-<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>// define styling of vector tiles
-var vectorTileStyling = {
-    signatures_4326: function(properties, zoom) {
-    // set line weight conditionally based on zoom
-        var weight = 0;
-        if (zoom &gt; 12) {
-            weight = 1.0;
-        }
-        return ({
-            fill: true,
-            fillColor: cmap[properties.signature_type],
-            fillOpacity: 0.9,
-            weight: weight, // pass the weight variable instead of a value
-            color: &quot;#ffffff&quot;,
-            opacity: 1.0,
-        });
-    }
-}
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span><span class="c1">// define styling of vector tiles</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">vectorTileStyling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">signatures_4326</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">properties</span><span class="p">,</span><span class="w"> </span><span class="nx">zoom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// set line weight conditionally based on zoom</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">zoom</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">({</span>
+<span class="w">            </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">fillColor</span><span class="o">:</span><span class="w"> </span><span class="nx">cmap</span><span class="p">[</span><span class="nx">properties</span><span class="p">.</span><span class="nx">signature_type</span><span class="p">],</span>
+<span class="w">            </span><span class="nx">fillOpacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">weight</span><span class="o">:</span><span class="w"> </span><span class="nx">weight</span><span class="p">,</span><span class="w"> </span><span class="c1">// pass the weight variable instead of a value</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The function signature has a new <code class="docutils literal notranslate"><span class="pre">zoom</span></code> attribute you can use in the condition.</p>
